@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:bioc="http://bpmn.io/schema/bpmn/biocolor/1.0" id="Definitions_0hxxv62" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="3.6.0">
+  <bpmn:process id="li-update-and-generate-contract" name="(Sub) Update and Generate Contract" isExecutable="true" camunda:versionTag="1">
+    <bpmn:startEvent id="StartEvent_1">
+      <bpmn:outgoing>SequenceFlow_1xfeh2a</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_1xfeh2a" sourceRef="StartEvent_1" targetRef="Task_0ahjmg0" />
+    <bpmn:sequenceFlow id="SequenceFlow_1dlh2c7" sourceRef="Task_0q00rxu" targetRef="Task_1053281" />
+    <bpmn:sequenceFlow id="SequenceFlow_1p12die" sourceRef="Task_1053281" targetRef="EndEvent_0xbsdis" />
+    <bpmn:serviceTask id="Task_1053281" name="generate-contract" camunda:type="external" camunda:topic="generate-contract-html">
+      <bpmn:incoming>SequenceFlow_1dlh2c7</bpmn:incoming>
+      <bpmn:incoming>SequenceFlow_1l8gfiu</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1p12die</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:serviceTask id="Task_0q00rxu" name="update-contract" camunda:type="external" camunda:topic="update-contract">
+      <bpmn:incoming>SequenceFlow_1hr3fg3</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1dlh2c7</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:boundaryEvent id="IntermediateThrowEvent_00gw8uj" attachedToRef="Task_0q00rxu">
+      <bpmn:outgoing>SequenceFlow_1l8gfiu</bpmn:outgoing>
+      <bpmn:conditionalEventDefinition id="ConditionalEventDefinition_1b0q6nt">
+        <bpmn:condition xsi:type="bpmn:tFormalExpression" language="JavaScript">var isUpdateContract = execution.getVariable("isUpdateContract");
+
+isUpdateContract == false</bpmn:condition>
+      </bpmn:conditionalEventDefinition>
+    </bpmn:boundaryEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_1l8gfiu" sourceRef="IntermediateThrowEvent_00gw8uj" targetRef="Task_1053281" />
+    <bpmn:boundaryEvent id="IntermediateThrowEvent_0ocyx0d" attachedToRef="Task_1053281">
+      <bpmn:outgoing>SequenceFlow_0pz5di6</bpmn:outgoing>
+      <bpmn:conditionalEventDefinition id="ConditionalEventDefinition_1sdr499">
+        <bpmn:condition xsi:type="bpmn:tFormalExpression" language="JavaScript">var isGenerateContract = execution.getVariable("isGenerateContract");
+
+isGenerateContract == false</bpmn:condition>
+      </bpmn:conditionalEventDefinition>
+    </bpmn:boundaryEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_0pz5di6" sourceRef="IntermediateThrowEvent_0ocyx0d" targetRef="EndEvent_0xbsdis" />
+    <bpmn:boundaryEvent id="IntermediateThrowEvent_1f9ph8q" attachedToRef="Task_0q00rxu">
+      <bpmn:outgoing>SequenceFlow_1v11yne</bpmn:outgoing>
+      <bpmn:errorEventDefinition id="ErrorEventDefinition_10grrxb" />
+    </bpmn:boundaryEvent>
+    <bpmn:boundaryEvent id="IntermediateThrowEvent_1r0sspu" attachedToRef="Task_1053281">
+      <bpmn:outgoing>SequenceFlow_0kyioyr</bpmn:outgoing>
+      <bpmn:errorEventDefinition id="ErrorEventDefinition_0pf0aej" />
+    </bpmn:boundaryEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_1v11yne" sourceRef="IntermediateThrowEvent_1f9ph8q" targetRef="EndEvent_1iewr0t" />
+    <bpmn:sequenceFlow id="SequenceFlow_0kyioyr" sourceRef="IntermediateThrowEvent_1r0sspu" targetRef="EndEvent_1iewr0t" />
+    <bpmn:sequenceFlow id="SequenceFlow_1hr3fg3" sourceRef="Task_0ahjmg0" targetRef="Task_0q00rxu" />
+    <bpmn:serviceTask id="Task_0ahjmg0" name="init" camunda:type="external" camunda:topic="init">
+      <bpmn:incoming>SequenceFlow_1xfeh2a</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1hr3fg3</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:endEvent id="EndEvent_0xbsdis" name="End">
+      <bpmn:incoming>SequenceFlow_1p12die</bpmn:incoming>
+      <bpmn:incoming>SequenceFlow_0pz5di6</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:endEvent id="EndEvent_1iewr0t" name="Error">
+      <bpmn:incoming>SequenceFlow_1v11yne</bpmn:incoming>
+      <bpmn:incoming>SequenceFlow_0kyioyr</bpmn:incoming>
+      <bpmn:errorEventDefinition id="ErrorEventDefinition_1h8hm0w" errorRef="Error_0qdjmra" />
+    </bpmn:endEvent>
+  </bpmn:process>
+  <bpmn:error id="Error_0qdjmra" name="Update contract error" errorCode="ERROR_UPDATE_CONTRACT" />
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="li-update-and-generate-contract">
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="152" y="99" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_1xfeh2a_di" bpmnElement="SequenceFlow_1xfeh2a">
+        <di:waypoint x="188" y="117" />
+        <di:waypoint x="230" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1dlh2c7_di" bpmnElement="SequenceFlow_1dlh2c7">
+        <di:waypoint x="480" y="117" />
+        <di:waypoint x="630" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1p12die_di" bpmnElement="SequenceFlow_1p12die">
+        <di:waypoint x="730" y="117" />
+        <di:waypoint x="872" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="ServiceTask_1wljmz1_di" bpmnElement="Task_1053281">
+        <dc:Bounds x="630" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_1atgnay_di" bpmnElement="Task_0q00rxu">
+        <dc:Bounds x="380" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BoundaryEvent_17voa86_di" bpmnElement="IntermediateThrowEvent_00gw8uj">
+        <dc:Bounds x="362" y="59" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_1l8gfiu_di" bpmnElement="SequenceFlow_1l8gfiu">
+        <di:waypoint x="380" y="59" />
+        <di:waypoint x="380" y="39" />
+        <di:waypoint x="500" y="39" />
+        <di:waypoint x="500" y="117" />
+        <di:waypoint x="630" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="BoundaryEvent_0qup2ur_di" bpmnElement="IntermediateThrowEvent_0ocyx0d">
+        <dc:Bounds x="612" y="59" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_0pz5di6_di" bpmnElement="SequenceFlow_0pz5di6">
+        <di:waypoint x="630" y="59" />
+        <di:waypoint x="630" y="39" />
+        <di:waypoint x="810" y="39" />
+        <di:waypoint x="810" y="117" />
+        <di:waypoint x="872" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="BoundaryEvent_11yqfev_di" bpmnElement="IntermediateThrowEvent_1f9ph8q" bioc:stroke="rgb(229, 57, 53)" bioc:fill="rgb(255, 205, 210)">
+        <dc:Bounds x="412" y="139" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BoundaryEvent_073vyka_di" bpmnElement="IntermediateThrowEvent_1r0sspu" bioc:stroke="rgb(229, 57, 53)" bioc:fill="rgb(255, 205, 210)">
+        <dc:Bounds x="662" y="139" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_1v11yne_di" bpmnElement="SequenceFlow_1v11yne" bioc:stroke="rgb(229, 57, 53)" bioc:fill="rgb(255, 205, 210)">
+        <di:waypoint x="430" y="175" />
+        <di:waypoint x="430" y="210" />
+        <di:waypoint x="872" y="210" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0kyioyr_di" bpmnElement="SequenceFlow_0kyioyr" bioc:stroke="rgb(229, 57, 53)" bioc:fill="rgb(255, 205, 210)">
+        <di:waypoint x="680" y="175" />
+        <di:waypoint x="680" y="210" />
+        <di:waypoint x="872" y="210" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1hr3fg3_di" bpmnElement="SequenceFlow_1hr3fg3">
+        <di:waypoint x="330" y="117" />
+        <di:waypoint x="380" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="ServiceTask_12tpguk_di" bpmnElement="Task_0ahjmg0">
+        <dc:Bounds x="230" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_0v6egnu_di" bpmnElement="EndEvent_0xbsdis">
+        <dc:Bounds x="872" y="99" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="880" y="142" width="20" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_0alk1uy_di" bpmnElement="EndEvent_1iewr0t">
+        <dc:Bounds x="872" y="192" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="878" y="235" width="25" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

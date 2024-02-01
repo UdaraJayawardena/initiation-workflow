@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_0atsw32" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.2.0">
+  <bpmn:process id="categories-bank-transactions-sub" name="(sub) categories-bank-transactions" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1" name="Start">
+      <bpmn:outgoing>Flow_1k63lqs</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:sequenceFlow id="Flow_1k63lqs" sourceRef="StartEvent_1" targetRef="Activity_0nh0xhg" />
+    <bpmn:serviceTask id="Activity_0nh0xhg" name="Categorize Bank Transactions" camunda:type="external" camunda:topic="categorize-bank-transactions">
+      <bpmn:incoming>Flow_1k63lqs</bpmn:incoming>
+      <bpmn:outgoing>Flow_1jz22gt</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:endEvent id="Event_1wgdxj1" name="End">
+      <bpmn:incoming>Flow_1oz9mi1</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:boundaryEvent id="Event_0492c5z" attachedToRef="Activity_0nh0xhg">
+      <bpmn:outgoing>Flow_1ur3jra</bpmn:outgoing>
+      <bpmn:errorEventDefinition id="ErrorEventDefinition_1on0u0x" />
+    </bpmn:boundaryEvent>
+    <bpmn:endEvent id="Event_1u4bqwm" name="Error">
+      <bpmn:incoming>Flow_1ur3jra</bpmn:incoming>
+      <bpmn:incoming>Flow_1ekd9aq</bpmn:incoming>
+      <bpmn:errorEventDefinition id="ErrorEventDefinition_05vsikd" errorRef="Error_10ksr6t" />
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_1ur3jra" sourceRef="Event_0492c5z" targetRef="Event_1u4bqwm" />
+    <bpmn:sequenceFlow id="Flow_1jz22gt" sourceRef="Activity_0nh0xhg" targetRef="Activity_0h05p9h" />
+    <bpmn:serviceTask id="Activity_0h05p9h" name="Add Multiple Sme Loan Request Alarm" camunda:type="external" camunda:topic="add-multiple-sme-loan-request-alarm">
+      <bpmn:incoming>Flow_1jz22gt</bpmn:incoming>
+      <bpmn:outgoing>Flow_1oz9mi1</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="Flow_1oz9mi1" sourceRef="Activity_0h05p9h" targetRef="Event_1wgdxj1" />
+    <bpmn:boundaryEvent id="Event_0jhuhtj" attachedToRef="Activity_0h05p9h">
+      <bpmn:outgoing>Flow_1ekd9aq</bpmn:outgoing>
+      <bpmn:errorEventDefinition id="ErrorEventDefinition_06pr6o1" />
+    </bpmn:boundaryEvent>
+    <bpmn:sequenceFlow id="Flow_1ekd9aq" sourceRef="Event_0jhuhtj" targetRef="Event_1u4bqwm" />
+  </bpmn:process>
+  <bpmn:error id="Error_10ksr6t" name="Categories Error" errorCode="ERROR_CATEGORIES_BANK_TRANSACTIONS" />
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="categories-bank-transactions-sub">
+      <bpmndi:BPMNEdge id="Flow_1ekd9aq_di" bpmnElement="Flow_1ekd9aq">
+        <di:waypoint x="480" y="175" />
+        <di:waypoint x="480" y="230" />
+        <di:waypoint x="622" y="230" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1oz9mi1_di" bpmnElement="Flow_1oz9mi1">
+        <di:waypoint x="530" y="117" />
+        <di:waypoint x="622" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1jz22gt_di" bpmnElement="Flow_1jz22gt">
+        <di:waypoint x="370" y="117" />
+        <di:waypoint x="430" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1ur3jra_di" bpmnElement="Flow_1ur3jra">
+        <di:waypoint x="320" y="175" />
+        <di:waypoint x="320" y="230" />
+        <di:waypoint x="622" y="230" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1k63lqs_di" bpmnElement="Flow_1k63lqs">
+        <di:waypoint x="215" y="117" />
+        <di:waypoint x="270" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="179" y="99" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="185" y="142" width="25" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_18ylqld_di" bpmnElement="Activity_0nh0xhg">
+        <dc:Bounds x="270" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0iugkzr_di" bpmnElement="Event_1wgdxj1">
+        <dc:Bounds x="622" y="99" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="630" y="142" width="20" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1484z0a_di" bpmnElement="Event_1u4bqwm">
+        <dc:Bounds x="622" y="212" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="628" y="255" width="26" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1u0yslf_di" bpmnElement="Activity_0h05p9h">
+        <dc:Bounds x="430" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0b5i4kw_di" bpmnElement="Event_0jhuhtj">
+        <dc:Bounds x="462" y="139" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0z8lfm2_di" bpmnElement="Event_0492c5z">
+        <dc:Bounds x="302" y="139" width="36" height="36" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" id="revision-approved-drd" name="Revision approved DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="4.7.0">
+  <decision id="revision-approved-decision" name="Revision approved decision">
+    <informationRequirement id="InformationRequirement_19ne4x6">
+      <requiredInput href="#isApprovedRiskManager2" />
+    </informationRequirement>
+    <informationRequirement id="InformationRequirement_04ht6s3">
+      <requiredInput href="#isApprovedRiskManager1" />
+    </informationRequirement>
+    <informationRequirement id="InformationRequirement_1mlnq92">
+      <requiredInput href="#isApprovedRiskSupervisor" />
+    </informationRequirement>
+    <decisionTable id="DecisionTable_1odg15u">
+      <input id="Input_1" label="Approved 01" biodi:width="150" camunda:inputVariable="isApprovedRiskManager1">
+        <inputExpression id="InputExpression_1" typeRef="boolean" expressionLanguage="feel">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0ju0v5d" label="Approved 02" camunda:inputVariable="isApprovedRiskManager2">
+        <inputExpression id="LiteralExpression_1063gkf" typeRef="boolean">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_09kneis" label="Approved 03" camunda:inputVariable="isApprovedRiskSupervisor">
+        <inputExpression id="LiteralExpression_0vaj9a0" typeRef="boolean" expressionLanguage="feel">
+          <text></text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="Status" name="status" typeRef="string" />
+      <rule id="DecisionRule_1knkuu6">
+        <description></description>
+        <inputEntry id="UnaryTests_05l7xv8">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_084b1x6">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0w627km">
+          <text>-</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_01m51pt">
+          <text>"outstanding"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1162o33">
+        <inputEntry id="UnaryTests_0iv9gib">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_10z479e">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0qlxij8">
+          <text>true</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0oalyid">
+          <text>"outstanding"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_13imspk">
+        <inputEntry id="UnaryTests_0qu3typ">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_08kvmmr">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1i8m7a9">
+          <text>false</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_18nrz2r">
+          <text>"revision-disapproved"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1vgcweq">
+        <inputEntry id="UnaryTests_1pmiab9">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02gwrmg">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1xez6yx">
+          <text>true</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1e6th6a">
+          <text>"outstanding"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1da85u4">
+        <inputEntry id="UnaryTests_08cla2f">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ot8uyy">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1pek0rw">
+          <text>false</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1comchx">
+          <text>"revision-disapproved"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1b9p78t">
+        <inputEntry id="UnaryTests_1rpxx5i">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1g8e84c">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1iuqdo2">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0jlfuk1">
+          <text>"revision-disapproved"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <inputData id="isApprovedRiskManager2" name="Is approved RiskManager2" />
+  <inputData id="isApprovedRiskManager1" name="Is approved RiskManager 1" />
+  <inputData id="isApprovedRiskSupervisor" name="Is approved RiskSupervisor" />
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="revision-approved-decision">
+        <dc:Bounds height="80" width="180" x="270" y="191" />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_0gbl7gp" dmnElementRef="isApprovedRiskManager2">
+        <dc:Bounds height="45" width="125" x="297" y="37" />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_0ae3ark" dmnElementRef="isApprovedRiskManager1">
+        <dc:Bounds height="45" width="125" x="157" y="37" />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_1s2nq1z" dmnElementRef="isApprovedRiskSupervisor">
+        <dc:Bounds height="45" width="125" x="437" y="37" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_0fyfozt" dmnElementRef="InformationRequirement_19ne4x6">
+        <di:waypoint x="360" y="82" />
+        <di:waypoint x="360" y="171" />
+        <di:waypoint x="360" y="191" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="DMNEdge_048che9" dmnElementRef="InformationRequirement_04ht6s3">
+        <di:waypoint x="220" y="82" />
+        <di:waypoint x="315" y="171" />
+        <di:waypoint x="315" y="191" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="DMNEdge_0ssvizr" dmnElementRef="InformationRequirement_1mlnq92">
+        <di:waypoint x="500" y="82" />
+        <di:waypoint x="405" y="171" />
+        <di:waypoint x="405" y="191" />
+      </dmndi:DMNEdge>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

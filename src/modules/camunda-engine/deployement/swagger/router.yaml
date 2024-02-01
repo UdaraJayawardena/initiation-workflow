@@ -1,0 +1,264 @@
+paths:
+  /deployments:
+    post:
+      tags:
+        - Deployments
+      name: Deploy BPMN flows
+      summary:  Deploy BPMN all flows to camunda server.
+      operationId: deployment
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        200:
+          description: success
+          schema:
+            type: object
+            properties:
+              code:
+                type: integer
+                example: 200
+              data:
+                type: object
+                properties:
+                  errLog:
+                    type: array
+                    example: []
+                  ok: 
+                    type: number
+                    example: 32
+              success:
+                type: boolean
+                example: true
+    delete:
+      tags:
+        - Deployments
+      name: Delete BPMN flows
+      summary: Deploy all BPMN flows
+      operationId: deleteDeployments
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        200:
+          description: success
+          schema:
+            type: object
+            properties:
+              code:
+                type: integer
+                example: 200
+              data:
+                type: number
+                example: 90
+              success:
+                type: boolean
+                example: true
+    get:
+      tags:
+        - Deployments
+      name: Get BPMN flows
+      summary: Get all BPMN flows
+      operationId: getDeployments
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        200:
+          description: success
+          schema:
+            type: object
+            properties:
+              code:
+                type: integer
+                example: 200
+              data:
+                type: number
+                example: 90
+              success:
+                type: boolean
+                example: true
+  /deployments/create:
+    post:
+      tags:
+        - Deployments
+      name: Deploy BPMN flow
+      summary:  Deploy BPMN multiple flow to camunda server request by user.
+      operationId: deploymentCreate
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          required: true
+          schema:
+            type: object
+            properties:
+              pathList:
+                type: array
+                items:
+                  properties:
+                    fileName:
+                      type: string
+                    filePath:
+                      type: string
+      responses:
+        200:
+          description: success
+          schema:
+            type: object
+            properties:
+              code:
+                type: integer
+                example: 200
+              data:
+                type: object
+                properties:
+                  errLog:
+                    type: array
+                    example: []
+                  ok: 
+                    type: number
+                    example: 32
+              success:
+                type: boolean
+                example: true
+  /deployments/{deploymentId}/redeploy:
+    post:
+      tags:
+        - Deployments
+      name: Redeploy BPMN flow
+      summary:  Deploy BPMN multiple flow to camunda server request by user.
+      operationId: redeploymentCreate
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: deploymentId
+          required: true
+          type: string
+        - in: body
+          name: body
+          required: true
+          schema:
+            type: object
+            properties:
+              resourceIds:
+                type: array
+                items:
+                  type: string
+              resourceNames:
+                type: array
+                items:
+                  type: string
+              source:
+                type: string
+      responses:
+        200:
+          description: success
+          schema:
+            type: object
+            properties:
+              code:
+                type: integer
+                example: 200
+              data:
+                type: object
+                properties:
+                  errLog:
+                    type: array
+                    example: []
+                  ok: 
+                    type: number
+                    example: 32
+              success:
+                type: boolean
+                example: true
+  /deployments/{deploymentId}/resources:
+    get:
+      tags:
+        - Deployments
+      name: Get Resource List
+      summary:  Deploy BPMN multiple flow to camunda server request by user.
+      operationId: getResourceList
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: deploymentId
+          required: true
+          type: string
+      responses:
+        200:
+          description: success
+          schema:
+            type: object
+            properties:
+              code:
+                type: integer
+                example: 200
+              data:
+                type: object
+                properties:
+                  errLog:
+                    type: array
+                    example: []
+                  ok: 
+                    type: number
+                    example: 32
+              success:
+                type: boolean
+                example: true
+  /deployments/delete:
+    delete:
+      tags:
+        - Deployments
+      name: Deploy BPMN flow
+      summary:  Delete BPMN multiple flow to camunda server request by user.
+      operationId: deploymentDel
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          required: true
+          schema:
+            type: object
+            properties:
+              idList:
+                type: array
+                items:
+                  type: string
+      responses:
+        200:
+          description: success
+          schema:
+            type: object
+            properties:
+              code:
+                type: integer
+                example: 200
+              data:
+                type: object
+                properties:
+                  errLog:
+                    type: array
+                    example: []
+                  ok: 
+                    type: number
+                    example: 32
+              success:
+                type: boolean
+                example: true
+              

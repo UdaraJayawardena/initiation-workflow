@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_17bpaag" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="3.7.2">
+  <bpmn:process id="create-bank-account" name="(sub) create-bank-account" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1">
+      <bpmn:outgoing>Flow_01wyqjk</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:serviceTask id="Activity_0jq6j4z" name="Get Customer " camunda:type="external" camunda:topic="get-customer">
+      <bpmn:incoming>Flow_01wyqjk</bpmn:incoming>
+      <bpmn:outgoing>Flow_1ot7pib</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="Flow_01wyqjk" sourceRef="StartEvent_1" targetRef="Activity_0jq6j4z" />
+    <bpmn:serviceTask id="Activity_1nbbylg" name="Get Bank" camunda:type="external" camunda:topic="get-bank">
+      <bpmn:incoming>Flow_1ot7pib</bpmn:incoming>
+      <bpmn:outgoing>Flow_0g44zza</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="Flow_1ot7pib" sourceRef="Activity_0jq6j4z" targetRef="Activity_1nbbylg" />
+    <bpmn:serviceTask id="Activity_1lmyvgf" name="Create bank account" camunda:type="external" camunda:topic="create-bank-account">
+      <bpmn:incoming>Flow_0g44zza</bpmn:incoming>
+      <bpmn:outgoing>Flow_06kdjji</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="Flow_0g44zza" sourceRef="Activity_1nbbylg" targetRef="Activity_1lmyvgf" />
+    <bpmn:endEvent id="Event_0u6lud0" name="End">
+      <bpmn:incoming>Flow_06kdjji</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_06kdjji" sourceRef="Activity_1lmyvgf" targetRef="Event_0u6lud0" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="create-bank-account">
+      <bpmndi:BPMNEdge id="Flow_01wyqjk_di" bpmnElement="Flow_01wyqjk">
+        <di:waypoint x="215" y="117" />
+        <di:waypoint x="300" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1ot7pib_di" bpmnElement="Flow_1ot7pib">
+        <di:waypoint x="400" y="117" />
+        <di:waypoint x="480" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0g44zza_di" bpmnElement="Flow_0g44zza">
+        <di:waypoint x="580" y="117" />
+        <di:waypoint x="660" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_06kdjji_di" bpmnElement="Flow_06kdjji">
+        <di:waypoint x="760" y="117" />
+        <di:waypoint x="842" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="179" y="99" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0jq6j4z_di" bpmnElement="Activity_0jq6j4z">
+        <dc:Bounds x="300" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1nbbylg_di" bpmnElement="Activity_1nbbylg">
+        <dc:Bounds x="480" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1lmyvgf_di" bpmnElement="Activity_1lmyvgf">
+        <dc:Bounds x="660" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0u6lud0_di" bpmnElement="Event_0u6lud0">
+        <dc:Bounds x="842" y="99" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="850" y="142" width="20" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

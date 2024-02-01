@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_1xljdjt" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="3.3.4">
+  <bpmn:process id="store-data-into-crm" name="(Sub) Store data into crm" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1" name="Start">
+      <bpmn:outgoing>SequenceFlow_16oh3kl</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_16oh3kl" sourceRef="StartEvent_1" targetRef="Task_0u5lg4o" />
+    <bpmn:sequenceFlow id="SequenceFlow_1amp4ic" sourceRef="Task_0u5lg4o" targetRef="Task_1r2hx65" />
+    <bpmn:sequenceFlow id="SequenceFlow_0055jl1" sourceRef="Task_1r2hx65" targetRef="Task_0dvzoh7" />
+    <bpmn:endEvent id="EndEvent_0i1tr2l" name="End">
+      <bpmn:incoming>SequenceFlow_0j5k23v</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_0j5k23v" sourceRef="Task_0dvzoh7" targetRef="EndEvent_0i1tr2l" />
+    <bpmn:serviceTask id="Task_0u5lg4o" name="Update Customer" camunda:type="external" camunda:topic="update-customer">
+      <bpmn:incoming>SequenceFlow_16oh3kl</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1amp4ic</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:serviceTask id="Task_1r2hx65" name="Update Person" camunda:type="external" camunda:topic="update-person">
+      <bpmn:incoming>SequenceFlow_1amp4ic</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0055jl1</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:serviceTask id="Task_0dvzoh7" name="Update Stakeholder" camunda:type="external" camunda:topic="update-stakeholder">
+      <bpmn:incoming>SequenceFlow_0055jl1</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0j5k23v</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:boundaryEvent id="BoundaryEvent_1bak8n4" attachedToRef="Task_0u5lg4o">
+      <bpmn:outgoing>SequenceFlow_0ovl64k</bpmn:outgoing>
+      <bpmn:errorEventDefinition errorRef="Error_1xbhge8" />
+    </bpmn:boundaryEvent>
+    <bpmn:boundaryEvent id="BoundaryEvent_1dytdb7" attachedToRef="Task_1r2hx65">
+      <bpmn:outgoing>SequenceFlow_11tpo20</bpmn:outgoing>
+      <bpmn:errorEventDefinition errorRef="Error_0vmrvqz" />
+    </bpmn:boundaryEvent>
+    <bpmn:boundaryEvent id="BoundaryEvent_0rxcplk" attachedToRef="Task_0dvzoh7">
+      <bpmn:outgoing>SequenceFlow_1yrbl9k</bpmn:outgoing>
+      <bpmn:errorEventDefinition errorRef="Error_16rxwzb" />
+    </bpmn:boundaryEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_0ovl64k" sourceRef="BoundaryEvent_1bak8n4" targetRef="EndEvent_16kj3mu" />
+    <bpmn:sequenceFlow id="SequenceFlow_11tpo20" sourceRef="BoundaryEvent_1dytdb7" targetRef="EndEvent_16kj3mu" />
+    <bpmn:sequenceFlow id="SequenceFlow_1yrbl9k" sourceRef="BoundaryEvent_0rxcplk" targetRef="EndEvent_16kj3mu" />
+    <bpmn:endEvent id="EndEvent_16kj3mu" name="Error">
+      <bpmn:incoming>SequenceFlow_0ovl64k</bpmn:incoming>
+      <bpmn:incoming>SequenceFlow_11tpo20</bpmn:incoming>
+      <bpmn:incoming>SequenceFlow_1yrbl9k</bpmn:incoming>
+      <bpmn:errorEventDefinition errorRef="Error_0cljd6c" />
+    </bpmn:endEvent>
+  </bpmn:process>
+  <bpmn:error id="Error_0cljd6c" name="Store data to crm error" errorCode="ERROR_STORE_DATA_TO_CRM" camunda:errorMessage="Unexpected Error Occurred while storing crm data" />
+  <bpmn:error id="Error_1xbhge8" name="Update customer error" errorCode="ERROR_UPDATE_CUSTOMER" camunda:errorMessage="Unexpected Error Occurred while updating customer data" />
+  <bpmn:error id="Error_0vmrvqz" name="Update person error" errorCode="ERROR_UPDATE_PERSON" camunda:errorMessage="Unexpected Error Occurred while updating person data" />
+  <bpmn:error id="Error_16rxwzb" name="Stakeholder update error" errorCode="ERROR_UPDATE_STAKEHOLDER" camunda:errorMessage="Unexpected Error Occurred while updating stakeholder data" />
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="store-data-into-crm">
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="179" y="239" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="186" y="282" width="23" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_16oh3kl_di" bpmnElement="SequenceFlow_16oh3kl">
+        <di:waypoint x="215" y="257" />
+        <di:waypoint x="270" y="257" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1amp4ic_di" bpmnElement="SequenceFlow_1amp4ic">
+        <di:waypoint x="370" y="257" />
+        <di:waypoint x="430" y="257" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0055jl1_di" bpmnElement="SequenceFlow_0055jl1">
+        <di:waypoint x="530" y="257" />
+        <di:waypoint x="590" y="257" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="EndEvent_0i1tr2l_di" bpmnElement="EndEvent_0i1tr2l">
+        <dc:Bounds x="752" y="239" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="761" y="282" width="19" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_0j5k23v_di" bpmnElement="SequenceFlow_0j5k23v">
+        <di:waypoint x="690" y="257" />
+        <di:waypoint x="752" y="257" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="ServiceTask_0v3jt4x_di" bpmnElement="Task_0u5lg4o">
+        <dc:Bounds x="270" y="217" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_0i8914k_di" bpmnElement="Task_1r2hx65">
+        <dc:Bounds x="430" y="217" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_1ug5l5p_di" bpmnElement="Task_0dvzoh7">
+        <dc:Bounds x="590" y="217" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BoundaryEvent_09qqgxi_di" bpmnElement="BoundaryEvent_1bak8n4">
+        <dc:Bounds x="302" y="199" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BoundaryEvent_1oq6he2_di" bpmnElement="BoundaryEvent_1dytdb7">
+        <dc:Bounds x="472" y="199" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BoundaryEvent_0u8oakk_di" bpmnElement="BoundaryEvent_0rxcplk">
+        <dc:Bounds x="632" y="199" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_0ovl64k_di" bpmnElement="SequenceFlow_0ovl64k">
+        <di:waypoint x="320" y="199" />
+        <di:waypoint x="320" y="80" />
+        <di:waypoint x="770" y="80" />
+        <di:waypoint x="770" y="112" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_11tpo20_di" bpmnElement="SequenceFlow_11tpo20">
+        <di:waypoint x="490" y="199" />
+        <di:waypoint x="490" y="120" />
+        <di:waypoint x="755" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1yrbl9k_di" bpmnElement="SequenceFlow_1yrbl9k">
+        <di:waypoint x="650" y="199" />
+        <di:waypoint x="650" y="130" />
+        <di:waypoint x="752" y="130" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="EndEvent_0yr5u5e_di" bpmnElement="EndEvent_16kj3mu">
+        <dc:Bounds x="752" y="112" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="758" y="155" width="25" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

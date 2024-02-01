@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_0elzacv" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.4.0">
+  <bpmn:process id="process-category-rule-data-main" name="( Main ) Process Category Rule" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1" name="Start">
+      <bpmn:outgoing>Flow_1x69qhf</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:serviceTask id="Activity_11uwyqs" name="Init" camunda:type="external" camunda:topic="init">
+      <bpmn:incoming>Flow_1x69qhf</bpmn:incoming>
+      <bpmn:outgoing>Flow_0w6wwaf</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="Flow_1x69qhf" sourceRef="StartEvent_1" targetRef="Activity_11uwyqs" />
+    <bpmn:callActivity id="Activity_17n7j3i" name="Process Category Rule" calledElement="process-category-rule-data">
+      <bpmn:extensionElements>
+        <camunda:in businessKey="#{execution.processBusinessKey}" />
+        <camunda:in source="errorLog" target="errorLog" />
+        <camunda:in source="rootProcessInstanceId" target="rootProcessInstanceId" />
+        <camunda:in source="authToken" target="authToken" />
+        <camunda:out source="errorLog" target="errorLog" />
+        <camunda:out source="rootProcessInstanceId" target="rootProcessInstanceId" />
+        <camunda:in source="action" target="action" />
+        <camunda:in source="categoryDataForCreate" target="categoryDataForCreate" />
+        <camunda:in source="categoryDataForUpdate" target="categoryDataForUpdate" />
+        <camunda:out source="processedCategoryRule" target="processedCategoryRule" />
+        <camunda:out source="success" target="success" />
+        <camunda:out source="error" target="error" />
+        <camunda:out source="result" target="result" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0w6wwaf</bpmn:incoming>
+      <bpmn:outgoing>Flow_0j9bnxo</bpmn:outgoing>
+    </bpmn:callActivity>
+    <bpmn:sequenceFlow id="Flow_0w6wwaf" sourceRef="Activity_11uwyqs" targetRef="Activity_17n7j3i" />
+    <bpmn:endEvent id="EndEvent_03jdhfv" name="End">
+      <bpmn:incoming>Flow_0g7agb6</bpmn:incoming>
+      <bpmn:incoming>Flow_0j9bnxo</bpmn:incoming>
+      <bpmn:messageEventDefinition id="MessageEventDefinition_0uh6zbq" camunda:type="external" camunda:topic="end-process-category-rule-data-main" />
+    </bpmn:endEvent>
+    <bpmn:boundaryEvent id="Event_1oe5c2c" attachedToRef="Activity_17n7j3i">
+      <bpmn:outgoing>Flow_0g7agb6</bpmn:outgoing>
+      <bpmn:errorEventDefinition id="ErrorEventDefinition_05kx5tp" errorRef="Error_0p0z2ji" />
+    </bpmn:boundaryEvent>
+    <bpmn:sequenceFlow id="Flow_0g7agb6" sourceRef="Event_1oe5c2c" targetRef="EndEvent_03jdhfv" />
+    <bpmn:sequenceFlow id="Flow_0j9bnxo" sourceRef="Activity_17n7j3i" targetRef="EndEvent_03jdhfv" />
+  </bpmn:process>
+  <bpmn:error id="Error_0p0z2ji" name="Process Category Rule Error" errorCode="ERROR_PROCESS_CATEGORY_RULE" camunda:errorMessage="Process Category Rule failed" />
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="process-category-rule-data-main">
+      <bpmndi:BPMNEdge id="Flow_0j9bnxo_di" bpmnElement="Flow_0j9bnxo">
+        <di:waypoint x="560" y="177" />
+        <di:waypoint x="642" y="177" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0g7agb6_di" bpmnElement="Flow_0g7agb6">
+        <di:waypoint x="540" y="119" />
+        <di:waypoint x="540" y="70" />
+        <di:waypoint x="660" y="70" />
+        <di:waypoint x="660" y="159" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0w6wwaf_di" bpmnElement="Flow_0w6wwaf">
+        <di:waypoint x="380" y="177" />
+        <di:waypoint x="460" y="177" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1x69qhf_di" bpmnElement="Flow_1x69qhf">
+        <di:waypoint x="215" y="177" />
+        <di:waypoint x="280" y="177" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="179" y="159" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="186" y="202" width="24" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0xm4lkv_di" bpmnElement="Activity_11uwyqs">
+        <dc:Bounds x="280" y="137" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1j6jv35_di" bpmnElement="Activity_17n7j3i">
+        <dc:Bounds x="460" y="137" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1ejmv6p_di" bpmnElement="EndEvent_03jdhfv">
+        <dc:Bounds x="642" y="159" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="650" y="202" width="20" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0ufx9tv_di" bpmnElement="Event_1oe5c2c">
+        <dc:Bounds x="522" y="119" width="36" height="36" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

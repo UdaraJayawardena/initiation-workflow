@@ -1,0 +1,16 @@
+include:
+  - project: "b5087/devops/ci-templates"
+    file: "/v2-alpha/trunk.yml"
+
+variables:
+  SERVICE: "workflows"
+  SERVICE_TYPE: "api"
+  NAMESPACE: initiation
+  DEV_HOSTNAME: initiation-workflows.bridgefund-development.net
+  ACCEPTANCE_HOSTNAME: initiation-workflows.bridgefund-acceptance.net
+  APPROVAL_HOSTNAME: initiation-workflows.bridgefund-approval.net
+  PRODUCTION_HOSTNAME: initiation-workflows.bridgefund.net
+  SERVICE_PATH: "/"
+  NPM_AUDIT: "false"
+  SKIP_IMAGE_SCAN: "true"
+# added container scanning

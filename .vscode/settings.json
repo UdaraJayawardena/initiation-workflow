@@ -1,0 +1,23 @@
+{
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#472406",
+    "titleBar.activeBackground": "#180c02",
+    "titleBar.activeForeground": "#e7e7e7",
+    "activityBar.activeBackground": "#472406",
+    "activityBar.activeBorder": "#0a763c",
+    "activityBar.foreground": "#e7e7e7",
+    "activityBar.inactiveForeground": "#e7e7e799",
+    "activityBarBadge.background": "#0a763c",
+    "activityBarBadge.foreground": "#e7e7e7",
+    "statusBar.background": "#180c02",
+    "statusBar.foreground": "#e7e7e7",
+    "statusBarItem.hoverBackground": "#472406",
+    "titleBar.inactiveBackground": "#180c0299",
+    "titleBar.inactiveForeground": "#e7e7e799"
+  },
+  "peacock.color": "#180c02",
+  "cSpell.words": [
+    "camunda"
+  ],
+  "files.eol": "\n",
+}

@@ -1,0 +1,40 @@
+definitions: # Schema defination for log
+  log:
+    type: object
+    properties:
+      _id:
+        type: string
+      id:
+        type: string
+      cluster:
+        type: string
+      app:
+        type: string
+      module:
+        type: string
+      type:
+        type: string
+      level:
+        type: string
+      clientIP:
+        type: string
+      clientUser:
+        type: string
+      clientSentBytes:
+        type: string
+      clientUserArgent:
+        type: string
+      serverIP:
+        type: string
+      serverPort:
+        type: string
+      serverReceivedBytes:
+        type: string
+      logData:
+        type: string
+      createdAt:
+        type: date
+        example: "2019-01-01"
+      updatedAt:
+        type: date
+        example: "2019-01-01"

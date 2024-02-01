@@ -1,0 +1,70 @@
+paths:
+  /authorization/access-matrix:
+    post:
+      tags:
+        - Authorization
+      name: Upload access matrix
+      summary:  Create camunda access level.
+      operationId: authorization
+      consumes:
+        - multipart/form-data
+      produces:
+        - application/json
+      parameters:
+        - in: formData
+          name: doc
+          type: file
+          description: The file to upload.
+      responses:
+        200:
+          description: success
+          schema:
+            type: object
+            properties:
+              code:
+                type: integer
+                example: 200
+              data:
+                type: object
+                properties:
+                  errLog:
+                    type: array
+                    example: []
+                  ok: 
+                    type: number
+                    example: 32
+              success:
+                type: boolean
+                example: true
+  /authorization/register:
+    post:
+      tags:
+        - Authorization
+      name: Registered admin user
+      summary:  Create camunda-admin user with access level.
+      operationId: authorizationRegister
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        200:
+          description: success
+          schema:
+            type: object
+            properties:
+              code:
+                type: integer
+                example: 200
+              data:
+                type: object
+                properties:
+                  errLog:
+                    type: array
+                    example: []
+                  ok: 
+                    type: number
+                    example: 32
+              success:
+                type: boolean
+                example: true

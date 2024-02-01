@@ -1,0 +1,13 @@
+deployment:
+  image:
+    repository: 002665144501.dkr.ecr.eu-central-1.amazonaws.com/bf-api-initiation-workflows
+  env:
+    ENVIRONMENT: dev
+hostName: initiation-workflows.bridgefund-development.net
+serviceAccount:
+  create: true
+  annotations:
+    eks.amazonaws.com/role-arn: arn:aws:iam::002665144501:role/dev-initiation-workflow-sa-role
+#deployment
+minReplicas: 1
+maxReplicas: 2

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_0k93k62" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="3.5.0">
+  <bpmn:process id="bai-update-bank-account" name="Bai Update Bank Account" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1" name="Start">
+      <bpmn:outgoing>Flow_1ty9cab</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:serviceTask id="Activity_156vij7" name="init" camunda:type="external" camunda:topic="init">
+      <bpmn:incoming>Flow_1ty9cab</bpmn:incoming>
+      <bpmn:outgoing>Flow_1hmcyz5</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="Flow_1ty9cab" sourceRef="StartEvent_1" targetRef="Activity_156vij7" />
+    <bpmn:exclusiveGateway id="Gateway_1t3ptvx">
+      <bpmn:incoming>Flow_1hmcyz5</bpmn:incoming>
+      <bpmn:outgoing>Flow_0yxtrqn</bpmn:outgoing>
+      <bpmn:outgoing>Flow_1roynnu</bpmn:outgoing>
+      <bpmn:outgoing>SequenceFlow_0bktcmw</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:sequenceFlow id="Flow_1hmcyz5" sourceRef="Activity_156vij7" targetRef="Gateway_1t3ptvx" />
+    <bpmn:serviceTask id="Activity_0bj7cnr" name="Update bank account" camunda:type="external" camunda:topic="update-bank-account">
+      <bpmn:incoming>Flow_1roynnu</bpmn:incoming>
+      <bpmn:outgoing>Flow_1rzik4m</bpmn:outgoing>
+      <bpmn:outgoing>Flow_09vrnhz</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:boundaryEvent id="Event_0xfgvpr" attachedToRef="Activity_0bj7cnr">
+      <bpmn:errorEventDefinition id="ErrorEventDefinition_17cmd96" />
+    </bpmn:boundaryEvent>
+    <bpmn:serviceTask id="Activity_0zw4yea" name="Delete bank account" camunda:type="external" camunda:topic="delete-bank-account">
+      <bpmn:incoming>Flow_0yxtrqn</bpmn:incoming>
+      <bpmn:outgoing>Flow_024kz5w</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:boundaryEvent id="Event_0b2o86t" attachedToRef="Activity_0zw4yea">
+      <bpmn:outgoing>Flow_0tr23vj</bpmn:outgoing>
+      <bpmn:errorEventDefinition id="ErrorEventDefinition_0jz97y0" />
+    </bpmn:boundaryEvent>
+    <bpmn:sequenceFlow id="Flow_0yxtrqn" sourceRef="Gateway_1t3ptvx" targetRef="Activity_0zw4yea">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${action == 'delete'}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_1roynnu" sourceRef="Gateway_1t3ptvx" targetRef="Activity_0bj7cnr">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${action == 'update'}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:endEvent id="Event_009raei" name="End">
+      <bpmn:incoming>Flow_0tr23vj</bpmn:incoming>
+      <bpmn:incoming>Flow_1rzik4m</bpmn:incoming>
+      <bpmn:incoming>Flow_09vrnhz</bpmn:incoming>
+      <bpmn:incoming>Flow_024kz5w</bpmn:incoming>
+      <bpmn:incoming>SequenceFlow_01qed3g</bpmn:incoming>
+      <bpmn:incoming>SequenceFlow_1pdp9ok</bpmn:incoming>
+      <bpmn:messageEventDefinition id="MessageEventDefinition_1dmiawg" camunda:type="external" camunda:topic="end-bai-update-bank-account" />
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_0tr23vj" sourceRef="Event_0b2o86t" targetRef="Event_009raei" />
+    <bpmn:sequenceFlow id="Flow_1rzik4m" sourceRef="Activity_0bj7cnr" targetRef="Event_009raei" />
+    <bpmn:sequenceFlow id="Flow_09vrnhz" sourceRef="Activity_0bj7cnr" targetRef="Event_009raei" />
+    <bpmn:sequenceFlow id="Flow_024kz5w" sourceRef="Activity_0zw4yea" targetRef="Event_009raei" />
+    <bpmn:serviceTask id="Task_0si7ml2" name="Create bank account" camunda:type="external" camunda:topic="create-bank-account">
+      <bpmn:incoming>SequenceFlow_0bktcmw</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_01qed3g</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="SequenceFlow_0bktcmw" sourceRef="Gateway_1t3ptvx" targetRef="Task_0si7ml2">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${action == 'create'}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="SequenceFlow_01qed3g" sourceRef="Task_0si7ml2" targetRef="Event_009raei" />
+    <bpmn:boundaryEvent id="BoundaryEvent_1f29sj8" attachedToRef="Task_0si7ml2">
+      <bpmn:outgoing>SequenceFlow_1pdp9ok</bpmn:outgoing>
+      <bpmn:errorEventDefinition id="ErrorEventDefinition_1hau2k3" />
+    </bpmn:boundaryEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_1pdp9ok" sourceRef="BoundaryEvent_1f29sj8" targetRef="Event_009raei" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="bai-update-bank-account">
+      <bpmndi:BPMNEdge id="Flow_1ty9cab_di" bpmnElement="Flow_1ty9cab">
+        <di:waypoint x="215" y="300" />
+        <di:waypoint x="300" y="300" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1hmcyz5_di" bpmnElement="Flow_1hmcyz5">
+        <di:waypoint x="400" y="300" />
+        <di:waypoint x="485" y="300" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0yxtrqn_di" bpmnElement="Flow_0yxtrqn">
+        <di:waypoint x="510" y="325" />
+        <di:waypoint x="510" y="430" />
+        <di:waypoint x="610" y="430" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1roynnu_di" bpmnElement="Flow_1roynnu">
+        <di:waypoint x="510" y="275" />
+        <di:waypoint x="510" y="160" />
+        <di:waypoint x="610" y="160" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0tr23vj_di" bpmnElement="Flow_0tr23vj">
+        <di:waypoint x="660" y="488" />
+        <di:waypoint x="660" y="508" />
+        <di:waypoint x="970" y="508" />
+        <di:waypoint x="970" y="300" />
+        <di:waypoint x="908" y="300" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1rzik4m_di" bpmnElement="Flow_1rzik4m">
+        <di:waypoint x="660" y="120" />
+        <di:waypoint x="660" y="80" />
+        <di:waypoint x="970" y="80" />
+        <di:waypoint x="970" y="300" />
+        <di:waypoint x="908" y="300" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_09vrnhz_di" bpmnElement="Flow_09vrnhz">
+        <di:waypoint x="710" y="160" />
+        <di:waypoint x="791" y="160" />
+        <di:waypoint x="791" y="300" />
+        <di:waypoint x="872" y="300" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_024kz5w_di" bpmnElement="Flow_024kz5w">
+        <di:waypoint x="710" y="430" />
+        <di:waypoint x="791" y="430" />
+        <di:waypoint x="791" y="300" />
+        <di:waypoint x="872" y="300" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Activity_0zw4yea_di" bpmnElement="Activity_0zw4yea">
+        <dc:Bounds x="610" y="390" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0bj7cnr_di" bpmnElement="Activity_0bj7cnr">
+        <dc:Bounds x="610" y="120" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1t3ptvx_di" bpmnElement="Gateway_1t3ptvx" isMarkerVisible="true">
+        <dc:Bounds x="485" y="275" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_156vij7_di" bpmnElement="Activity_156vij7">
+        <dc:Bounds x="300" y="260" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="179" y="282" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="186" y="325" width="24" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_009raei_di" bpmnElement="Event_009raei">
+        <dc:Bounds x="872" y="282" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="880" y="328" width="20" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0b2o86t_di" bpmnElement="Event_0b2o86t">
+        <dc:Bounds x="642" y="452" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0xfgvpr_di" bpmnElement="Event_0xfgvpr">
+        <dc:Bounds x="642" y="102" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_0562isp_di" bpmnElement="Task_0si7ml2">
+        <dc:Bounds x="620" y="260" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_0bktcmw_di" bpmnElement="SequenceFlow_0bktcmw">
+        <di:waypoint x="535" y="300" />
+        <di:waypoint x="620" y="300" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_01qed3g_di" bpmnElement="SequenceFlow_01qed3g">
+        <di:waypoint x="720" y="300" />
+        <di:waypoint x="872" y="300" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="BoundaryEvent_1f29sj8_di" bpmnElement="BoundaryEvent_1f29sj8">
+        <dc:Bounds x="652" y="242" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_1pdp9ok_di" bpmnElement="SequenceFlow_1pdp9ok">
+        <di:waypoint x="670" y="242" />
+        <di:waypoint x="670" y="222" />
+        <di:waypoint x="890" y="222" />
+        <di:waypoint x="890" y="282" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

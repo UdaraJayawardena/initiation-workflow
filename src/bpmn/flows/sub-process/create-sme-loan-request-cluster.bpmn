@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_1dk00xr" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.2.0">
+  <bpmn:process id="create-sme-loan-request-cluster" name="(Sub) Create sme loan request cluster" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1" name="Start">
+      <bpmn:outgoing>Flow_0s4kl9j</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:sequenceFlow id="Flow_0s4kl9j" sourceRef="StartEvent_1" targetRef="ING0102-Activity_1wmtnyp" />
+    <bpmn:sequenceFlow id="Flow_1nylwkb" sourceRef="Activity_1cplp0w" targetRef="Activity_15uvn6m" />
+    <bpmn:sequenceFlow id="Flow_01uwa4m" sourceRef="Activity_0ootoy4" targetRef="ING0102-Activity_0k5bc60" />
+    <bpmn:callActivity id="Activity_1cplp0w" name="Update CRM-system" calledElement="store-data-into-crm">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:inputParameter name="dataSource">data-provider</camunda:inputParameter>
+        </camunda:inputOutput>
+        <camunda:in source="dataSource" target="dataSource" local="true" />
+        <camunda:in source="customerData" target="customerData" />
+        <camunda:in source="personData" target="personData" />
+        <camunda:out source="updateCustomer" target="updateCustomer" />
+        <camunda:out source="updatePerson" target="updatePerson" />
+        <camunda:out source="updateStakeholders" target="updateStakeholders" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0i1o6fw</bpmn:incoming>
+      <bpmn:outgoing>Flow_1nylwkb</bpmn:outgoing>
+    </bpmn:callActivity>
+    <bpmn:endEvent id="Event_14etj37" name="End">
+      <bpmn:incoming>Flow_1r2qopj</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:serviceTask id="Activity_0ootoy4" name="Create SME-loan-Request" camunda:type="external" camunda:topic="update-sme-loan-request">
+      <bpmn:incoming>Flow_0gonizp</bpmn:incoming>
+      <bpmn:outgoing>Flow_01uwa4m</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="Flow_1r2qopj" sourceRef="ING0102-Activity_0k5bc60" targetRef="Event_14etj37" />
+    <bpmn:scriptTask id="ING0102-Activity_0k5bc60" name="API-OUT" scriptFormat="Javascript">
+      <bpmn:incoming>Flow_01uwa4m</bpmn:incoming>
+      <bpmn:outgoing>Flow_1r2qopj</bpmn:outgoing>
+      <bpmn:script>smeLoanRequest = JSON.parse(execution.getVariable("smeLoanRequest"));
+updateCustomer = JSON.parse(execution.getVariable("updateCustomer"));
+
+execution.setVariable('returnCode', '00');
+execution.setVariable('customerId',  updateCustomer.id);
+execution.setVariable('smeLoanRequestId', smeLoanRequest.id);
+execution.setVariable('smeLoanRequestContractId', smeLoanRequest.contractId);</bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:sequenceFlow id="Flow_1d0i2n4" sourceRef="Activity_15uvn6m" targetRef="Activity_1ejs64y" />
+    <bpmn:serviceTask id="Activity_15uvn6m" name="Bind Loan-Purpose-Risk-Parameters" camunda:type="external" camunda:topic="bind-loan-purpose-risk-parameters-by-params">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:inputParameter name="params">
+            <camunda:script scriptFormat="Javascript">smeLoanRequestData = JSON.parse(execution.getVariable("smeLoanRequestData"));
+params = {
+   purposeIndicator: smeLoanRequestData.loanGoal
+};
+
+JSON.stringify(params);</camunda:script>
+          </camunda:inputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1nylwkb</bpmn:incoming>
+      <bpmn:outgoing>Flow_1d0i2n4</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="Flow_0gonizp" sourceRef="Activity_1g0b27u" targetRef="Activity_0ootoy4" />
+    <bpmn:serviceTask id="Activity_1g0b27u" name="Mapping Sme-Loan-Request data" camunda:type="external" camunda:topic="mapping-sme-loan-request">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:inputParameter name="smeLoanRequest">
+            <camunda:script scriptFormat="Javascript">vTigerCrmEntities = JSON.parse(execution.getVariable('vtigerCrmEntities'));
+smeLoanRequestData = JSON.parse(execution.getVariable('smeLoanRequestData'));
+smeLoanRequest = {
+  requestType:  vTigerCrmEntities.active.cf_potentials_loantype,
+  loanType: 'fixed-loan',
+  contractId: vTigerCrmEntities.active.potential_no,
+  contractIdExtension: 0,
+  desiredLoanAmount: smeLoanRequestData.loanAmount,
+  companyExistsIndicator: smeLoanRequestData.companyExists,
+  purposeIndicator: smeLoanRequestData.loanGoal,
+  companyRevenueIndicator: smeLoanRequestData.companyRevenue,
+  desiredLoanUrgencyIndicator: smeLoanRequestData.loanWithin,
+  applicationId: vTigerCrmEntities.active.cf_potentials_applicationid
+};
+
+JSON.stringify(smeLoanRequest);</camunda:script>
+          </camunda:inputParameter>
+          <camunda:outputParameter name="smeLoanRequest">
+            <camunda:script scriptFormat="Javascript">smeLoanRequest = JSON.parse(execution.getVariable('smeLoanRequest'));
+JSON.stringify(smeLoanRequest);</camunda:script>
+          </camunda:outputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1h1ngcf</bpmn:incoming>
+      <bpmn:outgoing>Flow_0gonizp</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="Flow_0i1o6fw" sourceRef="ING0102-Activity_1wmtnyp" targetRef="Activity_1cplp0w" />
+    <bpmn:scriptTask id="ING0102-Activity_1wmtnyp" name="Mapping Customer Data" scriptFormat="Javascript">
+      <bpmn:incoming>Flow_0s4kl9j</bpmn:incoming>
+      <bpmn:outgoing>Flow_0i1o6fw</bpmn:outgoing>
+      <bpmn:script>chamberOfCommerceProfile = JSON.parse(execution.getVariable("chamberOfCommerceProfile"));
+vtigerCrmEntities = JSON.parse(execution.getVariable("vtigerCrmEntities"));
+customerContact = JSON.parse(execution.getVariable("customerContact"));
+
+customerData = {
+    chamberOfCommerceProfile: chamberOfCommerceProfile,
+    vtigerCrmEntities:  vtigerCrmEntities,
+    customerContact: customerContact
+}
+
+execution.setVariable('customerData',  JSON.stringify(customerData));</bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:sequenceFlow id="Flow_1h1ngcf" sourceRef="Activity_1ejs64y" targetRef="Activity_1g0b27u" />
+    <bpmn:serviceTask id="Activity_1ejs64y" name="Bind Standard-Loan-Pricing-Parameters" camunda:type="external" camunda:topic="bind-standard-loan-pp-by-params">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:inputParameter name="params">
+            <camunda:script scriptFormat="Javascript">smeLoanRequestData = JSON.parse(execution.getVariable("smeLoanRequestData"));
+params = {
+   amount: smeLoanRequestData.loanAmount,
+   loanType: 'fixed-loan'
+};
+JSON.stringify(params);</camunda:script>
+          </camunda:inputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1d0i2n4</bpmn:incoming>
+      <bpmn:outgoing>Flow_1h1ngcf</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:boundaryEvent id="Event_1qgw2b8" attachedToRef="Activity_1cplp0w">
+      <bpmn:outgoing>Flow_1yiiyhk</bpmn:outgoing>
+      <bpmn:errorEventDefinition id="ErrorEventDefinition_1h9256n" errorRef="Error_1odi3vy" />
+    </bpmn:boundaryEvent>
+    <bpmn:boundaryEvent id="Event_0mpt113" attachedToRef="Activity_15uvn6m">
+      <bpmn:outgoing>Flow_1x6vx6r</bpmn:outgoing>
+      <bpmn:errorEventDefinition id="ErrorEventDefinition_08rxwv8" errorRef="Error_17fcu18" />
+    </bpmn:boundaryEvent>
+    <bpmn:boundaryEvent id="Event_0vm0aqh" attachedToRef="Activity_1ejs64y">
+      <bpmn:outgoing>Flow_0gzmxhp</bpmn:outgoing>
+      <bpmn:errorEventDefinition id="ErrorEventDefinition_0mze8bs" errorRef="Error_1s2zrut" />
+    </bpmn:boundaryEvent>
+    <bpmn:boundaryEvent id="Event_1j8kwlk" attachedToRef="Activity_1g0b27u">
+      <bpmn:outgoing>Flow_0usojpq</bpmn:outgoing>
+      <bpmn:errorEventDefinition id="ErrorEventDefinition_0odpo9k" errorRef="Error_1eckhf4" />
+    </bpmn:boundaryEvent>
+    <bpmn:boundaryEvent id="Event_0a6gzjc" attachedToRef="Activity_0ootoy4">
+      <bpmn:outgoing>Flow_0o6ixf8</bpmn:outgoing>
+      <bpmn:errorEventDefinition id="ErrorEventDefinition_14oj1yq" errorRef="Error_03lgsts" />
+    </bpmn:boundaryEvent>
+    <bpmn:endEvent id="Event_12992lp">
+      <bpmn:incoming>Flow_1yiiyhk</bpmn:incoming>
+      <bpmn:incoming>Flow_1x6vx6r</bpmn:incoming>
+      <bpmn:incoming>Flow_0gzmxhp</bpmn:incoming>
+      <bpmn:incoming>Flow_0usojpq</bpmn:incoming>
+      <bpmn:incoming>Flow_0o6ixf8</bpmn:incoming>
+      <bpmn:errorEventDefinition id="ErrorEventDefinition_1abtrxw" errorRef="Error_1c60twz" />
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_1yiiyhk" sourceRef="Event_1qgw2b8" targetRef="Event_12992lp" />
+    <bpmn:sequenceFlow id="Flow_1x6vx6r" sourceRef="Event_0mpt113" targetRef="Event_12992lp" />
+    <bpmn:sequenceFlow id="Flow_0gzmxhp" sourceRef="Event_0vm0aqh" targetRef="Event_12992lp" />
+    <bpmn:sequenceFlow id="Flow_0usojpq" sourceRef="Event_1j8kwlk" targetRef="Event_12992lp" />
+    <bpmn:sequenceFlow id="Flow_0o6ixf8" sourceRef="Event_0a6gzjc" targetRef="Event_12992lp" />
+  </bpmn:process>
+  <bpmn:signal id="Signal_0s1mgp9" name="catch_cluster" />
+  <bpmn:message id="Message_1xzzddd" name="Message_2d5sbbj" />
+  <bpmn:error id="Error_1odi3vy" name="Store data to crm error" errorCode="ERROR_STORE_DATA_TO_CRM" camunda:errorMessage="Unexpected Error Occurred while storing crm data" />
+  <bpmn:error id="Error_17fcu18" name="Bind purpose risk parameter error" errorCode="ERROR_BIND_PURPOSE_RISK_PARAMETER" camunda:errorMessage="Unexpected Error Occurred while binding loan-purpose-risk-parameters" />
+  <bpmn:error id="Error_1s2zrut" name="Bind standard price parameter error" errorCode="ERROR_BIND_STANDARD_PRICE_PARAMETER" camunda:errorMessage="Unexpected Error Occurred while binding standard-loan-pricing-parameters" />
+  <bpmn:error id="Error_1eckhf4" name="Map sme loan request error" errorCode="ERROR_MAP_SME_LOAN_REQUEST" camunda:errorMessage="Unexpected Error Occurred while mapping sme-loan-request" />
+  <bpmn:error id="Error_03lgsts" name="Update sme-loan-request error" errorCode="ERROR_UPDATE_SME_LOAN_REQUEST" camunda:errorMessage="Unexpected Error Occurred while updating sme-loan-request" />
+  <bpmn:error id="Error_1c60twz" name="Create sme-loan-request cluster error" errorCode="ERROR_CREATE_SME_LOAN_REQUEST_CLUSTER" camunda:errorMessage="unexpected Error Occured while creating sme loan request cluster" />
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="create-sme-loan-request-cluster">
+      <bpmndi:BPMNEdge id="Flow_0o6ixf8_di" bpmnElement="Flow_0o6ixf8">
+        <di:waypoint x="940" y="335" />
+        <di:waypoint x="940" y="420" />
+        <di:waypoint x="1072" y="420" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0usojpq_di" bpmnElement="Flow_0usojpq">
+        <di:waypoint x="780" y="335" />
+        <di:waypoint x="780" y="420" />
+        <di:waypoint x="1072" y="420" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0gzmxhp_di" bpmnElement="Flow_0gzmxhp">
+        <di:waypoint x="640" y="335" />
+        <di:waypoint x="640" y="420" />
+        <di:waypoint x="1072" y="420" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1x6vx6r_di" bpmnElement="Flow_1x6vx6r">
+        <di:waypoint x="480" y="335" />
+        <di:waypoint x="480" y="420" />
+        <di:waypoint x="1072" y="420" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1yiiyhk_di" bpmnElement="Flow_1yiiyhk">
+        <di:waypoint x="330" y="335" />
+        <di:waypoint x="330" y="420" />
+        <di:waypoint x="1072" y="420" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1h1ngcf_di" bpmnElement="Flow_1h1ngcf">
+        <di:waypoint x="690" y="277" />
+        <di:waypoint x="730" y="277" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0i1o6fw_di" bpmnElement="Flow_0i1o6fw">
+        <di:waypoint x="330" y="160" />
+        <di:waypoint x="330" y="237" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0gonizp_di" bpmnElement="Flow_0gonizp">
+        <di:waypoint x="830" y="277" />
+        <di:waypoint x="890" y="277" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1d0i2n4_di" bpmnElement="Flow_1d0i2n4">
+        <di:waypoint x="530" y="277" />
+        <di:waypoint x="590" y="277" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1r2qopj_di" bpmnElement="Flow_1r2qopj">
+        <di:waypoint x="990" y="120" />
+        <di:waypoint x="1011" y="120" />
+        <di:waypoint x="1011" y="277" />
+        <di:waypoint x="1072" y="277" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_01uwa4m_di" bpmnElement="Flow_01uwa4m">
+        <di:waypoint x="940" y="237" />
+        <di:waypoint x="940" y="160" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1nylwkb_di" bpmnElement="Flow_1nylwkb">
+        <di:waypoint x="380" y="277" />
+        <di:waypoint x="430" y="277" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0s4kl9j_di" bpmnElement="Flow_0s4kl9j">
+        <di:waypoint x="188" y="277" />
+        <di:waypoint x="239" y="277" />
+        <di:waypoint x="239" y="120" />
+        <di:waypoint x="280" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="152" y="259" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="158" y="302" width="24" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1r1o8el_di" bpmnElement="Activity_1cplp0w">
+        <dc:Bounds x="280" y="237" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0semhxi_di" bpmnElement="Event_14etj37">
+        <dc:Bounds x="1072" y="259" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1080" y="302" width="20" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1x5rqvb_di" bpmnElement="Activity_0ootoy4">
+        <dc:Bounds x="890" y="237" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_19qo2wy_di" bpmnElement="ING0102-Activity_0k5bc60">
+        <dc:Bounds x="890" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1oqus3y_di" bpmnElement="Activity_15uvn6m">
+        <dc:Bounds x="430" y="237" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0hsbfev_di" bpmnElement="Activity_1g0b27u">
+        <dc:Bounds x="730" y="237" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_04m0fe1_di" bpmnElement="ING0102-Activity_1wmtnyp">
+        <dc:Bounds x="280" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0klc0jf_di" bpmnElement="Activity_1ejs64y">
+        <dc:Bounds x="590" y="237" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1qamcaj_di" bpmnElement="Event_12992lp">
+        <dc:Bounds x="1072" y="402" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0oro364_di" bpmnElement="Event_0a6gzjc">
+        <dc:Bounds x="922" y="299" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1e195dy_di" bpmnElement="Event_1j8kwlk">
+        <dc:Bounds x="762" y="299" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1dcmec5_di" bpmnElement="Event_0vm0aqh">
+        <dc:Bounds x="622" y="299" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_09h7qv6_di" bpmnElement="Event_0mpt113">
+        <dc:Bounds x="462" y="299" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_02t2mx8_di" bpmnElement="Event_1qgw2b8">
+        <dc:Bounds x="312" y="299" width="36" height="36" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

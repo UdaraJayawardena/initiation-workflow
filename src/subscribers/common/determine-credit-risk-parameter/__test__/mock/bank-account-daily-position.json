@@ -1,0 +1,3662 @@
+[
+  {
+    "id": 1202,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-03-01",
+    "balance_amount": "252.06",
+    "outgoing_payment_amount": "1229.27",
+    "incoming_payment_amount": "1470.85",
+    "inserted_date": "2021-07-26T07:31:47.000Z",
+    "updated_date": "2021-07-26T07:31:47.000Z"
+  },
+  {
+    "id": 1203,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-03-02",
+    "balance_amount": "252.06",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:47.000Z",
+    "updated_date": "2021-07-26T07:31:47.000Z"
+  },
+  {
+    "id": 1204,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-03-03",
+    "balance_amount": "252.06",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:47.000Z",
+    "updated_date": "2021-07-26T07:31:47.000Z"
+  },
+  {
+    "id": 1205,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-03-04",
+    "balance_amount": "252.06",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:47.000Z",
+    "updated_date": "2021-07-26T07:31:47.000Z"
+  },
+  {
+    "id": 1206,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-03-05",
+    "balance_amount": "3400.85",
+    "outgoing_payment_amount": "1600.00",
+    "incoming_payment_amount": "4748.79",
+    "inserted_date": "2021-07-26T07:31:47.000Z",
+    "updated_date": "2021-07-26T07:31:47.000Z"
+  },
+  {
+    "id": 1207,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-03-06",
+    "balance_amount": "2666.61",
+    "outgoing_payment_amount": "734.24",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:47.000Z",
+    "updated_date": "2021-07-26T07:31:47.000Z"
+  },
+  {
+    "id": 1208,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-03-07",
+    "balance_amount": "2791.57",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "124.96",
+    "inserted_date": "2021-07-26T07:31:47.000Z",
+    "updated_date": "2021-07-26T07:31:47.000Z"
+  },
+  {
+    "id": 1209,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-03-08",
+    "balance_amount": "2275.18",
+    "outgoing_payment_amount": "2253.56",
+    "incoming_payment_amount": "1737.17",
+    "inserted_date": "2021-07-26T07:31:47.000Z",
+    "updated_date": "2021-07-26T07:31:47.000Z"
+  },
+  {
+    "id": 1210,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-03-09",
+    "balance_amount": "2275.18",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:47.000Z",
+    "updated_date": "2021-07-26T07:31:47.000Z"
+  },
+  {
+    "id": 1211,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-03-10",
+    "balance_amount": "2275.18",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:47.000Z",
+    "updated_date": "2021-07-26T07:31:47.000Z"
+  },
+  {
+    "id": 1212,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-03-11",
+    "balance_amount": "2275.18",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:47.000Z",
+    "updated_date": "2021-07-26T07:31:47.000Z"
+  },
+  {
+    "id": 1213,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-03-12",
+    "balance_amount": "1239.80",
+    "outgoing_payment_amount": "3945.45",
+    "incoming_payment_amount": "2910.07",
+    "inserted_date": "2021-07-26T07:31:47.000Z",
+    "updated_date": "2021-07-26T07:31:47.000Z"
+  },
+  {
+    "id": 1214,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-03-13",
+    "balance_amount": "1239.80",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:47.000Z",
+    "updated_date": "2021-07-26T07:31:47.000Z"
+  },
+  {
+    "id": 1215,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-03-14",
+    "balance_amount": "1239.80",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:47.000Z",
+    "updated_date": "2021-07-26T07:31:47.000Z"
+  },
+  {
+    "id": 1216,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-03-15",
+    "balance_amount": "1280.73",
+    "outgoing_payment_amount": "900.00",
+    "incoming_payment_amount": "940.93",
+    "inserted_date": "2021-07-26T07:31:47.000Z",
+    "updated_date": "2021-07-26T07:31:47.000Z"
+  },
+  {
+    "id": 1217,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-03-16",
+    "balance_amount": "1409.30",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "128.57",
+    "inserted_date": "2021-07-26T07:31:47.000Z",
+    "updated_date": "2021-07-26T07:31:47.000Z"
+  },
+  {
+    "id": 1218,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-03-17",
+    "balance_amount": "1409.30",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:47.000Z",
+    "updated_date": "2021-07-26T07:31:47.000Z"
+  },
+  {
+    "id": 1219,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-03-18",
+    "balance_amount": "1409.30",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:47.000Z",
+    "updated_date": "2021-07-26T07:31:47.000Z"
+  },
+  {
+    "id": 1220,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-03-19",
+    "balance_amount": "4744.53",
+    "outgoing_payment_amount": "428.95",
+    "incoming_payment_amount": "3764.18",
+    "inserted_date": "2021-07-26T07:31:47.000Z",
+    "updated_date": "2021-07-26T07:31:47.000Z"
+  },
+  {
+    "id": 1221,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-03-20",
+    "balance_amount": "4210.58",
+    "outgoing_payment_amount": "533.95",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:47.000Z",
+    "updated_date": "2021-07-26T07:31:47.000Z"
+  },
+  {
+    "id": 1222,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-03-21",
+    "balance_amount": "5184.73",
+    "outgoing_payment_amount": "1600.00",
+    "incoming_payment_amount": "2574.15",
+    "inserted_date": "2021-07-26T07:31:47.000Z",
+    "updated_date": "2021-07-26T07:31:47.000Z"
+  },
+  {
+    "id": 1223,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-03-22",
+    "balance_amount": "7156.14",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "1971.41",
+    "inserted_date": "2021-07-26T07:31:47.000Z",
+    "updated_date": "2021-07-26T07:31:47.000Z"
+  },
+  {
+    "id": 1224,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-03-23",
+    "balance_amount": "6504.21",
+    "outgoing_payment_amount": "651.93",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:47.000Z",
+    "updated_date": "2021-07-26T07:31:47.000Z"
+  },
+  {
+    "id": 1225,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-03-24",
+    "balance_amount": "6504.21",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:47.000Z",
+    "updated_date": "2021-07-26T07:31:47.000Z"
+  },
+  {
+    "id": 1226,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-03-25",
+    "balance_amount": "6504.21",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:47.000Z",
+    "updated_date": "2021-07-26T07:31:47.000Z"
+  },
+  {
+    "id": 1227,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-03-26",
+    "balance_amount": "7915.55",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "1411.34",
+    "inserted_date": "2021-07-26T07:31:47.000Z",
+    "updated_date": "2021-07-26T07:31:47.000Z"
+  },
+  {
+    "id": 1228,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-03-27",
+    "balance_amount": "7915.55",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:47.000Z",
+    "updated_date": "2021-07-26T07:31:47.000Z"
+  },
+  {
+    "id": 1229,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-03-28",
+    "balance_amount": "8083.52",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "167.97",
+    "inserted_date": "2021-07-26T07:31:47.000Z",
+    "updated_date": "2021-07-26T07:31:47.000Z"
+  },
+  {
+    "id": 1230,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-03-29",
+    "balance_amount": "9048.34",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "964.82",
+    "inserted_date": "2021-07-26T07:31:47.000Z",
+    "updated_date": "2021-07-26T07:31:47.000Z"
+  },
+  {
+    "id": 1231,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-03-30",
+    "balance_amount": "9048.34",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:47.000Z",
+    "updated_date": "2021-07-26T07:31:47.000Z"
+  },
+  {
+    "id": 1232,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-03-31",
+    "balance_amount": "9048.34",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:47.000Z",
+    "updated_date": "2021-07-26T07:31:47.000Z"
+  },
+  {
+    "id": 1233,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-04-01",
+    "balance_amount": "9048.34",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:47.000Z",
+    "updated_date": "2021-07-26T07:31:47.000Z"
+  },
+  {
+    "id": 1234,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-04-02",
+    "balance_amount": "9048.34",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:47.000Z",
+    "updated_date": "2021-07-26T07:31:47.000Z"
+  },
+  {
+    "id": 1235,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-04-03",
+    "balance_amount": "6116.09",
+    "outgoing_payment_amount": "16542.40",
+    "incoming_payment_amount": "13610.15",
+    "inserted_date": "2021-07-26T07:31:47.000Z",
+    "updated_date": "2021-07-26T07:31:47.000Z"
+  },
+  {
+    "id": 1236,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-04-04",
+    "balance_amount": "2301.31",
+    "outgoing_payment_amount": "3968.45",
+    "incoming_payment_amount": "153.67",
+    "inserted_date": "2021-07-26T07:31:47.000Z",
+    "updated_date": "2021-07-26T07:31:47.000Z"
+  },
+  {
+    "id": 1237,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-04-05",
+    "balance_amount": "2181.93",
+    "outgoing_payment_amount": "5209.79",
+    "incoming_payment_amount": "5090.41",
+    "inserted_date": "2021-07-26T07:31:47.000Z",
+    "updated_date": "2021-07-26T07:31:47.000Z"
+  },
+  {
+    "id": 1238,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-04-06",
+    "balance_amount": "2181.93",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:47.000Z",
+    "updated_date": "2021-07-26T07:31:47.000Z"
+  },
+  {
+    "id": 1239,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-04-07",
+    "balance_amount": "2181.93",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:47.000Z",
+    "updated_date": "2021-07-26T07:31:47.000Z"
+  },
+  {
+    "id": 1240,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-04-08",
+    "balance_amount": "2181.93",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:47.000Z",
+    "updated_date": "2021-07-26T07:31:47.000Z"
+  },
+  {
+    "id": 1241,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-04-09",
+    "balance_amount": "5079.23",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "2897.30",
+    "inserted_date": "2021-07-26T07:31:47.000Z",
+    "updated_date": "2021-07-26T07:31:47.000Z"
+  },
+  {
+    "id": 1242,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-04-10",
+    "balance_amount": "5121.29",
+    "outgoing_payment_amount": "175.00",
+    "incoming_payment_amount": "217.06",
+    "inserted_date": "2021-07-26T07:31:47.000Z",
+    "updated_date": "2021-07-26T07:31:47.000Z"
+  },
+  {
+    "id": 1243,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-04-11",
+    "balance_amount": "4974.77",
+    "outgoing_payment_amount": "558.00",
+    "incoming_payment_amount": "411.48",
+    "inserted_date": "2021-07-26T07:31:47.000Z",
+    "updated_date": "2021-07-26T07:31:47.000Z"
+  },
+  {
+    "id": 1244,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-04-12",
+    "balance_amount": "5811.85",
+    "outgoing_payment_amount": "266.00",
+    "incoming_payment_amount": "1103.08",
+    "inserted_date": "2021-07-26T07:31:47.000Z",
+    "updated_date": "2021-07-26T07:31:47.000Z"
+  },
+  {
+    "id": 1245,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-04-13",
+    "balance_amount": "4961.85",
+    "outgoing_payment_amount": "850.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:47.000Z",
+    "updated_date": "2021-07-26T07:31:47.000Z"
+  },
+  {
+    "id": 1246,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-04-14",
+    "balance_amount": "4961.85",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:47.000Z",
+    "updated_date": "2021-07-26T07:31:47.000Z"
+  },
+  {
+    "id": 1247,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-04-15",
+    "balance_amount": "4961.85",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:47.000Z",
+    "updated_date": "2021-07-26T07:31:47.000Z"
+  },
+  {
+    "id": 1248,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-04-16",
+    "balance_amount": "7431.85",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "2470.00",
+    "inserted_date": "2021-07-26T07:31:47.000Z",
+    "updated_date": "2021-07-26T07:31:47.000Z"
+  },
+  {
+    "id": 1249,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-04-17",
+    "balance_amount": "8475.02",
+    "outgoing_payment_amount": "46.90",
+    "incoming_payment_amount": "1090.07",
+    "inserted_date": "2021-07-26T07:31:47.000Z",
+    "updated_date": "2021-07-26T07:31:47.000Z"
+  },
+  {
+    "id": 1250,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-04-18",
+    "balance_amount": "8603.91",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "128.89",
+    "inserted_date": "2021-07-26T07:31:47.000Z",
+    "updated_date": "2021-07-26T07:31:47.000Z"
+  },
+  {
+    "id": 1251,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-04-19",
+    "balance_amount": "9236.36",
+    "outgoing_payment_amount": "3450.93",
+    "incoming_payment_amount": "4083.38",
+    "inserted_date": "2021-07-26T07:31:47.000Z",
+    "updated_date": "2021-07-26T07:31:47.000Z"
+  },
+  {
+    "id": 1252,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-04-20",
+    "balance_amount": "8403.36",
+    "outgoing_payment_amount": "833.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:47.000Z",
+    "updated_date": "2021-07-26T07:31:47.000Z"
+  },
+  {
+    "id": 1253,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-04-21",
+    "balance_amount": "8403.36",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:47.000Z",
+    "updated_date": "2021-07-26T07:31:47.000Z"
+  },
+  {
+    "id": 1254,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-04-22",
+    "balance_amount": "8403.36",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:47.000Z",
+    "updated_date": "2021-07-26T07:31:47.000Z"
+  },
+  {
+    "id": 1255,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-04-23",
+    "balance_amount": "8403.36",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:47.000Z",
+    "updated_date": "2021-07-26T07:31:47.000Z"
+  },
+  {
+    "id": 1256,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-04-24",
+    "balance_amount": "7333.86",
+    "outgoing_payment_amount": "3483.00",
+    "incoming_payment_amount": "2413.50",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1257,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-04-25",
+    "balance_amount": "7555.79",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "221.93",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1258,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-04-26",
+    "balance_amount": "2.60",
+    "outgoing_payment_amount": "8810.17",
+    "incoming_payment_amount": "1256.98",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1259,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-04-27",
+    "balance_amount": "2.60",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1260,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-04-28",
+    "balance_amount": "2.60",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1261,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-04-29",
+    "balance_amount": "2.60",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1262,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-04-30",
+    "balance_amount": "260.39",
+    "outgoing_payment_amount": "1865.92",
+    "incoming_payment_amount": "2123.71",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1263,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-05-01",
+    "balance_amount": "260.39",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1264,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-05-02",
+    "balance_amount": "5.37",
+    "outgoing_payment_amount": "6002.89",
+    "incoming_payment_amount": "5747.87",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1265,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-05-03",
+    "balance_amount": "345.56",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "340.19",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1266,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-05-04",
+    "balance_amount": "276.69",
+    "outgoing_payment_amount": "119.79",
+    "incoming_payment_amount": "50.92",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1267,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-05-05",
+    "balance_amount": "276.69",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1268,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-05-06",
+    "balance_amount": "276.69",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1269,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-05-07",
+    "balance_amount": "2376.68",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "2099.99",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1270,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-05-08",
+    "balance_amount": "5621.32",
+    "outgoing_payment_amount": "250.00",
+    "incoming_payment_amount": "3494.64",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1271,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-05-09",
+    "balance_amount": "3474.98",
+    "outgoing_payment_amount": "2278.00",
+    "incoming_payment_amount": "131.66",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1272,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-05-10",
+    "balance_amount": "3042.52",
+    "outgoing_payment_amount": "479.03",
+    "incoming_payment_amount": "46.57",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1273,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-05-11",
+    "balance_amount": "5291.56",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "2249.04",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1274,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-05-12",
+    "balance_amount": "5291.56",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1275,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-05-13",
+    "balance_amount": "5291.56",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1276,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-05-14",
+    "balance_amount": "4491.03",
+    "outgoing_payment_amount": "4806.20",
+    "incoming_payment_amount": "4005.67",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1277,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-05-15",
+    "balance_amount": "5412.71",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "921.68",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1278,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-05-16",
+    "balance_amount": "5322.42",
+    "outgoing_payment_amount": "90.29",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1279,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-05-17",
+    "balance_amount": "5662.95",
+    "outgoing_payment_amount": "66.99",
+    "incoming_payment_amount": "407.52",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1280,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-05-18",
+    "balance_amount": "5662.95",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1281,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-05-19",
+    "balance_amount": "5662.95",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1282,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-05-20",
+    "balance_amount": "5662.95",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1283,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-05-21",
+    "balance_amount": "5261.92",
+    "outgoing_payment_amount": "450.00",
+    "incoming_payment_amount": "48.97",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1284,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-05-22",
+    "balance_amount": "7317.92",
+    "outgoing_payment_amount": "190.67",
+    "incoming_payment_amount": "2246.67",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1285,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-05-23",
+    "balance_amount": "7735.17",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "417.25",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1286,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-05-24",
+    "balance_amount": "8186.73",
+    "outgoing_payment_amount": "1000.00",
+    "incoming_payment_amount": "1451.56",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1287,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-05-25",
+    "balance_amount": "8186.73",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1288,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-05-26",
+    "balance_amount": "8186.73",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1289,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-05-27",
+    "balance_amount": "8186.73",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1290,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-05-28",
+    "balance_amount": "4753.03",
+    "outgoing_payment_amount": "5003.05",
+    "incoming_payment_amount": "1569.35",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1291,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-05-29",
+    "balance_amount": "5028.44",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "275.41",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1292,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-05-30",
+    "balance_amount": "735.40",
+    "outgoing_payment_amount": "5000.00",
+    "incoming_payment_amount": "706.96",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1293,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-05-31",
+    "balance_amount": "1087.01",
+    "outgoing_payment_amount": "2000.00",
+    "incoming_payment_amount": "2351.61",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1294,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-06-01",
+    "balance_amount": "1087.01",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1295,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-06-02",
+    "balance_amount": "1087.01",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1296,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-06-03",
+    "balance_amount": "1087.01",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1297,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-06-04",
+    "balance_amount": "930.29",
+    "outgoing_payment_amount": "10729.79",
+    "incoming_payment_amount": "10573.07",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1298,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-06-05",
+    "balance_amount": "1320.48",
+    "outgoing_payment_amount": "1200.00",
+    "incoming_payment_amount": "1590.19",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1299,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-06-06",
+    "balance_amount": "200.69",
+    "outgoing_payment_amount": "1119.79",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1300,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-06-07",
+    "balance_amount": "1254.96",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "1054.27",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1301,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-06-08",
+    "balance_amount": "2954.42",
+    "outgoing_payment_amount": "1000.00",
+    "incoming_payment_amount": "2699.46",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1302,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-06-09",
+    "balance_amount": "2954.42",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1303,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-06-10",
+    "balance_amount": "2954.42",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1304,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-06-11",
+    "balance_amount": "4840.06",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "1885.64",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1305,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-06-12",
+    "balance_amount": "4956.13",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "116.07",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1306,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-06-13",
+    "balance_amount": "5008.06",
+    "outgoing_payment_amount": "170.00",
+    "incoming_payment_amount": "221.93",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1307,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-06-14",
+    "balance_amount": "5730.90",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "722.84",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1308,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-06-15",
+    "balance_amount": "5730.90",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1309,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-06-16",
+    "balance_amount": "5730.90",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1310,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-06-17",
+    "balance_amount": "5730.90",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1311,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-06-18",
+    "balance_amount": "6571.23",
+    "outgoing_payment_amount": "1037.50",
+    "incoming_payment_amount": "1877.83",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1312,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-06-19",
+    "balance_amount": "6711.24",
+    "outgoing_payment_amount": "183.00",
+    "incoming_payment_amount": "323.01",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1313,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-06-20",
+    "balance_amount": "6211.24",
+    "outgoing_payment_amount": "500.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1314,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-06-21",
+    "balance_amount": "8371.38",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "2160.14",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1315,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-06-22",
+    "balance_amount": "6211.38",
+    "outgoing_payment_amount": "2160.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1316,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-06-23",
+    "balance_amount": "6211.38",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1317,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-06-24",
+    "balance_amount": "6211.38",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1318,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-06-25",
+    "balance_amount": "7852.53",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "1641.15",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1319,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-06-26",
+    "balance_amount": "8176.96",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "324.43",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1320,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-06-27",
+    "balance_amount": "8348.71",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "171.75",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1321,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-06-28",
+    "balance_amount": "9679.46",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "1330.75",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1322,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-06-29",
+    "balance_amount": "8183.81",
+    "outgoing_payment_amount": "1787.40",
+    "incoming_payment_amount": "291.75",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1323,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-06-30",
+    "balance_amount": "8183.81",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1324,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-07-01",
+    "balance_amount": "8183.81",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1325,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-07-02",
+    "balance_amount": "5377.53",
+    "outgoing_payment_amount": "10318.95",
+    "incoming_payment_amount": "7512.67",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1326,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-07-03",
+    "balance_amount": "1433.90",
+    "outgoing_payment_amount": "4200.66",
+    "incoming_payment_amount": "257.03",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1327,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-07-04",
+    "balance_amount": "1346.81",
+    "outgoing_payment_amount": "119.79",
+    "incoming_payment_amount": "32.70",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1328,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-07-05",
+    "balance_amount": "1728.19",
+    "outgoing_payment_amount": "460.00",
+    "incoming_payment_amount": "841.38",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1329,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-07-06",
+    "balance_amount": "1223.59",
+    "outgoing_payment_amount": "1700.00",
+    "incoming_payment_amount": "1195.40",
+    "inserted_date": "2021-07-26T07:31:48.000Z",
+    "updated_date": "2021-07-26T07:31:48.000Z"
+  },
+  {
+    "id": 1330,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-07-07",
+    "balance_amount": "1223.59",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1331,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-07-08",
+    "balance_amount": "1223.59",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1332,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-07-09",
+    "balance_amount": "74.13",
+    "outgoing_payment_amount": "2900.00",
+    "incoming_payment_amount": "1750.54",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1333,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-07-10",
+    "balance_amount": "13.63",
+    "outgoing_payment_amount": "310.50",
+    "incoming_payment_amount": "250.00",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1334,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-07-11",
+    "balance_amount": "13.63",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1335,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-07-12",
+    "balance_amount": "1170.01",
+    "outgoing_payment_amount": "1600.00",
+    "incoming_payment_amount": "2756.38",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1336,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-07-13",
+    "balance_amount": "3048.16",
+    "outgoing_payment_amount": "120.00",
+    "incoming_payment_amount": "1998.15",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1337,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-07-14",
+    "balance_amount": "3048.16",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1338,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-07-15",
+    "balance_amount": "3048.16",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1339,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-07-16",
+    "balance_amount": "2832.16",
+    "outgoing_payment_amount": "216.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1340,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-07-17",
+    "balance_amount": "7426.64",
+    "outgoing_payment_amount": "349.00",
+    "incoming_payment_amount": "4943.48",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1341,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-07-18",
+    "balance_amount": "7850.73",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "424.09",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1342,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-07-19",
+    "balance_amount": "8770.18",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "919.45",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1343,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-07-20",
+    "balance_amount": "6621.72",
+    "outgoing_payment_amount": "2500.00",
+    "incoming_payment_amount": "351.54",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1344,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-07-21",
+    "balance_amount": "6621.72",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1345,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-07-22",
+    "balance_amount": "6621.72",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1346,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-07-23",
+    "balance_amount": "9150.64",
+    "outgoing_payment_amount": "3000.00",
+    "incoming_payment_amount": "5528.92",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1347,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-07-24",
+    "balance_amount": "9319.74",
+    "outgoing_payment_amount": "100.00",
+    "incoming_payment_amount": "269.10",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1348,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-07-25",
+    "balance_amount": "8826.27",
+    "outgoing_payment_amount": "600.00",
+    "incoming_payment_amount": "106.53",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1349,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-07-26",
+    "balance_amount": "9621.92",
+    "outgoing_payment_amount": "46.25",
+    "incoming_payment_amount": "841.90",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1350,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-07-27",
+    "balance_amount": "9744.21",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "122.29",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1351,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-07-28",
+    "balance_amount": "9744.21",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1352,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-07-29",
+    "balance_amount": "9744.21",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1353,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-07-30",
+    "balance_amount": "8922.41",
+    "outgoing_payment_amount": "4102.40",
+    "incoming_payment_amount": "3280.60",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1354,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-07-31",
+    "balance_amount": "3351.40",
+    "outgoing_payment_amount": "6100.00",
+    "incoming_payment_amount": "528.99",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1355,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-08-01",
+    "balance_amount": "4443.49",
+    "outgoing_payment_amount": "7.50",
+    "incoming_payment_amount": "1099.59",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1356,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-08-02",
+    "balance_amount": "1005.98",
+    "outgoing_payment_amount": "5990.00",
+    "incoming_payment_amount": "2552.49",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1357,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-08-03",
+    "balance_amount": "1106.13",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "100.15",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1358,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-08-04",
+    "balance_amount": "1106.13",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1359,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-08-05",
+    "balance_amount": "1106.13",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1360,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-08-06",
+    "balance_amount": "2890.95",
+    "outgoing_payment_amount": "3027.29",
+    "incoming_payment_amount": "4812.11",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1361,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-08-07",
+    "balance_amount": "3387.58",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "496.63",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1362,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-08-08",
+    "balance_amount": "3883.95",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "496.37",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1363,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-08-09",
+    "balance_amount": "3406.01",
+    "outgoing_payment_amount": "1000.00",
+    "incoming_payment_amount": "522.06",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1364,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-08-10",
+    "balance_amount": "3406.01",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1365,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-08-11",
+    "balance_amount": "3406.01",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1366,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-08-12",
+    "balance_amount": "3406.01",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1367,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-08-13",
+    "balance_amount": "5000.45",
+    "outgoing_payment_amount": "4287.00",
+    "incoming_payment_amount": "5881.44",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1368,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-08-14",
+    "balance_amount": "5558.17",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "557.72",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1369,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-08-15",
+    "balance_amount": "5558.17",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1370,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-08-16",
+    "balance_amount": "7821.53",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "2263.36",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1371,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-08-17",
+    "balance_amount": "8290.28",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "468.75",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1372,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-08-18",
+    "balance_amount": "8290.28",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1373,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-08-19",
+    "balance_amount": "8290.28",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1374,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-08-20",
+    "balance_amount": "9302.20",
+    "outgoing_payment_amount": "8370.00",
+    "incoming_payment_amount": "9381.92",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1375,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-08-21",
+    "balance_amount": "9302.20",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1376,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-08-22",
+    "balance_amount": "9453.11",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "150.91",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1377,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-08-23",
+    "balance_amount": "10211.42",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "758.31",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1378,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-08-24",
+    "balance_amount": "9211.42",
+    "outgoing_payment_amount": "1000.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1379,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-08-25",
+    "balance_amount": "9211.42",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1380,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-08-26",
+    "balance_amount": "9211.42",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1381,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-08-27",
+    "balance_amount": "11060.13",
+    "outgoing_payment_amount": "5561.35",
+    "incoming_payment_amount": "7410.06",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1382,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-08-28",
+    "balance_amount": "9738.61",
+    "outgoing_payment_amount": "1321.52",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1383,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-08-29",
+    "balance_amount": "9738.61",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1384,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-08-30",
+    "balance_amount": "2947.59",
+    "outgoing_payment_amount": "11000.00",
+    "incoming_payment_amount": "4208.98",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1385,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-08-31",
+    "balance_amount": "1197.13",
+    "outgoing_payment_amount": "1800.00",
+    "incoming_payment_amount": "49.54",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1386,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-09-01",
+    "balance_amount": "1197.13",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1387,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-09-02",
+    "balance_amount": "1197.13",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1388,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-09-03",
+    "balance_amount": "4655.51",
+    "outgoing_payment_amount": "26483.97",
+    "incoming_payment_amount": "29942.35",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1389,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-09-04",
+    "balance_amount": "4070.46",
+    "outgoing_payment_amount": "665.00",
+    "incoming_payment_amount": "79.95",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1390,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-09-05",
+    "balance_amount": "4132.41",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "61.95",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1391,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-09-06",
+    "balance_amount": "3918.77",
+    "outgoing_payment_amount": "1000.00",
+    "incoming_payment_amount": "786.36",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1392,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-09-07",
+    "balance_amount": "4287.74",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "368.97",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1393,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-09-08",
+    "balance_amount": "4287.74",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1394,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-09-09",
+    "balance_amount": "4287.74",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1395,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-09-10",
+    "balance_amount": "7958.77",
+    "outgoing_payment_amount": "6000.01",
+    "incoming_payment_amount": "9671.04",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1396,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-09-11",
+    "balance_amount": "7896.44",
+    "outgoing_payment_amount": "71.33",
+    "incoming_payment_amount": "9.00",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1397,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-09-12",
+    "balance_amount": "8579.55",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "683.11",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1398,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-09-13",
+    "balance_amount": "10916.54",
+    "outgoing_payment_amount": "500.00",
+    "incoming_payment_amount": "2836.99",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1399,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-09-14",
+    "balance_amount": "8288.63",
+    "outgoing_payment_amount": "2627.91",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1400,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-09-15",
+    "balance_amount": "8288.63",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1401,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-09-16",
+    "balance_amount": "8288.63",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1402,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-09-17",
+    "balance_amount": "10611.88",
+    "outgoing_payment_amount": "3231.17",
+    "incoming_payment_amount": "5554.42",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1403,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-09-18",
+    "balance_amount": "9673.88",
+    "outgoing_payment_amount": "938.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1404,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-09-19",
+    "balance_amount": "10144.49",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "470.61",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1405,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-09-20",
+    "balance_amount": "11855.46",
+    "outgoing_payment_amount": "500.00",
+    "incoming_payment_amount": "2210.97",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1406,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-09-21",
+    "balance_amount": "11855.46",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1407,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-09-22",
+    "balance_amount": "11855.46",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1408,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-09-23",
+    "balance_amount": "11855.46",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:49.000Z",
+    "updated_date": "2021-07-26T07:31:49.000Z"
+  },
+  {
+    "id": 1409,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-09-24",
+    "balance_amount": "10997.43",
+    "outgoing_payment_amount": "13129.00",
+    "incoming_payment_amount": "12270.97",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1410,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-09-25",
+    "balance_amount": "11240.32",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "242.89",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1411,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-09-26",
+    "balance_amount": "0.53",
+    "outgoing_payment_amount": "16473.00",
+    "incoming_payment_amount": "5233.21",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1412,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-09-27",
+    "balance_amount": "1143.12",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "1142.59",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1413,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-09-28",
+    "balance_amount": "3.12",
+    "outgoing_payment_amount": "1140.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1414,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-09-29",
+    "balance_amount": "3.12",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1415,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-09-30",
+    "balance_amount": "3.12",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1416,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-10-01",
+    "balance_amount": "4322.58",
+    "outgoing_payment_amount": "6155.71",
+    "incoming_payment_amount": "10475.17",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1417,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-10-02",
+    "balance_amount": "2.70",
+    "outgoing_payment_amount": "20162.00",
+    "incoming_payment_amount": "15842.12",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1418,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-10-03",
+    "balance_amount": "243.82",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "241.12",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1419,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-10-04",
+    "balance_amount": "1052.34",
+    "outgoing_payment_amount": "2925.84",
+    "incoming_payment_amount": "3734.36",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1420,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-10-05",
+    "balance_amount": "1052.34",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1421,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-10-06",
+    "balance_amount": "1052.34",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1422,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-10-07",
+    "balance_amount": "1052.34",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1423,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-10-08",
+    "balance_amount": "11507.95",
+    "outgoing_payment_amount": "1000.00",
+    "incoming_payment_amount": "11455.61",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1424,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-10-09",
+    "balance_amount": "4007.95",
+    "outgoing_payment_amount": "7500.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1425,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-10-10",
+    "balance_amount": "4117.75",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "109.80",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1426,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-10-11",
+    "balance_amount": "6385.13",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "2267.38",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1427,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-10-12",
+    "balance_amount": "4385.13",
+    "outgoing_payment_amount": "2000.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1428,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-10-13",
+    "balance_amount": "4385.13",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1429,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-10-14",
+    "balance_amount": "4385.13",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1430,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-10-15",
+    "balance_amount": "10484.59",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "6099.46",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1431,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-10-16",
+    "balance_amount": "9984.59",
+    "outgoing_payment_amount": "500.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1432,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-10-17",
+    "balance_amount": "9684.72",
+    "outgoing_payment_amount": "758.00",
+    "incoming_payment_amount": "458.13",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1433,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-10-18",
+    "balance_amount": "10468.88",
+    "outgoing_payment_amount": "20.00",
+    "incoming_payment_amount": "804.16",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1434,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-10-19",
+    "balance_amount": "7468.88",
+    "outgoing_payment_amount": "3000.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1435,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-10-20",
+    "balance_amount": "7468.88",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1436,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-10-21",
+    "balance_amount": "7468.88",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1437,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-10-22",
+    "balance_amount": "7372.68",
+    "outgoing_payment_amount": "4010.38",
+    "incoming_payment_amount": "3914.18",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1438,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-10-23",
+    "balance_amount": "7373.06",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.38",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1439,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-10-24",
+    "balance_amount": "3413.76",
+    "outgoing_payment_amount": "4500.00",
+    "incoming_payment_amount": "540.70",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1440,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-10-25",
+    "balance_amount": "3024.42",
+    "outgoing_payment_amount": "540.00",
+    "incoming_payment_amount": "150.66",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1441,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-10-26",
+    "balance_amount": "2242.49",
+    "outgoing_payment_amount": "811.88",
+    "incoming_payment_amount": "29.95",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1442,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-10-27",
+    "balance_amount": "2242.49",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1443,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-10-28",
+    "balance_amount": "2242.49",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1444,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-10-29",
+    "balance_amount": "19.61",
+    "outgoing_payment_amount": "19451.30",
+    "incoming_payment_amount": "17228.42",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1445,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-10-30",
+    "balance_amount": "213.09",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "193.48",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1446,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-10-31",
+    "balance_amount": "4.28",
+    "outgoing_payment_amount": "700.00",
+    "incoming_payment_amount": "491.19",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1447,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-11-01",
+    "balance_amount": "5553.19",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "5548.91",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1448,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-11-02",
+    "balance_amount": "1430.10",
+    "outgoing_payment_amount": "23660.55",
+    "incoming_payment_amount": "19537.46",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1449,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-11-03",
+    "balance_amount": "1430.10",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1450,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-11-04",
+    "balance_amount": "1430.10",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1451,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-11-05",
+    "balance_amount": "10559.44",
+    "outgoing_payment_amount": "4343.17",
+    "incoming_payment_amount": "13472.51",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1452,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-11-06",
+    "balance_amount": "231.52",
+    "outgoing_payment_amount": "10500.00",
+    "incoming_payment_amount": "172.08",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1453,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-11-07",
+    "balance_amount": "995.13",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "763.61",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1454,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-11-08",
+    "balance_amount": "2783.22",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "1788.09",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1455,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-11-09",
+    "balance_amount": "2807.48",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "24.26",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1456,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-11-10",
+    "balance_amount": "2807.48",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1457,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-11-11",
+    "balance_amount": "2807.48",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1458,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-11-12",
+    "balance_amount": "10628.69",
+    "outgoing_payment_amount": "3000.00",
+    "incoming_payment_amount": "10821.21",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1459,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-11-13",
+    "balance_amount": "128.69",
+    "outgoing_payment_amount": "10500.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1460,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-11-14",
+    "balance_amount": "2050.70",
+    "outgoing_payment_amount": "8750.00",
+    "incoming_payment_amount": "10672.01",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1461,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-11-15",
+    "balance_amount": "3170.16",
+    "outgoing_payment_amount": "5287.95",
+    "incoming_payment_amount": "6407.41",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1462,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-11-16",
+    "balance_amount": "3170.16",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1463,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-11-17",
+    "balance_amount": "1720.16",
+    "outgoing_payment_amount": "1450.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1464,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-11-18",
+    "balance_amount": "1720.16",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1465,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-11-19",
+    "balance_amount": "431.93",
+    "outgoing_payment_amount": "14432.51",
+    "incoming_payment_amount": "13144.28",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1466,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-11-20",
+    "balance_amount": "499.95",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "68.02",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1467,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-11-21",
+    "balance_amount": "1617.67",
+    "outgoing_payment_amount": "4000.00",
+    "incoming_payment_amount": "5117.72",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1468,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-11-22",
+    "balance_amount": "42.36",
+    "outgoing_payment_amount": "5083.90",
+    "incoming_payment_amount": "3508.59",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1469,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-11-23",
+    "balance_amount": "42.36",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1470,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-11-24",
+    "balance_amount": "42.36",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1471,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-11-25",
+    "balance_amount": "42.36",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1472,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-11-26",
+    "balance_amount": "146.95",
+    "outgoing_payment_amount": "32531.34",
+    "incoming_payment_amount": "32635.93",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1473,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-11-27",
+    "balance_amount": "417.83",
+    "outgoing_payment_amount": "64.95",
+    "incoming_payment_amount": "335.83",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1474,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-11-28",
+    "balance_amount": "341.57",
+    "outgoing_payment_amount": "400.00",
+    "incoming_payment_amount": "323.74",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1475,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-11-29",
+    "balance_amount": "650.74",
+    "outgoing_payment_amount": "500.00",
+    "incoming_payment_amount": "809.17",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1476,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-11-30",
+    "balance_amount": "150.74",
+    "outgoing_payment_amount": "500.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1477,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-12-01",
+    "balance_amount": "150.74",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1478,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-12-02",
+    "balance_amount": "150.74",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1479,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-12-03",
+    "balance_amount": "1250.54",
+    "outgoing_payment_amount": "46018.99",
+    "incoming_payment_amount": "47118.79",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1480,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-12-04",
+    "balance_amount": "1146.62",
+    "outgoing_payment_amount": "272.80",
+    "incoming_payment_amount": "168.88",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1481,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-12-05",
+    "balance_amount": "324.62",
+    "outgoing_payment_amount": "1299.79",
+    "incoming_payment_amount": "477.79",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1482,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-12-06",
+    "balance_amount": "3175.11",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "2850.49",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1483,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-12-07",
+    "balance_amount": "2589.32",
+    "outgoing_payment_amount": "585.79",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1484,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-12-08",
+    "balance_amount": "2589.32",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1485,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-12-09",
+    "balance_amount": "2589.32",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1486,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-12-10",
+    "balance_amount": "1271.43",
+    "outgoing_payment_amount": "15056.63",
+    "incoming_payment_amount": "13738.74",
+    "inserted_date": "2021-07-26T07:31:50.000Z",
+    "updated_date": "2021-07-26T07:31:50.000Z"
+  },
+  {
+    "id": 1487,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-12-11",
+    "balance_amount": "1271.43",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1488,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-12-12",
+    "balance_amount": "246.09",
+    "outgoing_payment_amount": "1109.85",
+    "incoming_payment_amount": "84.51",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1489,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-12-13",
+    "balance_amount": "2771.78",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "2525.69",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1490,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-12-14",
+    "balance_amount": "35.88",
+    "outgoing_payment_amount": "2735.90",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1491,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-12-15",
+    "balance_amount": "35.88",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1492,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-12-16",
+    "balance_amount": "35.88",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1493,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-12-17",
+    "balance_amount": "4132.60",
+    "outgoing_payment_amount": "17444.22",
+    "incoming_payment_amount": "21540.94",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1494,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-12-18",
+    "balance_amount": "1389.83",
+    "outgoing_payment_amount": "3000.00",
+    "incoming_payment_amount": "257.23",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1495,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-12-19",
+    "balance_amount": "772.87",
+    "outgoing_payment_amount": "1000.00",
+    "incoming_payment_amount": "383.04",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1496,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-12-20",
+    "balance_amount": "1629.09",
+    "outgoing_payment_amount": "500.00",
+    "incoming_payment_amount": "1356.22",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1497,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-12-21",
+    "balance_amount": "238.25",
+    "outgoing_payment_amount": "1410.44",
+    "incoming_payment_amount": "19.60",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1498,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-12-22",
+    "balance_amount": "139.25",
+    "outgoing_payment_amount": "99.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1499,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-12-23",
+    "balance_amount": "139.25",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1500,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-12-24",
+    "balance_amount": "12471.58",
+    "outgoing_payment_amount": "2000.00",
+    "incoming_payment_amount": "14332.33",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1501,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-12-25",
+    "balance_amount": "12471.58",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1502,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-12-26",
+    "balance_amount": "11471.58",
+    "outgoing_payment_amount": "1000.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1503,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-12-27",
+    "balance_amount": "686.95",
+    "outgoing_payment_amount": "13080.85",
+    "incoming_payment_amount": "2296.22",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1504,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-12-28",
+    "balance_amount": "765.43",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "78.48",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1505,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-12-29",
+    "balance_amount": "765.43",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1506,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-12-30",
+    "balance_amount": "765.43",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1507,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2018-12-31",
+    "balance_amount": "4843.10",
+    "outgoing_payment_amount": "26514.58",
+    "incoming_payment_amount": "30592.25",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1508,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2019-01-01",
+    "balance_amount": "4843.10",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1509,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2019-01-02",
+    "balance_amount": "1205.13",
+    "outgoing_payment_amount": "10381.84",
+    "incoming_payment_amount": "6743.87",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1510,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2019-01-03",
+    "balance_amount": "1907.49",
+    "outgoing_payment_amount": "665.17",
+    "incoming_payment_amount": "1367.53",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1511,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2019-01-04",
+    "balance_amount": "1810.40",
+    "outgoing_payment_amount": "500.00",
+    "incoming_payment_amount": "402.91",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1512,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2019-01-05",
+    "balance_amount": "810.40",
+    "outgoing_payment_amount": "1000.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1513,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2019-01-06",
+    "balance_amount": "810.40",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1514,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2019-01-07",
+    "balance_amount": "6169.43",
+    "outgoing_payment_amount": "22144.91",
+    "incoming_payment_amount": "27503.94",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1515,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2019-01-08",
+    "balance_amount": "867.66",
+    "outgoing_payment_amount": "5530.13",
+    "incoming_payment_amount": "228.36",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1516,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2019-01-09",
+    "balance_amount": "867.66",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1517,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2019-01-10",
+    "balance_amount": "3118.00",
+    "outgoing_payment_amount": "513.98",
+    "incoming_payment_amount": "2764.32",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1518,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2019-01-11",
+    "balance_amount": "418.00",
+    "outgoing_payment_amount": "2700.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1519,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2019-01-12",
+    "balance_amount": "418.00",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1520,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2019-01-13",
+    "balance_amount": "418.00",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1521,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2019-01-14",
+    "balance_amount": "15440.56",
+    "outgoing_payment_amount": "2373.73",
+    "incoming_payment_amount": "17396.29",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1522,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2019-01-15",
+    "balance_amount": "907.19",
+    "outgoing_payment_amount": "14676.47",
+    "incoming_payment_amount": "143.10",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1523,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2019-01-16",
+    "balance_amount": "1728.41",
+    "outgoing_payment_amount": "500.00",
+    "incoming_payment_amount": "1321.22",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1524,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2019-01-17",
+    "balance_amount": "1776.66",
+    "outgoing_payment_amount": "1226.00",
+    "incoming_payment_amount": "1274.25",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1525,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2019-01-18",
+    "balance_amount": "1789.99",
+    "outgoing_payment_amount": "49.67",
+    "incoming_payment_amount": "63.00",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1526,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2019-01-19",
+    "balance_amount": "575.33",
+    "outgoing_payment_amount": "1214.66",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1527,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2019-01-20",
+    "balance_amount": "575.33",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1528,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2019-01-21",
+    "balance_amount": "4838.95",
+    "outgoing_payment_amount": "17086.47",
+    "incoming_payment_amount": "21350.09",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1529,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2019-01-22",
+    "balance_amount": "4838.95",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1530,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2019-01-23",
+    "balance_amount": "5282.85",
+    "outgoing_payment_amount": "500.00",
+    "incoming_payment_amount": "943.90",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1531,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2019-01-24",
+    "balance_amount": "1735.08",
+    "outgoing_payment_amount": "4500.00",
+    "incoming_payment_amount": "952.23",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1532,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2019-01-25",
+    "balance_amount": "2179.29",
+    "outgoing_payment_amount": "1200.00",
+    "incoming_payment_amount": "1644.21",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1533,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2019-01-26",
+    "balance_amount": "1179.29",
+    "outgoing_payment_amount": "1000.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1534,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2019-01-27",
+    "balance_amount": "1179.29",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1535,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2019-01-28",
+    "balance_amount": "1892.17",
+    "outgoing_payment_amount": "17376.89",
+    "incoming_payment_amount": "18089.77",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1536,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2019-01-29",
+    "balance_amount": "1331.85",
+    "outgoing_payment_amount": "560.32",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1537,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2019-01-30",
+    "balance_amount": "1022.54",
+    "outgoing_payment_amount": "814.07",
+    "incoming_payment_amount": "504.76",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1538,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2019-01-31",
+    "balance_amount": "2654.64",
+    "outgoing_payment_amount": "513.95",
+    "incoming_payment_amount": "2146.05",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1539,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2019-02-01",
+    "balance_amount": "77.66",
+    "outgoing_payment_amount": "2576.98",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1540,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2019-02-02",
+    "balance_amount": "64.66",
+    "outgoing_payment_amount": "13.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1541,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2019-02-03",
+    "balance_amount": "64.66",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1542,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2019-02-04",
+    "balance_amount": "2407.51",
+    "outgoing_payment_amount": "18716.63",
+    "incoming_payment_amount": "21059.48",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1543,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2019-02-05",
+    "balance_amount": "2339.83",
+    "outgoing_payment_amount": "1411.67",
+    "incoming_payment_amount": "1343.99",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1544,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2019-02-06",
+    "balance_amount": "2330.71",
+    "outgoing_payment_amount": "755.14",
+    "incoming_payment_amount": "746.02",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1545,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2019-02-07",
+    "balance_amount": "4037.34",
+    "outgoing_payment_amount": "2300.00",
+    "incoming_payment_amount": "4006.63",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1546,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2019-02-08",
+    "balance_amount": "6787.34",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "2750.00",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1547,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2019-02-09",
+    "balance_amount": "6787.34",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1548,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2019-02-10",
+    "balance_amount": "6787.34",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1549,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2019-02-11",
+    "balance_amount": "746.09",
+    "outgoing_payment_amount": "16121.65",
+    "incoming_payment_amount": "10080.40",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1550,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2019-02-12",
+    "balance_amount": "746.09",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1551,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2019-02-13",
+    "balance_amount": "198.44",
+    "outgoing_payment_amount": "627.28",
+    "incoming_payment_amount": "79.63",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1552,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2019-02-14",
+    "balance_amount": "8.64",
+    "outgoing_payment_amount": "189.80",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1553,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2019-02-15",
+    "balance_amount": "2745.10",
+    "outgoing_payment_amount": "500.00",
+    "incoming_payment_amount": "3236.46",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1554,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2019-02-16",
+    "balance_amount": "2720.06",
+    "outgoing_payment_amount": "25.04",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1555,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2019-02-17",
+    "balance_amount": "2720.06",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1556,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2019-02-18",
+    "balance_amount": "1709.29",
+    "outgoing_payment_amount": "13851.82",
+    "incoming_payment_amount": "12841.05",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1557,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2019-02-19",
+    "balance_amount": "1544.76",
+    "outgoing_payment_amount": "5036.92",
+    "incoming_payment_amount": "4872.39",
+    "inserted_date": "2021-07-26T07:31:51.000Z",
+    "updated_date": "2021-07-26T07:31:51.000Z"
+  },
+  {
+    "id": 1558,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2019-02-20",
+    "balance_amount": "1256.19",
+    "outgoing_payment_amount": "700.00",
+    "incoming_payment_amount": "411.43",
+    "inserted_date": "2021-07-26T07:31:52.000Z",
+    "updated_date": "2021-07-26T07:31:52.000Z"
+  },
+  {
+    "id": 1559,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2019-02-21",
+    "balance_amount": "3166.71",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "1910.52",
+    "inserted_date": "2021-07-26T07:31:52.000Z",
+    "updated_date": "2021-07-26T07:31:52.000Z"
+  },
+  {
+    "id": 1560,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2019-02-22",
+    "balance_amount": "3166.71",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:52.000Z",
+    "updated_date": "2021-07-26T07:31:52.000Z"
+  },
+  {
+    "id": 1561,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2019-02-23",
+    "balance_amount": "3166.71",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:52.000Z",
+    "updated_date": "2021-07-26T07:31:52.000Z"
+  },
+  {
+    "id": 1562,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2019-02-24",
+    "balance_amount": "3166.71",
+    "outgoing_payment_amount": "0.00",
+    "incoming_payment_amount": "0.00",
+    "inserted_date": "2021-07-26T07:31:52.000Z",
+    "updated_date": "2021-07-26T07:31:52.000Z"
+  },
+  {
+    "id": 1563,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2019-02-25",
+    "balance_amount": "2196.20",
+    "outgoing_payment_amount": "15867.00",
+    "incoming_payment_amount": "14896.49",
+    "inserted_date": "2021-07-26T07:31:52.000Z",
+    "updated_date": "2021-07-26T07:31:52.000Z"
+  },
+  {
+    "id": 1564,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2019-02-26",
+    "balance_amount": "871.28",
+    "outgoing_payment_amount": "1500.00",
+    "incoming_payment_amount": "175.08",
+    "inserted_date": "2021-07-26T07:31:52.000Z",
+    "updated_date": "2021-07-26T07:31:52.000Z"
+  },
+  {
+    "id": 1565,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2019-02-27",
+    "balance_amount": "466.10",
+    "outgoing_payment_amount": "2500.00",
+    "incoming_payment_amount": "2094.82",
+    "inserted_date": "2021-07-26T07:31:52.000Z",
+    "updated_date": "2021-07-26T07:31:52.000Z"
+  },
+  {
+    "id": 1566,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2019-02-28",
+    "balance_amount": "2484.76",
+    "outgoing_payment_amount": "500.00",
+    "incoming_payment_amount": "2518.66",
+    "inserted_date": "2021-07-26T07:31:52.000Z",
+    "updated_date": "2021-07-26T07:31:52.000Z"
+  },
+  {
+    "id": 1567,
+    "iban_number": "NL48INGB0005106691",
+    "position_date": "2019-03-01",
+    "balance_amount": "57.07",
+    "outgoing_payment_amount": "2475.56",
+    "incoming_payment_amount": "47.87",
+    "inserted_date": "2021-07-26T07:31:52.000Z",
+    "updated_date": "2021-07-26T07:31:52.000Z"
+  }
+]

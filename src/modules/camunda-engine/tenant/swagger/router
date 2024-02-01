@@ -1,0 +1,141 @@
+paths:
+  /tenants:
+    get:
+      tags:
+        - Tenants
+      name: Get Tenants
+      summary: Get all tenant list
+      operationId: getTenants
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        200:
+          description: success
+          schema:
+            type: object
+            properties:
+              code:
+                type: integer
+                example: 200
+              data:
+                type: number
+                example: 90
+              success:
+                type: boolean
+                example: true
+  /tenants/create:
+    post:
+      tags:
+        - Tenants
+      name: Create Tenant
+      summary:  Create a new tenant.
+      operationId: createTenant
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          required: true
+          schema:
+            type: object
+            properties:
+              id:
+                type: string
+              name:
+                type: string
+                    
+      responses:
+        200:
+          description: success
+          schema:
+            type: object
+            properties:
+              code:
+                type: integer
+                example: 200
+              data:
+                type: object
+                properties:
+                  errLog:
+                    type: array
+                    example: []
+                  ok: 
+                    type: number
+                    example: 32
+              success:
+                type: boolean
+                example: true
+  /tenants/seed:
+    post:
+      tags:
+        - Tenants
+      name: Seed Tenants
+      summary:  Seed default tenants.
+      operationId: seedTenant
+      consumes:
+        - application/json
+      produces:
+        - application/json      
+      responses:
+        200:
+          description: success
+          schema:
+            type: object
+            properties:
+              code:
+                type: integer
+                example: 200
+              data:
+                type: object
+                properties:
+                  errLog:
+                    type: array
+                    example: []
+                  ok: 
+                    type: number
+                    example: 32
+              success:
+                type: boolean
+                example: true
+  /tenants/{tenantId}:
+    delete:
+      tags:
+        - Tenants
+      name: Delete tenant
+      summary:  Delete tenant by id.
+      operationId: deleteTenant
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: tenantId
+          required: true
+          type: string
+      responses:
+        200:
+          description: success
+          schema:
+            type: object
+            properties:
+              code:
+                type: integer
+                example: 200
+              data:
+                type: object
+                properties:
+                  errLog:
+                    type: array
+                    example: []
+                  ok: 
+                    type: number
+                    example: 32
+              success:
+                type: boolean
+                example: true
+              

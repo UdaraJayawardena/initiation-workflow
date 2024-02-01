@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_17x93o1" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="3.7.1">
+  <bpmn:process id="create-debtor-creditor" name="(sub) create-debtor-creditor" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1" name="Start">
+      <bpmn:outgoing>Flow_1ij6zof</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:sequenceFlow id="Flow_1ij6zof" sourceRef="StartEvent_1" targetRef="Activity_1023u4i" />
+    <bpmn:sequenceFlow id="Flow_1j7zdnx" sourceRef="Activity_1023u4i" targetRef="Activity_0k8kd78" />
+    <bpmn:endEvent id="Event_1hqmisn" name="End">
+      <bpmn:incoming>Flow_0kty5h9</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_0kty5h9" sourceRef="Activity_0k8kd78" targetRef="Event_1hqmisn" />
+    <bpmn:serviceTask id="Activity_1023u4i" name="Get sme loan request" camunda:type="external" camunda:topic="get-sme-loan-request">
+      <bpmn:incoming>Flow_1ij6zof</bpmn:incoming>
+      <bpmn:outgoing>Flow_1j7zdnx</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:serviceTask id="Activity_0k8kd78" name="Create debtor creditor" camunda:type="external" camunda:topic="create-debtor-creditor">
+      <bpmn:incoming>Flow_1j7zdnx</bpmn:incoming>
+      <bpmn:outgoing>Flow_0kty5h9</bpmn:outgoing>
+    </bpmn:serviceTask>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="create-debtor-creditor">
+      <bpmndi:BPMNEdge id="Flow_1ij6zof_di" bpmnElement="Flow_1ij6zof">
+        <di:waypoint x="215" y="117" />
+        <di:waypoint x="270" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1j7zdnx_di" bpmnElement="Flow_1j7zdnx">
+        <di:waypoint x="370" y="117" />
+        <di:waypoint x="430" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0kty5h9_di" bpmnElement="Flow_0kty5h9">
+        <di:waypoint x="530" y="117" />
+        <di:waypoint x="592" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="179" y="99" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="185" y="142" width="25" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1hqmisn_di" bpmnElement="Event_1hqmisn">
+        <dc:Bounds x="592" y="99" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="600" y="142" width="20" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_114dgpi_di" bpmnElement="Activity_1023u4i">
+        <dc:Bounds x="270" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_10w9pfr_di" bpmnElement="Activity_0k8kd78">
+        <dc:Bounds x="430" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

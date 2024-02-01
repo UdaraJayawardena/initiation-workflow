@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Definitions_0ytbqqt" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="3.7.1">
+  <bpmn:process id="sme-loan-request-process" name="(Sub) Sme loan request process" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1" name="Start">
+      <bpmn:outgoing>SequenceFlow_027t35h</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_027t35h" sourceRef="StartEvent_1" targetRef="Task_1wb15o5" />
+    <bpmn:sequenceFlow id="SequenceFlow_0yif06s" sourceRef="Task_1wb15o5" targetRef="Task_1r3sh2m" />
+    <bpmn:endEvent id="EndEvent_1u59ome" name="End">
+      <bpmn:incoming>SequenceFlow_1haj9xz</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_1haj9xz" sourceRef="Task_0y51a1l" targetRef="EndEvent_1u59ome" />
+    <bpmn:serviceTask id="Task_1wb15o5" name="Bind Bank-BIC-Code" camunda:type="external" camunda:topic="bind-bank-bic-codes">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:inputParameter name="targetObject">smeLoanRequest</camunda:inputParameter>
+          <camunda:inputParameter name="fieldNameBicCode">bicCode</camunda:inputParameter>
+          <camunda:inputParameter name="fieldNameIban">iban</camunda:inputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_027t35h</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0yif06s</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:serviceTask id="Task_1r3sh2m" name="Create SME-Loan-Request" camunda:type="external" camunda:topic="update-sme-loan-request">
+      <bpmn:incoming>SequenceFlow_0yif06s</bpmn:incoming>
+      <bpmn:incoming>Flow_1by4joa</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_12nxuvt</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:serviceTask id="Task_0y51a1l" name="Create SME-Loan-Request-Proposal" camunda:type="external" camunda:topic="update-sme-loan-request-proposal">
+      <bpmn:incoming>SequenceFlow_0ko6mxh</bpmn:incoming>
+      <bpmn:incoming>Flow_00ws0b8</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1haj9xz</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:serviceTask id="Task_06jjv4p" name="Get Last Day of Transactions" camunda:type="external" camunda:topic="get-last-working-day">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:inputParameter name="startDate">
+            <camunda:script scriptFormat="Javascript">var smeLoanRequestProposal = JSON.parse(execution.getVariable("smeLoanRequestProposal"));
+var startDate = smeLoanRequestProposal.firstDirectDebitDate;
+startDate;</camunda:script>
+          </camunda:inputParameter>
+          <camunda:inputParameter name="noOfDaysAhead">
+            <camunda:script scriptFormat="javascript">var smeLoanRequestProposal = JSON.parse(execution.getVariable("smeLoanRequestProposal"));
+var noOfDaysAhead = smeLoanRequestProposal.plannedNumberOfDirectDebits;
+noOfDaysAhead;</camunda:script>
+          </camunda:inputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_12nxuvt</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0ko6mxh</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="SequenceFlow_12nxuvt" sourceRef="Task_1r3sh2m" targetRef="Task_06jjv4p" />
+    <bpmn:sequenceFlow id="SequenceFlow_0ko6mxh" sourceRef="Task_06jjv4p" targetRef="Task_0y51a1l" />
+    <bpmn:boundaryEvent id="BoundaryEvent_1gbcphk" attachedToRef="Task_1wb15o5">
+      <bpmn:outgoing>SequenceFlow_0q4rw6t</bpmn:outgoing>
+      <bpmn:errorEventDefinition errorRef="Error_0y64m5q" />
+    </bpmn:boundaryEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_0q4rw6t" sourceRef="BoundaryEvent_1gbcphk" targetRef="EndEvent_1vuzh26" />
+    <bpmn:endEvent id="EndEvent_1vuzh26" name="Error">
+      <bpmn:incoming>SequenceFlow_0q4rw6t</bpmn:incoming>
+      <bpmn:incoming>SequenceFlow_0ptl5ae</bpmn:incoming>
+      <bpmn:incoming>SequenceFlow_0t60ftn</bpmn:incoming>
+      <bpmn:incoming>SequenceFlow_0ud854w</bpmn:incoming>
+      <bpmn:errorEventDefinition errorRef="Error_05ohhz9" />
+    </bpmn:endEvent>
+    <bpmn:boundaryEvent id="BoundaryEvent_14p3w00" attachedToRef="Task_06jjv4p">
+      <bpmn:outgoing>SequenceFlow_0ptl5ae</bpmn:outgoing>
+      <bpmn:errorEventDefinition errorRef="Error_0v4l515" />
+    </bpmn:boundaryEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_0ptl5ae" sourceRef="BoundaryEvent_14p3w00" targetRef="EndEvent_1vuzh26" />
+    <bpmn:boundaryEvent id="BoundaryEvent_085mxw9" attachedToRef="Task_1r3sh2m">
+      <bpmn:outgoing>SequenceFlow_0t60ftn</bpmn:outgoing>
+      <bpmn:errorEventDefinition errorRef="Error_1vwxb87" />
+    </bpmn:boundaryEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_0t60ftn" sourceRef="BoundaryEvent_085mxw9" targetRef="EndEvent_1vuzh26" />
+    <bpmn:boundaryEvent id="BoundaryEvent_1wi9ump" attachedToRef="Task_0y51a1l">
+      <bpmn:outgoing>SequenceFlow_0ud854w</bpmn:outgoing>
+      <bpmn:errorEventDefinition errorRef="Error_0dkhyfn" />
+    </bpmn:boundaryEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_0ud854w" sourceRef="BoundaryEvent_1wi9ump" targetRef="EndEvent_1vuzh26" />
+    <bpmn:boundaryEvent id="Event_1brl3xw" attachedToRef="Task_1wb15o5">
+      <bpmn:outgoing>Flow_1by4joa</bpmn:outgoing>
+      <bpmn:conditionalEventDefinition id="ConditionalEventDefinition_1hceeff">
+        <bpmn:condition xsi:type="bpmn:tFormalExpression">${loanType == 'flex-loan'}</bpmn:condition>
+      </bpmn:conditionalEventDefinition>
+    </bpmn:boundaryEvent>
+    <bpmn:sequenceFlow id="Flow_1by4joa" sourceRef="Event_1brl3xw" targetRef="Task_1r3sh2m" />
+    <bpmn:sequenceFlow id="Flow_00ws0b8" sourceRef="Event_0sam8zd" targetRef="Task_0y51a1l" />
+    <bpmn:boundaryEvent id="Event_0sam8zd" attachedToRef="Task_06jjv4p">
+      <bpmn:outgoing>Flow_00ws0b8</bpmn:outgoing>
+      <bpmn:conditionalEventDefinition id="ConditionalEventDefinition_0z7i7py">
+        <bpmn:condition xsi:type="bpmn:tFormalExpression">${loanType == 'flex-loan'}</bpmn:condition>
+      </bpmn:conditionalEventDefinition>
+    </bpmn:boundaryEvent>
+  </bpmn:process>
+  <bpmn:error id="Error_05ohhz9" name="Sme loan request process error" errorCode="ERROR_SME_LOAN_REQUEST_PROCESS" camunda:errorMessage="unexpected Error Occured while processing sme loan request" />
+  <bpmn:error id="Error_0y64m5q" name="Bind bank bic codes error" errorCode="ERROR_BIND_BANK_BIC_CODES" camunda:errorMessage="Unexpected Error Occurred while binding bank bic" />
+  <bpmn:error id="Error_1vwxb87" name="Update sme-loan-request error" errorCode="ERROR_UPDATE_SME_LOAN_REQUEST" camunda:errorMessage="Unexpected Error Occurred while updating sme-loan-request" />
+  <bpmn:error id="Error_0dkhyfn" name="Update sme-loan-request-proposal error" errorCode="ERROR_UPDATE_SME_LOAN_REQUEST_PROPOSAL" camunda:errorMessage="Unexpected Error Occurred while updating sme-loan-request-proposal" />
+  <bpmn:error id="Error_0v4l515" name="Get last working error" errorCode="ERROR_GET_LAST_WORKING_DATE" camunda:errorMessage="Unexpected Error Occurred while getting last working date" />
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="sme-loan-request-process">
+      <bpmndi:BPMNEdge id="SequenceFlow_0ud854w_di" bpmnElement="SequenceFlow_0ud854w">
+        <di:waypoint x="820" y="175" />
+        <di:waypoint x="820" y="270" />
+        <di:waypoint x="932" y="270" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0t60ftn_di" bpmnElement="SequenceFlow_0t60ftn">
+        <di:waypoint x="480" y="175" />
+        <di:waypoint x="480" y="270" />
+        <di:waypoint x="932" y="270" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0ptl5ae_di" bpmnElement="SequenceFlow_0ptl5ae">
+        <di:waypoint x="650" y="175" />
+        <di:waypoint x="650" y="270" />
+        <di:waypoint x="932" y="270" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0q4rw6t_di" bpmnElement="SequenceFlow_0q4rw6t">
+        <di:waypoint x="320" y="175" />
+        <di:waypoint x="320" y="330" />
+        <di:waypoint x="950" y="330" />
+        <di:waypoint x="950" y="288" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0ko6mxh_di" bpmnElement="SequenceFlow_0ko6mxh">
+        <di:waypoint x="700" y="117" />
+        <di:waypoint x="770" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_12nxuvt_di" bpmnElement="SequenceFlow_12nxuvt">
+        <di:waypoint x="530" y="117" />
+        <di:waypoint x="600" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1haj9xz_di" bpmnElement="SequenceFlow_1haj9xz">
+        <di:waypoint x="870" y="117" />
+        <di:waypoint x="932" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0yif06s_di" bpmnElement="SequenceFlow_0yif06s">
+        <di:waypoint x="370" y="117" />
+        <di:waypoint x="430" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_027t35h_di" bpmnElement="SequenceFlow_027t35h">
+        <di:waypoint x="188" y="117" />
+        <di:waypoint x="270" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1by4joa_di" bpmnElement="Flow_1by4joa">
+        <di:waypoint x="320" y="59" />
+        <di:waypoint x="320" y="39" />
+        <di:waypoint x="480" y="39" />
+        <di:waypoint x="480" y="77" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_00ws0b8_di" bpmnElement="Flow_00ws0b8">
+        <di:waypoint x="650" y="59" />
+        <di:waypoint x="650" y="39" />
+        <di:waypoint x="820" y="39" />
+        <di:waypoint x="820" y="77" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="152" y="99" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="158" y="142" width="25" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_1u59ome_di" bpmnElement="EndEvent_1u59ome">
+        <dc:Bounds x="932" y="99" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="941" y="142" width="19" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_015751o_di" bpmnElement="Task_1wb15o5">
+        <dc:Bounds x="270" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_00ytuy2_di" bpmnElement="Task_1r3sh2m">
+        <dc:Bounds x="430" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_1nyy2cl_di" bpmnElement="Task_0y51a1l">
+        <dc:Bounds x="770" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_0nntru2_di" bpmnElement="Task_06jjv4p">
+        <dc:Bounds x="600" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_1y9p55i_di" bpmnElement="EndEvent_1vuzh26">
+        <dc:Bounds x="932" y="252" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="938" y="222" width="25" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BoundaryEvent_1xw74re_di" bpmnElement="BoundaryEvent_1wi9ump">
+        <dc:Bounds x="802" y="139" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BoundaryEvent_1ny90tj_di" bpmnElement="BoundaryEvent_085mxw9">
+        <dc:Bounds x="462" y="139" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BoundaryEvent_0ed7359_di" bpmnElement="BoundaryEvent_14p3w00">
+        <dc:Bounds x="632" y="139" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BoundaryEvent_1yqlk1r_di" bpmnElement="BoundaryEvent_1gbcphk">
+        <dc:Bounds x="302" y="139" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1n1nhvw_di" bpmnElement="Event_1brl3xw">
+        <dc:Bounds x="302" y="59" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_01j6joz_di" bpmnElement="Event_0sam8zd">
+        <dc:Bounds x="632" y="59" width="36" height="36" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

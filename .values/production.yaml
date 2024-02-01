@@ -1,0 +1,21 @@
+deployment:
+  image:
+    repository: 336144032973.dkr.ecr.eu-central-1.amazonaws.com/bf-api-initiation-workflows
+  env:
+    ENVIRONMENT: production
+hostName: initiation-workflows.bridgefund.net
+minReplicas: 2
+maxReplicas: 10
+secrets:
+  env:
+    enabled: true
+    name: initiation-workflows-env
+  config:
+    enabled: true
+    name: initiation-workflows-config
+    mountpath: /usr/src/app/config/env/production.json
+    subpath: production.json
+serviceAccount:
+  create: true
+  annotations:
+    eks.amazonaws.com/role-arn: arn:aws:iam::336144032973:role/production-initiation-workflow-sa-role 

@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_1atv2z1" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.2.0">
+  <bpmn:process id="loan-initiation" name="(Main) Loan Initiation" isExecutable="true" camunda:versionTag="1">
+    <bpmn:startEvent id="ING0102-StartEvent_1" name="Start">
+      <bpmn:outgoing>SequenceFlow_0xiiaca</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_0xiiaca" sourceRef="ING0102-StartEvent_1" targetRef="Activity_0rdznvy" />
+    <bpmn:userTask id="receive-bank-file-info" name="Waiting for MT940 / PSD2-info">
+      <bpmn:incoming>Flow_02bfecm</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0p5v7ah</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:boundaryEvent id="IntermediateThrowEvent_0lsheqs" cancelActivity="false" attachedToRef="receive-bank-file-info">
+      <bpmn:outgoing>SequenceFlow_17qfq8u</bpmn:outgoing>
+      <bpmn:timerEventDefinition id="TimerEventDefinition_1ngoewn">
+        <bpmn:timeCycle xsi:type="bpmn:tFormalExpression">0 0/15 * * * ?</bpmn:timeCycle>
+      </bpmn:timerEventDefinition>
+    </bpmn:boundaryEvent>
+    <bpmn:exclusiveGateway id="ExclusiveGateway_0bqd114">
+      <bpmn:incoming>SequenceFlow_17qfq8u</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_09wgkwi</bpmn:outgoing>
+      <bpmn:outgoing>SequenceFlow_184nhe9</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:sequenceFlow id="SequenceFlow_17qfq8u" sourceRef="IntermediateThrowEvent_0lsheqs" targetRef="ExclusiveGateway_0bqd114" />
+    <bpmn:sequenceFlow id="SequenceFlow_09wgkwi" name="amount &#62;= 75000" sourceRef="ExclusiveGateway_0bqd114" targetRef="call-customer">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${loanAmount &gt;= 75000}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="SequenceFlow_184nhe9" name="amount &#60; 75000" sourceRef="ExclusiveGateway_0bqd114" targetRef="send-email">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${loanAmount &lt; 75000}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:endEvent id="ING0102-EndEvent_1u7qgyv">
+      <bpmn:incoming>SequenceFlow_1iimllx</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_1iimllx" sourceRef="call-customer" targetRef="ING0102-EndEvent_1u7qgyv" />
+    <bpmn:endEvent id="ING0102-EndEvent_06296cj">
+      <bpmn:incoming>SequenceFlow_020oiq3</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_020oiq3" sourceRef="send-email" targetRef="ING0102-EndEvent_06296cj" />
+    <bpmn:sequenceFlow id="SequenceFlow_0p5v7ah" sourceRef="receive-bank-file-info" targetRef="ING0102-call-to-bai-parser" />
+    <bpmn:sequenceFlow id="SequenceFlow_13x66tb" sourceRef="ING0102-call-to-bai-parser" targetRef="process-mt940" />
+    <bpmn:endEvent id="EndEvent_0umr8l0" name="End">
+      <bpmn:incoming>SequenceFlow_0raz4og</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_0raz4og" sourceRef="categorize-bank-transaction" targetRef="EndEvent_0umr8l0" />
+    <bpmn:task id="call-customer" name="Call Customer For MT940">
+      <bpmn:incoming>SequenceFlow_09wgkwi</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1iimllx</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="send-email" name="Send E-Mail to Customer for MT940">
+      <bpmn:incoming>SequenceFlow_184nhe9</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_020oiq3</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_02bfecm" sourceRef="Activity_1ner41m" targetRef="receive-bank-file-info" />
+    <bpmn:callActivity id="Activity_1ner41m" name="Create SME Loan Request Cluster" calledElement="create-sme-loan-request-cluster">
+      <bpmn:extensionElements>
+        <camunda:in source="chamberOfCommerceProfile" target="chamberOfCommerceProfile" />
+        <camunda:in source="vtigerCrmEntities" target="vtigerCrmEntities" />
+        <camunda:in source="smeLoanRequestData" target="smeLoanRequestData" />
+        <camunda:in source="customerContact" target="customerContact" />
+        <camunda:in source="personData" target="personData" />
+        <camunda:out source="returnCode" target="returnCode" />
+        <camunda:out source="customerId" target="customerId" />
+        <camunda:out source="smeLoanRequestId" target="smeLoanRequestId" />
+        <camunda:out source="smeLoanRequestContractId" target="smeLoanRequestContractId" />
+        <camunda:in businessKey="#{execution.processBusinessKey}" />
+        <camunda:out source="loanAmount" target="loanAmount" />
+        <camunda:out source="loanType" target="loanType" />
+        <camunda:out source="updateCustomer" target="updateCustomer" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_00z3hmr</bpmn:incoming>
+      <bpmn:outgoing>Flow_02bfecm</bpmn:outgoing>
+    </bpmn:callActivity>
+    <bpmn:task id="Activity_0rdznvy" name="Receive SME Loan Request from Customer">
+      <bpmn:incoming>SequenceFlow_0xiiaca</bpmn:incoming>
+      <bpmn:outgoing>Flow_00z3hmr</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_00z3hmr" sourceRef="Activity_0rdznvy" targetRef="Activity_1ner41m" />
+    <bpmn:serviceTask id="ING0102-call-to-bai-parser" name="Call to bai-parser process MT940" camunda:type="external" camunda:topic="process-mt-940">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:inputParameter name="customerId">
+            <camunda:script scriptFormat="Javascript">updateCustomer = JSON.parse(execution.getVariable("updateCustomer"));
+customerId = "";
+if(updateCustomer){
+customerId = updateCustomer.vTigerAccountNumber
+}
+customerId;</camunda:script>
+          </camunda:inputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_0p5v7ah</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_13x66tb</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:endEvent id="loan_initiation_terminate" name="Terminate">
+      <bpmn:incoming>Flow_0dg83oz</bpmn:incoming>
+      <bpmn:terminateEventDefinition id="TerminateEventDefinition_06r1n06" />
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_0dg83oz" sourceRef="Event_04ila4a" targetRef="loan_initiation_terminate" />
+    <bpmn:boundaryEvent id="Event_04ila4a" attachedToRef="Activity_1ner41m">
+      <bpmn:outgoing>Flow_0dg83oz</bpmn:outgoing>
+      <bpmn:errorEventDefinition id="ErrorEventDefinition_1hlw3u0" />
+    </bpmn:boundaryEvent>
+    <bpmn:sequenceFlow id="Flow_1grkr2p" sourceRef="process-mt940" targetRef="categorize-bank-transaction" />
+    <bpmn:userTask id="process-mt940" name="Process MT940">
+      <bpmn:incoming>SequenceFlow_13x66tb</bpmn:incoming>
+      <bpmn:outgoing>Flow_1grkr2p</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:callActivity id="categorize-bank-transaction" name="Categorize Bank Transactions" calledElement="categories-bank-transactions-sub">
+      <bpmn:extensionElements>
+        <camunda:in source="smeLoanRequestContractId" target="smeLoanRequestId" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1grkr2p</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0raz4og</bpmn:outgoing>
+    </bpmn:callActivity>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="loan-initiation">
+      <bpmndi:BPMNEdge id="Flow_1grkr2p_di" bpmnElement="Flow_1grkr2p">
+        <di:waypoint x="960" y="227" />
+        <di:waypoint x="1010" y="227" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0dg83oz_di" bpmnElement="Flow_0dg83oz">
+        <di:waypoint x="430" y="169" />
+        <di:waypoint x="430" y="118" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_00z3hmr_di" bpmnElement="Flow_00z3hmr">
+        <di:waypoint x="320" y="227" />
+        <di:waypoint x="380" y="227" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_02bfecm_di" bpmnElement="Flow_02bfecm">
+        <di:waypoint x="480" y="227" />
+        <di:waypoint x="550" y="227" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0raz4og_di" bpmnElement="SequenceFlow_0raz4og">
+        <di:waypoint x="1110" y="227" />
+        <di:waypoint x="1142" y="227" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_13x66tb_di" bpmnElement="SequenceFlow_13x66tb">
+        <di:waypoint x="810" y="227" />
+        <di:waypoint x="860" y="227" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0p5v7ah_di" bpmnElement="SequenceFlow_0p5v7ah">
+        <di:waypoint x="650" y="227" />
+        <di:waypoint x="710" y="227" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_020oiq3_di" bpmnElement="SequenceFlow_020oiq3">
+        <di:waypoint x="920" y="460" />
+        <di:waypoint x="962" y="460" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1iimllx_di" bpmnElement="SequenceFlow_1iimllx">
+        <di:waypoint x="920" y="350" />
+        <di:waypoint x="962" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_184nhe9_di" bpmnElement="SequenceFlow_184nhe9">
+        <di:waypoint x="700" y="375" />
+        <di:waypoint x="700" y="460" />
+        <di:waypoint x="820" y="460" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="710" y="443" width="80" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_09wgkwi_di" bpmnElement="SequenceFlow_09wgkwi">
+        <di:waypoint x="725" y="350" />
+        <di:waypoint x="820" y="350" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="717" y="332" width="87" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_17qfq8u_di" bpmnElement="SequenceFlow_17qfq8u">
+        <di:waypoint x="600" y="285" />
+        <di:waypoint x="600" y="350" />
+        <di:waypoint x="675" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0xiiaca_di" bpmnElement="SequenceFlow_0xiiaca">
+        <di:waypoint x="158" y="227" />
+        <di:waypoint x="220" y="227" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="ING0102-StartEvent_1">
+        <dc:Bounds x="122" y="209" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="128" y="252" width="24" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="UserTask_1gsp2x7_di" bpmnElement="receive-bank-file-info">
+        <dc:Bounds x="550" y="187" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ExclusiveGateway_0bqd114_di" bpmnElement="ExclusiveGateway_0bqd114" isMarkerVisible="true">
+        <dc:Bounds x="675" y="325" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_1u7qgyv_di" bpmnElement="ING0102-EndEvent_1u7qgyv">
+        <dc:Bounds x="962" y="332" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_06296cj_di" bpmnElement="ING0102-EndEvent_06296cj">
+        <dc:Bounds x="962" y="442" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_0umr8l0_di" bpmnElement="EndEvent_0umr8l0">
+        <dc:Bounds x="1142" y="209" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1150" y="252" width="20" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_0o8m3iw_di" bpmnElement="call-customer">
+        <dc:Bounds x="820" y="310" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_11a2iw3_di" bpmnElement="send-email">
+        <dc:Bounds x="820" y="420" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0ozxoty_di" bpmnElement="Activity_1ner41m">
+        <dc:Bounds x="380" y="187" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0rdznvy_di" bpmnElement="Activity_0rdznvy">
+        <dc:Bounds x="220" y="187" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0c7vfna_di" bpmnElement="ING0102-call-to-bai-parser">
+        <dc:Bounds x="710" y="187" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1axcell_di" bpmnElement="loan_initiation_terminate">
+        <dc:Bounds x="412" y="82" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="406" y="52" width="49" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1my8mz9_di" bpmnElement="process-mt940">
+        <dc:Bounds x="860" y="187" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1bvwg3c_di" bpmnElement="categorize-bank-transaction">
+        <dc:Bounds x="1010" y="187" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1mbbgp0_di" bpmnElement="Event_04ila4a">
+        <dc:Bounds x="412" y="169" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BoundaryEvent_1ahsjhf_di" bpmnElement="IntermediateThrowEvent_0lsheqs">
+        <dc:Bounds x="582" y="249" width="36" height="36" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

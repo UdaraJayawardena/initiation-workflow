@@ -1,0 +1,15 @@
+[
+  {
+    "sme_loan_request_id": "SBF81660",
+    "customer_id": "3x1334445",
+    "bank_number": 5106691,
+    "iban_number": "NL48INGB0005106691",
+    "start_date": "2018-03-01",
+    "opening_balance_amount": "10.48",
+    "end_date": "2019-03-01",
+    "closing_balance_amount": "57.07",
+    "highest_turnover_indicator": 1,
+    "inserted_date": "2021-07-26T07:31:47.000Z",
+    "updated_date": "2021-07-26T07:40:02.000Z"
+  }
+]

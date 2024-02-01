@@ -1,0 +1,35 @@
+paths:
+  /task/claim:
+    post:
+      tags:
+        - Task
+      summary: "claim task by id"
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          required: true
+          schema:
+            type: object
+            properties:
+              id:
+                type: string
+              userId:
+                type: string
+                example: demo
+      responses:
+        200:
+          description: success
+          schema:
+            type: "object"
+            properties:
+              code:
+                type: "integer"
+                default: 204
+              success:
+                type: "boolean"
+                default: true
+        404:
+          description: Not Found
+        500:
+          description: Internal Server Error

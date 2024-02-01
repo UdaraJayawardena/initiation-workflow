@@ -1,0 +1,34 @@
+paths:
+  /migration/:
+    post:
+      tags:
+        - Migration
+      summary: "Camunda workflow migration"
+      produces:
+        - application/json  
+      parameters:
+        - in: body
+          required: true
+          name: body
+          schema:
+            type: object
+            properties: 
+              keys:
+                type: array
+                example: ['invoice', 'update-bank-transaction-types']                                            
+      responses:
+        200:
+          description: success
+          schema:
+            type: "object"
+            properties:
+              code:
+                type: "integer"
+                default: 204
+              success:
+                type: "boolean"
+                default: true
+        404:
+          description: Not Found
+        500:
+          description: Internal Server Error

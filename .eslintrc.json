@@ -1,0 +1,58 @@
+{
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true,
+    "commonjs": true,
+    "jest": true
+  },
+  "extends": "eslint:recommended",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "allowImportExportEverywhere": false,
+    "codeFrame": true,
+    "ecmaFeatures": {
+      "impliedStrict": true
+    }
+  },
+  "parser": "babel-eslint",
+  "plugins": [
+    "mocha"
+  ],
+  "rules": {
+    "strict": "off",
+    "no-console": "off",
+    "indent": [
+      "error",
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "linebreak-style": [
+      "error",
+      "unix"
+    ],
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "semi": [
+      "error",
+      "always"
+    ],
+    "complexity": "error",
+    "no-duplicate-imports": "error",
+    "no-empty-function": "error",
+    "no-var": "error",
+    "prefer-const": "error",
+    "camelcase": "off",
+    "no-const-assign": "error",
+    "no-nested-ternary": "error",
+    "no-else-return": "error",
+    "no-unreachable": "error",
+    "valid-typeof": "error",
+    "mocha/no-exclusive-tests": "error"
+  }
+}

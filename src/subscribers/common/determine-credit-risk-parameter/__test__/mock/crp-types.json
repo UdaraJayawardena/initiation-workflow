@@ -1,0 +1,232 @@
+[
+  {
+    "_id": "60c844978f4f010014d39abf",
+    "id": "CRPT000001",
+    "displaySequenceNumber": 1,
+    "type": "daily-collection",
+    "description": "the direct-debit amount the is calculated based on loan-request amount of customer",
+    "format": "euro-rounded",
+    "createdAt": "2021-06-15T06:11:35.421Z",
+    "updatedAt": "2021-06-15T06:11:35.421Z"
+  },
+  {
+    "_id": "60c844978f4f010014d39ac0",
+    "id": "CRPT000002",
+    "displaySequenceNumber": 2,
+    "type": "turn-over",
+    "description": "the turn-over (revenue) found in the bank-account of the customer with the highest turnover",
+    "format": "euro-rounded",
+    "createdAt": "2021-06-15T06:11:35.421Z",
+    "updatedAt": "2021-06-15T06:11:35.421Z"
+  },
+  {
+    "_id": "60c844978f4f010014d39ac1",
+    "id": "CRPT000003",
+    "displaySequenceNumber": 3,
+    "type": "higher-balance%",
+    "description": "the percentage in which the daily-collection can be paid based on end-of-day balance of bank-account with highest turnover",
+    "format": "percentage+",
+    "createdAt": "2021-06-15T06:11:35.421Z",
+    "updatedAt": "2021-06-15T06:11:35.421Z"
+  },
+  {
+    "_id": "60c844978f4f010014d39ac2",
+    "id": "CRPT000004",
+    "displaySequenceNumber": 4,
+    "type": "no-of-partial-incoming-payments",
+    "description": "number of incoming transactions with 'deel' in description (excluding 'voordeel') of bank-account with highest turnover ",
+    "format": "integer",
+    "createdAt": "2021-06-15T06:11:35.422Z",
+    "updatedAt": "2021-06-15T06:11:35.422Z"
+  },
+  {
+    "_id": "60c844978f4f010014d39ac3",
+    "id": "CRPT000005",
+    "displaySequenceNumber": 5,
+    "type": "no-of-partial-outgoing-payments",
+    "description": "number of outgoing transactions with 'deel' in description (excluding 'voordeel') of bank-account with highest turnover",
+    "format": "integer",
+    "createdAt": "2021-06-15T06:11:35.422Z",
+    "updatedAt": "2021-06-15T06:11:35.422Z"
+  },
+  {
+    "_id": "60c844978f4f010014d39ac4",
+    "id": "CRPT000006",
+    "displaySequenceNumber": 6,
+    "type": "partial-payment%",
+    "description": "percentage of outgoing transactions with 'deel' in description (excluding 'voordeel') of bank-account with highest turnover",
+    "format": "percentage+",
+    "createdAt": "2021-06-15T06:11:35.423Z",
+    "updatedAt": "2021-06-15T06:11:35.423Z"
+  },
+  {
+    "_id": "60c844978f4f010014d39ac5",
+    "id": "CRPT000007",
+    "displaySequenceNumber": 7,
+    "type": "customer-dependency",
+    "description": "number of different customers of 'our customer' found in bank-account with highest turnover",
+    "format": "integer",
+    "createdAt": "2021-06-15T06:11:35.423Z",
+    "updatedAt": "2021-06-15T06:11:35.423Z"
+  },
+  {
+    "_id": "60c844978f4f010014d39ac6",
+    "id": "CRPT000008",
+    "displaySequenceNumber": 8,
+    "type": "private-income",
+    "description": "the private income as a percentage of the turnover found in the bank-account with the highest turnover",
+    "format": "percentage",
+    "createdAt": "2021-06-15T06:11:35.423Z",
+    "updatedAt": "2021-06-15T06:11:35.423Z"
+  },
+  {
+    "_id": "60c844978f4f010014d39ac7",
+    "id": "CRPT000009",
+    "displaySequenceNumber": 9,
+    "type": "direct-debit-reversals",
+    "description": "the amount of direct-debit reversals found in bank-account with highest turnover",
+    "format": "euro-rounded",
+    "createdAt": "2021-06-15T06:11:35.423Z",
+    "updatedAt": "2021-06-15T06:11:35.423Z"
+  },
+  {
+    "_id": "60c844978f4f010014d39ac8",
+    "id": "CRPT000010",
+    "displaySequenceNumber": 10,
+    "type": "cash-withdrawals",
+    "description": "the amount of cash-withdrawals found in bank-account with highest turnover",
+    "format": "euro-rounded",
+    "createdAt": "2021-06-15T06:11:35.423Z",
+    "updatedAt": "2021-06-15T06:11:35.423Z"
+  },
+  {
+    "_id": "60c844978f4f010014d39ac9",
+    "id": "CRPT000011",
+    "displaySequenceNumber": 11,
+    "type": "total-debt",
+    "description": "the sum of all debts of type of type 'loan', 'current-account', ' personal relationship', 'supplier-credit', 'mortgage' and 'other-loans' found on the debt-form",
+    "format": "euro-rounded",
+    "createdAt": "2021-06-15T06:11:35.424Z",
+    "updatedAt": "2021-06-15T06:11:35.424Z"
+  },
+  {
+    "_id": "60c844978f4f010014d39aca",
+    "id": "CRPT000012",
+    "displaySequenceNumber": 12,
+    "type": "total-debt-loans-with-collateral",
+    "description": "the sum of all debts of type of type 'loan', 'current-account' and 'mortgage' found on the debt-form",
+    "format": "",
+    "createdAt": "2021-06-15T06:11:35.424Z",
+    "updatedAt": "2021-06-15T06:11:35.424Z"
+  },
+  {
+    "_id": "60c844978f4f010014d39acb",
+    "id": "CRPT000013",
+    "displaySequenceNumber": 13,
+    "type": "lease-debt",
+    "description": "the sum of all lease debts found on debt-form",
+    "format": "euro-rounded",
+    "createdAt": "2021-06-15T06:11:35.424Z",
+    "updatedAt": "2021-06-15T06:11:35.424Z"
+  },
+  {
+    "_id": "60c844978f4f010014d39acc",
+    "id": "CRPT000014",
+    "displaySequenceNumber": 14,
+    "type": "tax-debt",
+    "description": "the sum of all taxdebt found on debt-form",
+    "format": "",
+    "createdAt": "2021-06-15T06:11:35.424Z",
+    "updatedAt": "2021-06-15T06:11:35.424Z"
+  },
+  {
+    "_id": "60c844978f4f010014d39acd",
+    "id": "CRPT000015",
+    "displaySequenceNumber": 15,
+    "type": "tax-debt-self-reported",
+    "description": "this field is set to 'yes' is a tax-debt is reported on the debtform and a rounded tax-payment is found in the bank-transaction file. And 'no' if not.",
+    "format": "string",
+    "createdAt": "2021-06-15T06:11:35.424Z",
+    "updatedAt": "2021-06-15T06:11:35.424Z"
+  },
+  {
+    "_id": "60c844978f4f010014d39ace",
+    "id": "CRPT000016",
+    "displaySequenceNumber": 16,
+    "type": "total-payments-overdue",
+    "description": "the sum of all debts of type of type 'debt-collector' and 'collection-agency' found on the debt-form",
+    "format": "euro-rounded",
+    "createdAt": "2021-06-15T06:11:35.424Z",
+    "updatedAt": "2021-06-15T06:11:35.424Z"
+  },
+  {
+    "_id": "60c844978f4f010014d39acf",
+    "id": "CRPT000017",
+    "displaySequenceNumber": 17,
+    "type": "debtors-amount",
+    "description": "the sum a all outstanding invoices at customers",
+    "format": "euro-rounded",
+    "createdAt": "2021-06-15T06:11:35.425Z",
+    "updatedAt": "2021-06-15T06:11:35.425Z"
+  },
+  {
+    "_id": "60c844978f4f010014d39ad0",
+    "id": "CRPT000018",
+    "displaySequenceNumber": 18,
+    "type": "creditors-amount",
+    "description": "the sum of all outstanding invoices at suppliers",
+    "format": "euro-rounded",
+    "createdAt": "2021-06-15T06:11:35.425Z",
+    "updatedAt": "2021-06-15T06:11:35.425Z"
+  },
+  {
+    "_id": "60c844978f4f010014d39ad1",
+    "id": "CRPT000019",
+    "displaySequenceNumber": 19,
+    "type": "supplier-dependency",
+    "description": "the number of different suppliers which the customer has",
+    "format": "integer",
+    "createdAt": "2021-06-15T06:11:35.425Z",
+    "updatedAt": "2021-06-15T06:11:35.425Z"
+  },
+  {
+    "_id": "60c844978f4f010014d39ad2",
+    "id": "CRPT000020",
+    "displaySequenceNumber": 20,
+    "type": "nett-savings",
+    "description": "the total amount of transactions found with sub-category 'savings' in bank-account with higest turnover",
+    "format": "euro-rounded",
+    "createdAt": "2021-06-15T06:11:35.425Z",
+    "updatedAt": "2021-06-15T06:11:35.425Z"
+  },
+  {
+    "_id": "60c844978f4f010014d39ad3",
+    "id": "CRPT000021",
+    "displaySequenceNumber": 21,
+    "type": "bankruptcy-indicator",
+    "description": "an indicator that tells if the customer was involved in a bankrupty befoethe purpose of the loan-request",
+    "format": "string",
+    "createdAt": "2021-06-15T06:11:35.425Z",
+    "updatedAt": "2021-06-15T06:11:35.425Z"
+  },
+  {
+    "_id": "60c844978f4f010014d39ad4",
+    "id": "CRPT000022",
+    "displaySequenceNumber": 22,
+    "type": "loan-purpose-risk",
+    "description": "the purpose of the loan-request",
+    "format": "string",
+    "createdAt": "2021-06-15T06:11:35.425Z",
+    "updatedAt": "2021-06-15T06:11:35.425Z"
+  },
+  {
+    "_id": "60c844978f4f010014d39ad5",
+    "id": "CRPT000023",
+    "displaySequenceNumber": 23,
+    "type": "loan-request-rejections",
+    "description": "the number of times a loan-request was rejected before by credit-risk department",
+    "format": "integer",
+    "createdAt": "2021-06-15T06:11:35.426Z",
+    "updatedAt": "2021-06-15T06:11:35.426Z"
+  }
+]

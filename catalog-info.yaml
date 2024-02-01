@@ -1,0 +1,86 @@
+# This file is maintained by an automation script and should not be modified manually
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: initiation-workflow
+  namespace: initiation
+  title: Initiation Workflow
+  description: This is the Camunda Subscriber service. This Subscriber service for
+    the Initiation Section effectively handles all loan initiation, revision, and
+    Contract Management flows. It confidently communicates with low-level micro-services
+    to ensure seamless business log.
+  tags:
+  - node16
+spec:
+  type: service
+  system: initiation
+  owner: default/initiation-team
+  lifecycle: production
+  dependsOn:
+  - resource:initiation/loan_initiation_camunda_workflow
+  - resource:initiation/complete-crm-system-update
+  - resource:initiation/initiation-camunda-completeUserTask
+  - resource:initiation/camunda_waiting_for_fix_issue
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: loan_initiation_camunda_workflow
+  namespace: initiation
+  description: Stores camunda workflow information || Tables | counters | logs | processes
+    | processes_statuses
+  tags:
+  - legacy
+  - mongodb
+spec:
+  type: database
+  system: initiation
+  owner: default/initiation-team
+  lifecycle: production
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: complete-crm-system-update
+  namespace: initiation
+  description: 'Engage in the essential task of updating customer, person, and stakeholder
+    records to maintain data precision and reflect current information accurately,
+    Prepare-update-crm-initiation subscriber. Error Causes: legal form missing'
+  tags:
+  - legacy
+spec:
+  type: queue
+  system: initiation
+  owner: default/initiation-team
+  lifecycle: production
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: initiation-camunda-completeUserTask
+  namespace: initiation
+  description: 'Complete Initiation > Complete Updating CRM System  user task, complete
+    Initiation > (sub) categories-bank-transactions > Waiting for categorization user
+    task, Complete Initiation > Waiting for MT940 / PSD2-info user task. Error Causes:
+    Token missing( Authentication service is down )'
+  tags:
+  - legacy
+spec:
+  type: queue
+  system: initiation
+  owner: default/initiation-team
+  lifecycle: production
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: camunda_waiting_for_fix_issue
+  namespace: initiation
+  description: Produce error message when creating a Jira ticket
+  tags:
+  - legacy
+spec:
+  type: queue
+  system: initiation
+  owner: default/initiation-team
+  lifecycle: production

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_0h4eh5t" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="3.7.1">
+  <bpmn:process id="categories-bank-transactions" name="(Main) categories-bank-transactions" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1">
+      <bpmn:outgoing>Flow_0o6o9zt</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:sequenceFlow id="Flow_0o6o9zt" sourceRef="StartEvent_1" targetRef="Activity_0sravl8" />
+    <bpmn:serviceTask id="Activity_0sravl8" name="init" camunda:type="external" camunda:topic="init">
+      <bpmn:incoming>Flow_0o6o9zt</bpmn:incoming>
+      <bpmn:outgoing>Flow_0eeanjm</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:endEvent id="Event_0bjiex5">
+      <bpmn:incoming>Flow_1sip05f</bpmn:incoming>
+      <bpmn:incoming>Flow_0gftedg</bpmn:incoming>
+      <bpmn:messageEventDefinition id="MessageEventDefinition_0pfx1rv" camunda:type="external" camunda:topic="end-categories-bank-transactions" />
+    </bpmn:endEvent>
+    <bpmn:callActivity id="Activity_1szurv4" name="Categories Bank Transactions" calledElement="categories-bank-transactions-sub">
+      <bpmn:extensionElements>
+        <camunda:in source="authToken" target="authToken" />
+        <camunda:out source="result" target="result" />
+        <camunda:out source="error" target="error" />
+        <camunda:out source="success" target="success" />
+        <camunda:in source="smeLoanRequestId" target="smeLoanRequestId" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0eeanjm</bpmn:incoming>
+      <bpmn:outgoing>Flow_1sip05f</bpmn:outgoing>
+    </bpmn:callActivity>
+    <bpmn:sequenceFlow id="Flow_1sip05f" sourceRef="Activity_1szurv4" targetRef="Event_0bjiex5" />
+    <bpmn:boundaryEvent id="Event_0ykf4tf" attachedToRef="Activity_1szurv4">
+      <bpmn:outgoing>Flow_0gftedg</bpmn:outgoing>
+      <bpmn:errorEventDefinition id="ErrorEventDefinition_0iwx37j" errorRef="Error_0tqru0m" />
+    </bpmn:boundaryEvent>
+    <bpmn:sequenceFlow id="Flow_0gftedg" sourceRef="Event_0ykf4tf" targetRef="Event_0bjiex5" />
+    <bpmn:sequenceFlow id="Flow_0eeanjm" sourceRef="Activity_0sravl8" targetRef="Activity_1szurv4" />
+  </bpmn:process>
+  <bpmn:error id="Error_1ohnfsh" />
+  <bpmn:error id="Error_0tqru0m" name="ERROR_CATEGORIES_BANK_TRANSACTIONS" errorCode="500" camunda:errorMessage="unexpected Error Occured while categorizing bank transactions" />
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="categories-bank-transactions">
+      <bpmndi:BPMNEdge id="Flow_0o6o9zt_di" bpmnElement="Flow_0o6o9zt">
+        <di:waypoint x="215" y="177" />
+        <di:waypoint x="270" y="177" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1sip05f_di" bpmnElement="Flow_1sip05f">
+        <di:waypoint x="620" y="177" />
+        <di:waypoint x="742" y="177" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0gftedg_di" bpmnElement="Flow_0gftedg">
+        <di:waypoint x="570" y="119" />
+        <di:waypoint x="570" y="80" />
+        <di:waypoint x="760" y="80" />
+        <di:waypoint x="760" y="159" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0eeanjm_di" bpmnElement="Flow_0eeanjm">
+        <di:waypoint x="370" y="177" />
+        <di:waypoint x="520" y="180" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="179" y="159" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_13d7guo_di" bpmnElement="Activity_0sravl8">
+        <dc:Bounds x="270" y="137" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1qlfh06_di" bpmnElement="Event_0bjiex5">
+        <dc:Bounds x="742" y="159" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_070mp7a_di" bpmnElement="Activity_1szurv4">
+        <dc:Bounds x="520" y="137" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1hlwpm0_di" bpmnElement="Event_0ykf4tf">
+        <dc:Bounds x="552" y="119" width="36" height="36" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

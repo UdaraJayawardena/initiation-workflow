@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_0b1yf5j" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.2.0">
+  <bpmn:process id="bai-parser-feedback" name="(BAI) Parser Feedback" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1" name="Start">
+      <bpmn:outgoing>Flow_0idpiwk</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:sequenceFlow id="Flow_0idpiwk" sourceRef="StartEvent_1" targetRef="ING0102-BAI-PF-init" />
+    <bpmn:sequenceFlow id="Flow_02q40la" sourceRef="Activity_1shsn4o" targetRef="Event_0a0q3b9" />
+    <bpmn:endEvent id="Event_0a0q3b9" name="End">
+      <bpmn:incoming>Flow_02q40la</bpmn:incoming>
+      <bpmn:messageEventDefinition id="MessageEventDefinition_0mtvjyq" camunda:type="external" camunda:topic="end-bai-parser-feedback" />
+    </bpmn:endEvent>
+    <bpmn:scriptTask id="Activity_1shsn4o" name="Check feed-back" scriptFormat="Javascript">
+      <bpmn:incoming>Flow_0h1f46y</bpmn:incoming>
+      <bpmn:outgoing>Flow_02q40la</bpmn:outgoing>
+      <bpmn:script>var smeLoanRequestId = execution.getVariable("smeLoanRequestId");
+
+var result = {
+  "smeLoanRequestId": smeLoanRequestId
+};
+
+execution.setVariable('result', JSON.stringify(result));
+execution.setVariable('success', true);</bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:sequenceFlow id="Flow_0h1f46y" sourceRef="ING0102-BAI-PF-init" targetRef="Activity_1shsn4o" />
+    <bpmn:serviceTask id="ING0102-BAI-PF-init" name="Init" camunda:type="external" camunda:topic="init">
+      <bpmn:incoming>Flow_0idpiwk</bpmn:incoming>
+      <bpmn:outgoing>Flow_0h1f46y</bpmn:outgoing>
+    </bpmn:serviceTask>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="bai-parser-feedback">
+      <bpmndi:BPMNEdge id="Flow_0idpiwk_di" bpmnElement="Flow_0idpiwk">
+        <di:waypoint x="215" y="97" />
+        <di:waypoint x="260" y="97" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_02q40la_di" bpmnElement="Flow_02q40la">
+        <di:waypoint x="500" y="97" />
+        <di:waypoint x="532" y="97" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0h1f46y_di" bpmnElement="Flow_0h1f46y">
+        <di:waypoint x="360" y="97" />
+        <di:waypoint x="400" y="97" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="179" y="79" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="185" y="122" width="24" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0yoqt7e_di" bpmnElement="Event_0a0q3b9">
+        <dc:Bounds x="532" y="79" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="540" y="122" width="20" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_04ygxbl_di" bpmnElement="Activity_1shsn4o">
+        <dc:Bounds x="400" y="57" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_034t1up_di" bpmnElement="ING0102-BAI-PF-init">
+        <dc:Bounds x="260" y="57" width="100" height="80" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

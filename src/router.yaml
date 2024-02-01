@@ -1,0 +1,42 @@
+paths:
+  /key/{key}/start:
+    post:
+      tags:
+        - Process
+      name: Start Process
+      summary: Start process by process key.
+      operationId: startProcess
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: key
+          type: string
+          description: Process key
+          required: true
+        - in: body
+          name: body
+          description: Sample request
+          required: true
+          schema:
+            type: object
+            properties:
+              contractId:
+                type: string
+      responses:
+        200:
+          description: success
+          schema:
+            type: object
+            properties:
+              code:
+                type: integer
+                example: 200
+              data:
+                type: object
+                example: '{}'
+              success:
+                type: boolean
+                example: true

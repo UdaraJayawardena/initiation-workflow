@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_0xga9rw" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="3.3.4">
+  <bpmn:process id="create-contract" name="(sub) create-contract" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1" name="Start">
+      <bpmn:outgoing>SequenceFlow_0m1vlw2</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_0m1vlw2" sourceRef="StartEvent_1" targetRef="Activity_1byt1dt" />
+    <bpmn:serviceTask id="Task_1nmgcnx" name="Create Contract" camunda:type="external" camunda:topic="create-contract">
+      <bpmn:incoming>Flow_1g44cqq</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0hvuvko</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="SequenceFlow_0hvuvko" sourceRef="Task_1nmgcnx" targetRef="Task_0xwr6nl" />
+    <bpmn:serviceTask id="Task_0xwr6nl" name="Create Contract-Party" camunda:type="external" camunda:topic="create-contract-party">
+      <bpmn:incoming>SequenceFlow_0hvuvko</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1gkd0qq</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:endEvent id="EndEvent_05xsp2l" name="End">
+      <bpmn:incoming>SequenceFlow_1gkd0qq</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_1gkd0qq" sourceRef="Task_0xwr6nl" targetRef="EndEvent_05xsp2l" />
+    <bpmn:endEvent id="EndEvent_1jahkp9" name="Error">
+      <bpmn:incoming>SequenceFlow_0019k6d</bpmn:incoming>
+      <bpmn:incoming>SequenceFlow_0u20sl7</bpmn:incoming>
+      <bpmn:errorEventDefinition errorRef="Error_1s6ixk6" />
+    </bpmn:endEvent>
+    <bpmn:boundaryEvent id="BoundaryEvent_1wbcu4o" attachedToRef="Task_1nmgcnx">
+      <bpmn:outgoing>SequenceFlow_0019k6d</bpmn:outgoing>
+      <bpmn:errorEventDefinition />
+    </bpmn:boundaryEvent>
+    <bpmn:boundaryEvent id="BoundaryEvent_0rtqlvy" attachedToRef="Task_0xwr6nl">
+      <bpmn:outgoing>SequenceFlow_0u20sl7</bpmn:outgoing>
+      <bpmn:errorEventDefinition />
+    </bpmn:boundaryEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_0019k6d" sourceRef="BoundaryEvent_1wbcu4o" targetRef="EndEvent_1jahkp9" />
+    <bpmn:sequenceFlow id="SequenceFlow_0u20sl7" sourceRef="BoundaryEvent_0rtqlvy" targetRef="EndEvent_1jahkp9" />
+    <bpmn:sequenceFlow id="Flow_1g44cqq" sourceRef="Activity_1byt1dt" targetRef="Task_1nmgcnx" />
+    <bpmn:serviceTask id="Activity_1byt1dt" name="Get Bank" camunda:type="external" camunda:topic="get-bank">
+      <bpmn:incoming>SequenceFlow_0m1vlw2</bpmn:incoming>
+      <bpmn:outgoing>Flow_1g44cqq</bpmn:outgoing>
+    </bpmn:serviceTask>
+  </bpmn:process>
+  <bpmn:error id="Error_1s6ixk6" name="ERROR_CREATE_CONTRACT_PARTY" errorCode="500" camunda:errorMessage="unexpected Error Occured while creating contract party" />
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="create-contract">
+      <bpmndi:BPMNEdge id="SequenceFlow_0u20sl7_di" bpmnElement="SequenceFlow_0u20sl7">
+        <di:waypoint x="590" y="155" />
+        <di:waypoint x="590" y="190" />
+        <di:waypoint x="702" y="190" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0019k6d_di" bpmnElement="SequenceFlow_0019k6d">
+        <di:waypoint x="430" y="155" />
+        <di:waypoint x="430" y="190" />
+        <di:waypoint x="702" y="190" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1gkd0qq_di" bpmnElement="SequenceFlow_1gkd0qq">
+        <di:waypoint x="640" y="97" />
+        <di:waypoint x="702" y="97" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0hvuvko_di" bpmnElement="SequenceFlow_0hvuvko">
+        <di:waypoint x="480" y="97" />
+        <di:waypoint x="540" y="97" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0m1vlw2_di" bpmnElement="SequenceFlow_0m1vlw2">
+        <di:waypoint x="188" y="97" />
+        <di:waypoint x="230" y="97" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1g44cqq_di" bpmnElement="Flow_1g44cqq">
+        <di:waypoint x="330" y="97" />
+        <di:waypoint x="380" y="97" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="ServiceTask_0xtl6dy_di" bpmnElement="Task_1nmgcnx">
+        <dc:Bounds x="380" y="57" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_1i1090u_di" bpmnElement="Task_0xwr6nl">
+        <dc:Bounds x="540" y="57" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_05xsp2l_di" bpmnElement="EndEvent_05xsp2l">
+        <dc:Bounds x="702" y="79" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="711" y="122" width="19" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_10bw83z_di" bpmnElement="EndEvent_1jahkp9">
+        <dc:Bounds x="702" y="172" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="708" y="215" width="25" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0ty7dtg_di" bpmnElement="Activity_1byt1dt">
+        <dc:Bounds x="230" y="57" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="152" y="79" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="159" y="122" width="23" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BoundaryEvent_1qrqf48_di" bpmnElement="BoundaryEvent_0rtqlvy">
+        <dc:Bounds x="572" y="119" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BoundaryEvent_0phkfyv_di" bpmnElement="BoundaryEvent_1wbcu4o">
+        <dc:Bounds x="412" y="119" width="36" height="36" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

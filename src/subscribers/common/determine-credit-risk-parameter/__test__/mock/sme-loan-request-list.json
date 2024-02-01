@@ -1,0 +1,47 @@
+[{
+  "_id" : "60fe6458a3abdd001476b8ae",
+  "changedBy" : {
+      "action" : "create",
+      "user" : {
+          "userName" : "Administrator",
+          "email" : "system@system.com",
+          "userId" : "system-dev",
+          "firstName" : "system",
+          "lastName" : "system",
+          "userType" : "superAdmin",
+          "role" : "system",
+          "preferredLanguage" : "",
+          "camundaUserId" : "system",
+          "camundaPassword" : "FDji0wRb08"
+      }
+  },
+  "contractId" : "SBF81660",
+  "requestType" : "",
+  "loanType" : "fixed-loan",
+  "status" : "received-from-customer",
+  "purposeIndicator" : "vehicles",
+  "desiredPrincipleAmount" : 50000,
+  "desiredDurationInMonths" : 12,
+  "desiredDirectDebitFrequency" : "daily",
+  "desiredLoanUrgencyIndicator" : "Geen haast",
+  "loanPurposeRisk" : "high",
+  "applicationId" : "1626680287103-3c61616356a2",
+  "desiredDirectDebitAmount" : 254.615384615385,
+  "customerId" : "CST000002",
+  "primaryCustomerSuccessManager" : "Laurens Steenbergen",
+  "primaryStakeholderWithinSme" : "PSN000002",
+  "contractIdExtension" : 0,
+  "platform" : "BridgeFund BV",
+  "commercialLabel" : "BridgeFund BV",
+  "id" : "LR000002",
+  "statusHistory" : [ 
+      {
+          "status" : "received-from-customer",
+          "_id" : "60fe6458a3abdd001476b8af",
+          "createdAt" : "2021-07-26T07:29:28.563Z"
+      }
+  ],
+  "createdAt" : "2021-07-26T07:29:28.563Z",
+  "updatedAt" : "2021-07-26T07:29:28.563Z",
+  "__v" : 0
+}]

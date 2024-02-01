@@ -1,0 +1,39 @@
+# Main Config
+PORT = 8002
+HOST = localhost
+NODE_ENV = development
+
+VERSION = v1.0.0
+
+# Application Config
+APP_NAME = Loan initiation workflow
+APP_KEY = LIW
+APP_CLUSTER = LI
+APP_URL = localhost:8002
+APP_ENV = localhost
+
+JAEGER_HOST = localhost
+JAEGER_PORT = 6832
+
+API_VERSIONS = V1
+
+# Database Connection ENV
+DB_NAME_V1 = camunda_workflow
+# <DB_NAME> Replace by code base
+DB_URI = mongodb://localhost:27017/<DB_NAME>
+
+INTEGRATION = false
+
+ENV_FILE_PATH = ./env
+
+NODE_TLS_REJECT_UNAUTHORIZED = 0
+
+REDIS_PORT = 6379
+REDIS_HOST = 127.0.0.1
+
+SENTRY_DSN = 
+SENTRY_ENVIRONMENT = 
+SENTRY_SAMPLERATE = 
+
+
+# dev, prod, staging, uat

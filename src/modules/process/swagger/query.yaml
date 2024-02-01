@@ -1,0 +1,97 @@
+paths:
+  /processes/query:
+    get:
+      tags:
+        - Processes
+      summary: "Retrieve worflow process by (GET)query"
+      produces:
+        - application/json
+      parameters:
+        - in: query
+          name: id
+          type: string
+          description: system id
+        - in: query
+          name: key
+          type: string
+          description: process key
+        - in: query
+          name: status
+          type: string
+          description: process status
+        - in: query
+          name: page
+          type: string
+          description: page number (For pageniation and start by 1)
+        - in: query
+          name: noOfLogsPP
+          type: string
+          description: number of logs per page (For pageniation)
+      responses:
+        200:
+          description: success
+          schema:
+            type: "object"
+            properties:
+              code:
+                type: "integer"
+                default: 200
+              data:
+                type: "object"
+                $ref: "#/definitions/process"
+              success:
+                type: "boolean"
+                default: true
+        404:
+          description: Not Found
+        500:
+          description: Internal Server Error
+    post:
+      tags:
+        - Processes
+      summary: "Retrieve worflow process by (POST)query"
+      produces:
+        - application/json
+      parameters:
+        - in: query
+          name: page
+          type: string
+          description: page number (For pageniation and start by 1)
+        - in: query
+          name: noOfLogsPP
+          type: string
+          description: number of logs per page (For pageniation)
+        - in: body
+          name: body
+          description: will be getting a worflow process
+          required: true
+          schema:
+            type: object
+            properties:
+              id:
+                type: string
+              key:
+                type: string
+              status:
+                type: string
+              'logData.*':
+                type: string 
+      responses:
+        200:
+          description: success
+          schema:
+            type: "object"
+            properties:
+              code:
+                type: "integer"
+                default: 200
+              data:
+                type: "object"
+                $ref: "#/definitions/process"
+              success:
+                type: "boolean"
+                default: true
+        404:
+          description: Not Found
+        500:
+          description: Internal Server Error

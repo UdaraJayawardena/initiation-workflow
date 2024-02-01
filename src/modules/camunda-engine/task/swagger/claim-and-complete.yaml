@@ -1,0 +1,73 @@
+paths:
+  /task/claim-and-complete:
+    post:
+      tags:
+        - Task
+      summary: "Complete task with new variables (optional)"
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          required: true
+          schema:
+            type: object
+            properties:
+              id:
+                type: string
+                required: true
+              userId:
+                type: string
+                example: demo
+              withVariablesInReturn:
+                type: boolean
+                example: false
+              variables:
+                type: object
+                properties:
+                  replaceWithYourVariableName:
+                    type: object
+                    properties:
+                      type:
+                        type: string
+                        description: The value type of the variable.
+                      value:
+                        type: string
+                        description: The variable's value. For variables of type Object, the serialized value has to be submitted as a String value. For variables of type File the value has to be submitted as Base64 encoded string.
+                      valueInfo:
+                        type: object
+                        description: A JSON object containing additional, value-type-dependent properties.
+                        properties:
+                          objectTypeName:
+                            type: string
+                            description: A string representation of the object's type name. (For serialized variables)
+                          serializationDataFormat:
+                            type: string
+                            description: The serialization format used to store the variable. (For serialized variables)
+                          filename:
+                            type: string
+                            description: The name of the file. This is not the variable name but the name that will be used when downloading the file again. (For serialized variables of type File)
+                          mimetype:
+                            type: string
+                            description: The MIME type of the file that is being uploaded. (For serialized variables of type File)
+                          encoding:
+                            type: string
+                            description: The encoding of the file that is being uploaded. (For serialized variables of type File)
+                          transient:
+                            type: boolean
+                            description: Indicates whether the variable should be transient or not. (For all value types)
+      responses:
+        200:
+          description: success
+          schema:
+            type: "object"
+            properties:
+              code:
+                type: "integer"
+                default: 204
+              success:
+                type: "boolean"
+                default: true
+        404:
+          description: Not Found
+        500:
+          description: Internal Server Error

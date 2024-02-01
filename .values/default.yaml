@@ -1,0 +1,37 @@
+deployment:
+  env:
+    INVENTORY_SERVICE: inventory:80
+    JAEGER_HOST: jaeger-agent.istio-system.svc.cluster.local
+    JAEGER_PORT: 6832
+ingress:
+  enabled: true
+port: 7004
+secrets:
+  env:
+    enabled: true
+    name: initiation-workflows-env
+  config:
+    enabled: true
+    name: initiation-workflows-config
+    mountpath: /usr/src/app/config/env/development.json
+    subpath: development.json
+eHpa:
+  create: true
+  queueLength: 3
+  queueName: complete-crm-system-update
+
+legacy-infrastructure:
+  databases:
+    loan_initiation_camunda_workflow:
+      engine: mongodb
+      description: Stores camunda workflow information || Tables | counters | logs | processes | processes_statuses
+  queues:
+    complete-crm-system-update:
+      role: consumer
+      description: 'Engage in the essential task of updating customer, person, and stakeholder records to maintain data precision and reflect current information accurately, Prepare-update-crm-initiation subscriber. Error Causes: legal form missing'
+    initiation-camunda-completeUserTask:
+      role: producer
+      description: 'Complete Initiation > Complete Updating CRM System  user task, complete Initiation > (sub) categories-bank-transactions > Waiting for categorization user task, Complete Initiation > Waiting for MT940 / PSD2-info user task. Error Causes: Token missing( Authentication service is down )'
+    camunda_waiting_for_fix_issue:
+      role: producer
+      description: Produce error message when creating a Jira ticket

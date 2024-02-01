@@ -1,0 +1,90 @@
+{
+  "ALLOWED_DOMAINS": [
+    "http://localhost:3000"
+  ],
+  "ALLOW_METHODS": "GET,PUT,POST,DELETE,OPTIONS",
+  "ALLOW_HEADERS": "Content-Type, Authorization, Content-Length, X-Requested-With",
+  "JSON_PARSER": {
+    "limit": "50mb"
+  },
+  "URLENCODED": {
+    "limit": "50mb",
+    "extended": true,
+    "parameterLimit": 50000
+  },
+  "system": {
+    "token": "Bearer <JWT_TOKEN>",
+    "userId": "demo"
+  },
+  "camunda": {
+    "baseUrl": "http://localhost:8080/engine-rest",
+    "asyncResponseTimeout": 10000,
+    "auth": {
+      "username": "demo",
+      "password": "demo"
+    }
+  },
+  "initiation-management": {
+    "baseUrl": "http://localhost:6101/v1"
+  },
+  "configurations": {
+    "baseUrl": "http://localhost:4012/v1"
+  },
+  "crm-gateway": {
+    "baseUrl": "http://localhost:7001/v1"
+  },
+  "crm-management": {
+    "baseUrl": "http://localhost:7003/v1"
+  },
+  "v-tiger": {
+    "baseUrl": "https://bridgefundbv.od2.vtiger.com",
+    "accessKey": "IOP887889799",
+    "userName": "test@dhdgt.ol'",
+    "samplePotentials": [
+      {
+        "id": "5x784693",
+        "potential_no": "SBF28370"
+      }
+    ]
+  },
+  "bai-management":{
+      "baseUrl": "http://localhost:8001/v1"
+  },
+  "bai-parser":{
+      "baseUrl": "http://localhost:8001/v1"
+  },
+  "authentication": {
+    "baseUrl": "http://localhost:6003/v2"
+  },
+  "initiationApiGateway": {
+    "baseUrl": "http://localhost:8001/v1"
+  },
+  "camunda-client": {
+    "baseUrl": "http://localhost:8007/v1"
+  },
+ "loan-management": {
+  "baseUrl": "http://localhost:3008/v2"
+ },
+ "notifications": {
+  "baseUrl": "http://localhost:6004/v1"
+ },
+ "psd2-daily-update-parser": {
+  "baseUrl": "http://localhost:8001/v1"
+ },
+ "automatedAnalysis": {
+  "baseUrl": "http://localhost:8001/v1"
+ },
+ "psd2-daily-update-notification-to-email": "360development.test@gmail.com",
+"aws": {
+  "region": "eu-central-1",
+  "updateCrmSystemQueue": "https://sqs.eu-central-1.amazonaws.com/***************",
+  "completeTaskQueueUrl": "https://sqs.eu-central-1.amazonaws.com/***************",
+  "createJiraTicketQueueUrl": "https://sqs.eu-central-1.amazonaws.com/***************"
+},
+"revision-vTiger-call":{
+  "pipeline": "Credit Line Extension",
+  "sales_stage" : "New",
+  "assigned_user_id": "19x84",
+  "risk_analysis_base_url": "http//localhost:3000/user/Risk-Dashboard"
+ }
+}

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Definitions_0jf64xb" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.7.0">
+  <bpmn:process id="revision-flex-loan-simulation" name="Revision Flex Loan (Simulation)" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1" name="Start">
+      <bpmn:outgoing>Flow_1ss0ovm</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:sequenceFlow id="Flow_1ss0ovm" sourceRef="StartEvent_1" targetRef="Activity_0yb5w5d" />
+    <bpmn:sequenceFlow id="Flow_05fuvgc" sourceRef="Activity_1xxkpu1" targetRef="Event_16mfvuy" />
+    <bpmn:callActivity id="Activity_1xxkpu1" name="Revision flex-loan Processor" calledElement="revision-flex-loan-processor">
+      <bpmn:extensionElements>
+        <camunda:in businessKey="#{execution.processBusinessKey}" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_057e999</bpmn:incoming>
+      <bpmn:outgoing>Flow_05fuvgc</bpmn:outgoing>
+    </bpmn:callActivity>
+    <bpmn:endEvent id="Event_16mfvuy" name="End">
+      <bpmn:incoming>Flow_05fuvgc</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_057e999" sourceRef="Activity_0yb5w5d" targetRef="Activity_1xxkpu1" />
+    <bpmn:scriptTask id="Activity_0yb5w5d" name="Set business key" scriptFormat="javascript">
+      <bpmn:incoming>Flow_1ss0ovm</bpmn:incoming>
+      <bpmn:outgoing>Flow_057e999</bpmn:outgoing>
+      <bpmn:script>date = new java.util.Date;
+//id = new java.util.Random().toString(36).substr(2, 9);
+execution.setProcessBusinessKey(date.getTime());</bpmn:script>
+    </bpmn:scriptTask>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="revision-flex-loan-simulation">
+      <bpmndi:BPMNEdge id="Flow_057e999_di" bpmnElement="Flow_057e999">
+        <di:waypoint x="360" y="117" />
+        <di:waypoint x="400" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_05fuvgc_di" bpmnElement="Flow_05fuvgc">
+        <di:waypoint x="500" y="117" />
+        <di:waypoint x="542" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1ss0ovm_di" bpmnElement="Flow_1ss0ovm">
+        <di:waypoint x="215" y="117" />
+        <di:waypoint x="260" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="179" y="99" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="185" y="142" width="24" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_02da6pz_di" bpmnElement="Activity_1xxkpu1">
+        <dc:Bounds x="400" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1hpq1uc_di" bpmnElement="Event_16mfvuy">
+        <dc:Bounds x="542" y="99" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="550" y="142" width="20" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0zr1cby_di" bpmnElement="Activity_0yb5w5d">
+        <dc:Bounds x="260" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

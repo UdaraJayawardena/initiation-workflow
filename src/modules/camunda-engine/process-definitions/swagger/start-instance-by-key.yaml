@@ -1,0 +1,61 @@
+paths:
+  /process-definitions/start-instance-by-key:
+    post:
+      tags:
+        - Process Definitions
+      summary: "start process instance by key"
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          required: true
+          schema:
+            type: object
+            properties:
+              key:
+                type: string
+                example: loan-initiation
+              businessKey:
+                type: string
+                example: SBF43681
+              variables:
+                type: object
+                example:
+                  {
+                    contractId: "SBF43681",
+                    smeLoanRequest: {},
+                    smeLoanRequestProposal: {},
+                  }
+      responses:
+        200:
+          description: success
+          schema:
+            type: "object"
+            properties:
+              code:
+                type: "integer"
+                default: 200
+              data:
+                type: "object"
+                properties:
+                  businessKey:
+                    type: string
+                  caseInstanceId:
+                    type: string
+                  definitionId:
+                    type: string
+                  ended:
+                    type: boolean
+                  id:
+                    type: string
+                  suspended:
+                    type: string
+                  tenantId:
+                    type: string
+              success:
+                type: "boolean"
+                default: true
+        404:
+          description: Not Found
+        500:
+          description: Internal Server Error

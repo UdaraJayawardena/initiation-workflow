@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_0mpgy9x" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="3.3.4">
+  <bpmn:process id="update-platform-parameter" name="(Main) update-platform-parameter" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1" name="Start">
+      <bpmn:outgoing>Flow_0iftglr</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:sequenceFlow id="Flow_0iftglr" sourceRef="StartEvent_1" targetRef="ING0102-PP-init" />
+    <bpmn:sequenceFlow id="Flow_0q9n3ra" sourceRef="ING0102-PP-init" targetRef="Activity_0nuv3bh" />
+    <bpmn:sequenceFlow id="Flow_0iisfv9" sourceRef="Activity_0nuv3bh" targetRef="Event_1c19mj9" />
+    <bpmn:endEvent id="Event_1c19mj9" name="End">
+      <bpmn:incoming>Flow_0iisfv9</bpmn:incoming>
+      <bpmn:incoming>Flow_01u142j</bpmn:incoming>
+      <bpmn:messageEventDefinition id="MessageEventDefinition_0owcvsp" camunda:type="external" camunda:topic="end-update-platform-parameter" />
+    </bpmn:endEvent>
+    <bpmn:serviceTask id="ING0102-PP-init" name="init" camunda:type="external" camunda:topic="init">
+      <bpmn:incoming>Flow_0iftglr</bpmn:incoming>
+      <bpmn:outgoing>Flow_0q9n3ra</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:serviceTask id="Activity_0nuv3bh" name="update platform parameter" camunda:type="external" camunda:topic="update-platform-parameter">
+      <bpmn:incoming>Flow_0q9n3ra</bpmn:incoming>
+      <bpmn:outgoing>Flow_0iisfv9</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="Flow_01u142j" sourceRef="Event_0t89qjv" targetRef="Event_1c19mj9" />
+    <bpmn:boundaryEvent id="Event_0t89qjv" attachedToRef="Activity_0nuv3bh">
+      <bpmn:outgoing>Flow_01u142j</bpmn:outgoing>
+      <bpmn:errorEventDefinition id="ErrorEventDefinition_08ohybf" />
+    </bpmn:boundaryEvent>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="update-platform-parameter">
+      <bpmndi:BPMNEdge id="Flow_0iftglr_di" bpmnElement="Flow_0iftglr">
+        <di:waypoint x="228" y="97" />
+        <di:waypoint x="270" y="97" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0q9n3ra_di" bpmnElement="Flow_0q9n3ra">
+        <di:waypoint x="370" y="97" />
+        <di:waypoint x="430" y="97" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0iisfv9_di" bpmnElement="Flow_0iisfv9">
+        <di:waypoint x="530" y="97" />
+        <di:waypoint x="592" y="97" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_01u142j_di" bpmnElement="Flow_01u142j">
+        <di:waypoint x="480" y="155" />
+        <di:waypoint x="480" y="175" />
+        <di:waypoint x="610" y="175" />
+        <di:waypoint x="610" y="115" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Event_17knkak_di" bpmnElement="Event_1c19mj9">
+        <dc:Bounds x="592" y="79" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="601" y="49" width="19" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1cr68rr_di" bpmnElement="ING0102-PP-init">
+        <dc:Bounds x="270" y="57" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0p2kz5q_di" bpmnElement="Activity_0nuv3bh">
+        <dc:Bounds x="430" y="57" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="192" y="79" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="199" y="122" width="23" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0m3ky4j_di" bpmnElement="Event_0t89qjv">
+        <dc:Bounds x="462" y="119" width="36" height="36" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

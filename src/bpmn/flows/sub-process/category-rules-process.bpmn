@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Definitions_0gxbh5y" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.4.0">
+  <bpmn:process id="process-category-rule-data" name="(Sub) Process Category Rule" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1" name="Start">
+      <bpmn:outgoing>Flow_0w3uylb</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:serviceTask id="Activity_1ob89ue" name="Process Category Rule" camunda:type="external" camunda:topic="process-category-rules">
+      <bpmn:incoming>Flow_0w3uylb</bpmn:incoming>
+      <bpmn:outgoing>Flow_1xattda</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="Flow_0w3uylb" sourceRef="StartEvent_1" targetRef="Activity_1ob89ue" />
+    <bpmn:boundaryEvent id="Event_1uoxd6s" attachedToRef="Activity_1ob89ue">
+      <bpmn:outgoing>Flow_03h9cpk</bpmn:outgoing>
+      <bpmn:errorEventDefinition id="ErrorEventDefinition_05ye1jc" errorRef="Error_0j4ftzm" />
+    </bpmn:boundaryEvent>
+    <bpmn:endEvent id="Event_1nl62w0" name="Error">
+      <bpmn:incoming>Flow_03h9cpk</bpmn:incoming>
+      <bpmn:errorEventDefinition id="ErrorEventDefinition_1ry60e4" errorRef="Error_0emkvbo" />
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_03h9cpk" sourceRef="Event_1uoxd6s" targetRef="Event_1nl62w0" />
+    <bpmn:endEvent id="EndEvent_1av2j8s" name="End">
+      <bpmn:incoming>Flow_1xattda</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_1xattda" sourceRef="Activity_1ob89ue" targetRef="EndEvent_1av2j8s" />
+  </bpmn:process>
+  <bpmn:error id="Error_0j4ftzm" name="Process Category Rule Error" errorCode="ERROR_PROCESS_CATEGORY_RULE" camunda:errorMessage="Process Category Rule failed" />
+  <bpmn:error id="Error_0emkvbo" name="Process Category Rule Error" errorCode="ERROR_PROCESS_CATEGORY_RULE" camunda:errorMessage="Process Category Rule failed" />
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="process-category-rule-data">
+      <bpmndi:BPMNEdge id="Flow_03h9cpk_di" bpmnElement="Flow_03h9cpk">
+        <di:waypoint x="380" y="169" />
+        <di:waypoint x="380" y="100" />
+        <di:waypoint x="492" y="100" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0w3uylb_di" bpmnElement="Flow_0w3uylb">
+        <di:waypoint x="215" y="227" />
+        <di:waypoint x="300" y="227" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1xattda_di" bpmnElement="Flow_1xattda">
+        <di:waypoint x="400" y="227" />
+        <di:waypoint x="492" y="227" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="179" y="209" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="186" y="252" width="24" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0xzkmay_di" bpmnElement="Activity_1ob89ue">
+        <dc:Bounds x="300" y="187" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1av2j8s_di" bpmnElement="EndEvent_1av2j8s">
+        <dc:Bounds x="492" y="209" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="500" y="252" width="20" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1x8qvlx_di" bpmnElement="Event_1nl62w0">
+        <dc:Bounds x="492" y="82" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="498" y="125" width="25" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0btcchu_di" bpmnElement="Event_1uoxd6s">
+        <dc:Bounds x="362" y="169" width="36" height="36" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

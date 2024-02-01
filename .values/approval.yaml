@@ -1,0 +1,6 @@
+deployment:
+  image:
+    repository: 002665144501.dkr.ecr.eu-central-1.amazonaws.com/bf-api-initiation-workflows
+  env:
+    ENVIRONMENT: acceptance
+hostName: initiation-workflows.bridgefund-approval.net

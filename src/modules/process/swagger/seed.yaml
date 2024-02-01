@@ -1,0 +1,27 @@
+paths:
+  /processes/seed:
+    post:
+      tags:
+        - Processes
+      summary: "Seed default process"
+      produces:
+        - application/json
+      responses:
+        200:
+          description: success
+          schema:
+            type: "object"
+            properties:
+              code:
+                type: "integer"
+                default: 200
+              data:
+                type: "object"
+                $ref: "#/definitions/process"
+              success:
+                type: "boolean"
+                default: true
+        404:
+          description: Not Found
+        500:
+          description: Internal Server Error

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Definitions_1mn0l72" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.2.0">
+  <bpmn:process id="revision-flex-loan-processor" name="Revision Flex Loan (Sub Processor)" isExecutable="true">
+    <bpmn:endEvent id="Event_0tu2kjt" name="End">
+      <bpmn:incoming>Flow_1vyo2dn</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_0eez6h4" sourceRef="StartEvent_1" targetRef="Activity_1tg0es2" />
+    <bpmn:sequenceFlow id="Flow_0b1fo7j" sourceRef="Activity_0klrhba" targetRef="Activity_15bx1sb" />
+    <bpmn:sequenceFlow id="Flow_0wxj745" sourceRef="Activity_15bx1sb" targetRef="Gateway_0c1w8uz" />
+    <bpmn:scriptTask id="Activity_15bx1sb" name="Loop Revision" scriptFormat="Javascript">
+      <bpmn:incoming>Flow_0b1fo7j</bpmn:incoming>
+      <bpmn:incoming>Flow_11k5yuq</bpmn:incoming>
+      <bpmn:outgoing>Flow_0wxj745</bpmn:outgoing>
+      <bpmn:script>var system = java.lang.System;
+
+flexLoans = JSON.parse(execution.getVariable("flexLoanForInRevision"));
+index = execution.getVariable("index");
+system.out.println(flexLoanForInRevision);
+
+if(!index) index = 0;
+
+system.out.println('Length: '+ flexLoans.length);
+
+if(index &lt; flexLoans.length){
+  smeLoan = flexLoans[index];
+  system.out.println('ABCDE: '+smeLoan.status);
+  isContinueLoop = true;
+  execution.setVariable('loanId', smeLoan._id);
+  execution.setVariable('contractId', smeLoan.contractId);
+  execution.setVariable('customerId', smeLoan.customerId);
+  execution.setVariable('messageType', smeLoan.messageType);
+  execution.setVariable('status', smeLoan.status);
+  execution.setVariable('creditLimitAmount', smeLoan.creditLimitAmount);
+}else{
+   smeLoan = null;
+   isContinueLoop = false;
+}
+
+index = index + 1;
+execution.setVariable('isContinueLoop', isContinueLoop);
+execution.setVariable('index', index);</bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:exclusiveGateway id="Gateway_0c1w8uz">
+      <bpmn:incoming>Flow_0wxj745</bpmn:incoming>
+      <bpmn:outgoing>Flow_0ja4mnz</bpmn:outgoing>
+      <bpmn:outgoing>Flow_1vyo2dn</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:sequenceFlow id="Flow_0ja4mnz" sourceRef="Gateway_0c1w8uz" targetRef="Event_1mgo9nu">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${isContinueLoop == true}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_1vyo2dn" sourceRef="Gateway_0c1w8uz" targetRef="Event_0tu2kjt">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${isContinueLoop == false}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:serviceTask id="Activity_0klrhba" name="Select all flex sme-loans for Revision" camunda:type="external" camunda:topic="select-flex-loan-for-in-revision">
+      <bpmn:incoming>Flow_152h60e</bpmn:incoming>
+      <bpmn:outgoing>Flow_0b1fo7j</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:endEvent id="revision_flex_loan_scheduler_terminate" name="Terminate">
+      <bpmn:incoming>Flow_106o0ar</bpmn:incoming>
+      <bpmn:incoming>Flow_1ccecaf</bpmn:incoming>
+      <bpmn:terminateEventDefinition id="TerminateEventDefinition_1sxb0wj" />
+    </bpmn:endEvent>
+    <bpmn:boundaryEvent id="Event_1lststt" attachedToRef="Activity_0klrhba">
+      <bpmn:outgoing>Flow_106o0ar</bpmn:outgoing>
+      <bpmn:errorEventDefinition id="ErrorEventDefinition_0s1jz3d" errorRef="Error_0zq3zol" />
+    </bpmn:boundaryEvent>
+    <bpmn:sequenceFlow id="Flow_106o0ar" sourceRef="Event_1lststt" targetRef="revision_flex_loan_scheduler_terminate" />
+    <bpmn:startEvent id="StartEvent_1" name="Start">
+      <bpmn:outgoing>Flow_0eez6h4</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:sequenceFlow id="Flow_152h60e" sourceRef="Activity_1tg0es2" targetRef="Activity_0klrhba" />
+    <bpmn:serviceTask id="Activity_1tg0es2" name="Set System date" camunda:type="external" camunda:topic="get-simulation-date">
+      <bpmn:incoming>Flow_0eez6h4</bpmn:incoming>
+      <bpmn:outgoing>Flow_152h60e</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:startEvent id="Event_0pltxak">
+      <bpmn:outgoing>Flow_0uiniuf</bpmn:outgoing>
+      <bpmn:signalEventDefinition id="SignalEventDefinition_0nkde2c" signalRef="Signal_0kezlkb" />
+    </bpmn:startEvent>
+    <bpmn:callActivity id="Activity_1cxd8in" name="Revision Flex-Loan" calledElement="revision-flex-loan">
+      <bpmn:extensionElements>
+        <camunda:in source="loanId" target="loanId" />
+        <camunda:in source="contractId" target="contractId" />
+        <camunda:in source="customerId" target="customerId" />
+        <camunda:in source="messageType" target="messageType" />
+        <camunda:in source="creditLimitAmount" target="creditLimitAmount" />
+        <camunda:in source="status" target="status" />
+        <camunda:in businessKey="${contractId}" />
+        <camunda:in source="systemDate" target="systemDate" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0uiniuf</bpmn:incoming>
+      <bpmn:outgoing>Flow_1w8ax3x</bpmn:outgoing>
+    </bpmn:callActivity>
+    <bpmn:endEvent id="Event_04rrrot">
+      <bpmn:incoming>Flow_1w8ax3x</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_1w8ax3x" sourceRef="Activity_1cxd8in" targetRef="Event_04rrrot" />
+    <bpmn:sequenceFlow id="Flow_0uiniuf" sourceRef="Event_0pltxak" targetRef="Activity_1cxd8in" />
+    <bpmn:sequenceFlow id="Flow_11k5yuq" sourceRef="Event_1mgo9nu" targetRef="Activity_15bx1sb" />
+    <bpmn:intermediateThrowEvent id="Event_1mgo9nu">
+      <bpmn:incoming>Flow_0ja4mnz</bpmn:incoming>
+      <bpmn:outgoing>Flow_11k5yuq</bpmn:outgoing>
+      <bpmn:signalEventDefinition id="SignalEventDefinition_1xoxx2t" signalRef="Signal_0kezlkb">
+        <bpmn:extensionElements>
+          <camunda:in source="loanId" target="loanId" />
+          <camunda:in source="contractId" target="contractId" />
+          <camunda:in source="customerId" target="customerId" />
+          <camunda:in source="messageType" target="messageType" />
+          <camunda:in source="creditLimitAmount" target="creditLimitAmount" />
+          <camunda:in source="status" target="status" />
+          <camunda:in source="systemDate" target="systemDate" />
+        </bpmn:extensionElements>
+      </bpmn:signalEventDefinition>
+    </bpmn:intermediateThrowEvent>
+    <bpmn:boundaryEvent id="Event_0svk2pl" attachedToRef="Activity_1tg0es2">
+      <bpmn:outgoing>Flow_1ccecaf</bpmn:outgoing>
+      <bpmn:errorEventDefinition id="ErrorEventDefinition_11jtlo3" errorRef="Error_1cr4m3d" />
+    </bpmn:boundaryEvent>
+    <bpmn:sequenceFlow id="Flow_1ccecaf" sourceRef="Event_0svk2pl" targetRef="revision_flex_loan_scheduler_terminate" />
+  </bpmn:process>
+  <bpmn:error id="Error_0zq3zol" name="Flex loan status in revision error" errorCode="ERROR_FLEX_LOAN_STATUS_IN_REVISION" camunda:errorMessage="Unexpected Error Occurred while selecting in-revision flex loan" />
+  <bpmn:signal id="Signal_0kezlkb" name="start-revision-flex-loan" />
+  <bpmn:error id="Error_1cr4m3d" name="Get simulation date error" errorCode="ERROR_GET_SIMULATION_DATE" />
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="revision-flex-loan-processor">
+      <bpmndi:BPMNEdge id="Flow_11k5yuq_di" bpmnElement="Flow_11k5yuq">
+        <di:waypoint x="692" y="137" />
+        <di:waypoint x="600" y="137" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0uiniuf_di" bpmnElement="Flow_0uiniuf">
+        <di:waypoint x="168" y="450" />
+        <di:waypoint x="210" y="450" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1w8ax3x_di" bpmnElement="Flow_1w8ax3x">
+        <di:waypoint x="310" y="450" />
+        <di:waypoint x="392" y="450" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_152h60e_di" bpmnElement="Flow_152h60e">
+        <di:waypoint x="310" y="137" />
+        <di:waypoint x="360" y="137" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_106o0ar_di" bpmnElement="Flow_106o0ar">
+        <di:waypoint x="410" y="195" />
+        <di:waypoint x="410" y="262" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1vyo2dn_di" bpmnElement="Flow_1vyo2dn">
+        <di:waypoint x="550" y="275" />
+        <di:waypoint x="550" y="320" />
+        <di:waypoint x="692" y="320" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0ja4mnz_di" bpmnElement="Flow_0ja4mnz">
+        <di:waypoint x="575" y="250" />
+        <di:waypoint x="710" y="250" />
+        <di:waypoint x="710" y="155" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0wxj745_di" bpmnElement="Flow_0wxj745">
+        <di:waypoint x="550" y="177" />
+        <di:waypoint x="550" y="225" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0b1fo7j_di" bpmnElement="Flow_0b1fo7j">
+        <di:waypoint x="460" y="137" />
+        <di:waypoint x="500" y="137" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0eez6h4_di" bpmnElement="Flow_0eez6h4">
+        <di:waypoint x="168" y="137" />
+        <di:waypoint x="210" y="137" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1ccecaf_di" bpmnElement="Flow_1ccecaf">
+        <di:waypoint x="260" y="195" />
+        <di:waypoint x="260" y="280" />
+        <di:waypoint x="392" y="280" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Event_0tu2kjt_di" bpmnElement="Event_0tu2kjt">
+        <dc:Bounds x="692" y="302" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="700" y="272" width="20" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0k8qqli_di" bpmnElement="Activity_15bx1sb">
+        <dc:Bounds x="500" y="97" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0c1w8uz_di" bpmnElement="Gateway_0c1w8uz" isMarkerVisible="true">
+        <dc:Bounds x="525" y="225" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0uht9g5_di" bpmnElement="Activity_0klrhba">
+        <dc:Bounds x="360" y="97" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_19z6wzi_di" bpmnElement="revision_flex_loan_scheduler_terminate">
+        <dc:Bounds x="392" y="262" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="385" y="305" width="49" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0fq27c9_di" bpmnElement="StartEvent_1">
+        <dc:Bounds x="132" y="119" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="138" y="162" width="24" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0jcrpds_di" bpmnElement="Activity_1tg0es2">
+        <dc:Bounds x="210" y="97" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1vqorzz_di" bpmnElement="Event_0pltxak">
+        <dc:Bounds x="132" y="432" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0ggnjte_di" bpmnElement="Activity_1cxd8in">
+        <dc:Bounds x="210" y="410" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_04rrrot_di" bpmnElement="Event_04rrrot">
+        <dc:Bounds x="392" y="432" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_17cjpz5_di" bpmnElement="Event_1mgo9nu">
+        <dc:Bounds x="692" y="119" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_119wn2n_di" bpmnElement="Event_1lststt">
+        <dc:Bounds x="392" y="159" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0dgf0ot_di" bpmnElement="Event_0svk2pl">
+        <dc:Bounds x="242" y="159" width="36" height="36" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

@@ -1,0 +1,10 @@
+deployment:
+  image:
+    repository: 601685913437.dkr.ecr.eu-central-1.amazonaws.com/bf-api-initiation-workflows
+  env:
+    ENVIRONMENT: acceptance
+hostName: initiation-workflows.bridgefund-acceptance.net
+serviceAccount:
+  create: true
+  annotations:
+    eks.amazonaws.com/role-arn: arn:aws:iam::601685913437:role/acceptance-initiation-workflow-sa-role
